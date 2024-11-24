@@ -1,0 +1,22 @@
+.footer {
+  &__container {
+    @apply flex items-center justify-between py-5;
+
+    @screen md {
+      @apply py-9;
+    }
+
+    @screen lg {
+      @apply py-10;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__nav {
+  }
+
+  &__copyright {
+  }
+}

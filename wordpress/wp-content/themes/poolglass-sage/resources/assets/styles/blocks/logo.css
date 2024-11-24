@@ -1,0 +1,18 @@
+.logo {
+  @apply w-full max-w-[149px] shrink-0;
+
+  @screen sm {
+    @apply max-w-[191px];
+  }
+
+  @screen md {
+    @apply max-w-[237px];
+  }
+
+  /* @screen lg {
+    } */
+
+  img {
+    @apply w-full;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'tailwind.css';
+@import 'vendor/normalize.css';
+@import 'variables.css';
+@import 'mixins.css';
+/* @import 'functions.css'; */
+@import 'keyframes.css';
+
+@import 'global/fonts.css';
+@import 'global/reboot.css';
+@import 'global/utils.css';
+
+@import 'typography.css';
+
+@import 'blocks/header.css';
+@import 'blocks/logo.css';
+@import 'blocks/nav.css';
+@import 'blocks/contact-list.css';
+@import 'blocks/socials.css';

@@ -1,0 +1,48 @@
+@layer base {
+  .container {
+    @apply m-auto w-full max-w-full px-2.5;
+
+    @screen sm {
+      @apply max-w-3xl px-[15px];
+    }
+
+    @screen md {
+      @apply max-w-[999px] px-5;
+    }
+
+    @screen lg {
+      @apply max-w-[1240px] px-10;
+    }
+
+    @screen xl {
+      /* @apply max-w-[1240px]; */
+    }
+  }
+  /* Remove scrollbar */
+  .side-title {
+    @apply mt-0;
+  }
+
+  .form {
+    @apply grid gap-5;
+
+    &__submit {
+      @apply bg-blue-300 h-12 w-full;
+    }
+
+    &__bottom {
+      @apply mt-5 grid gap-5;
+    }
+
+    &__group {
+      @apply flex items-center gap-3;
+    }
+
+    &__login {
+      @apply text-blue-600 text-xl font-bold underline hover:no-underline;
+    }
+  }
+}
+
+@layer utilities {
+}

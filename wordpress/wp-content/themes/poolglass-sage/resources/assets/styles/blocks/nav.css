@@ -1,0 +1,31 @@
+.nav {
+  &__list {
+    @apply flex flex-nowrap items-center ~gap-x-[10px]/[30px];
+  }
+
+  &__item {
+    &.current-menu-item {
+      .nav__link {
+      }
+    }
+  }
+
+  &__link {
+    @apply relative flex cursor-pointer whitespace-nowrap font-medium text-gray ~text-[15px]/[17px];
+
+    @screen sm {
+    }
+
+    @screen md {
+    }
+
+    @screen lg {
+    }
+  }
+
+  &_primary {
+  }
+
+  &_secondary {
+  }
+}

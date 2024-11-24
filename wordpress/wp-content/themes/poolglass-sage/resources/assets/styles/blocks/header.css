@@ -1,0 +1,35 @@
+.header {
+  @apply bg-blue;
+  &_scroll {
+    @apply fixed left-0 right-0 top-0 w-full bg-blue py-2.5;
+  }
+
+  &_show {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  &__container {
+    @apply flex flex-nowrap items-center justify-between py-5 ~gap-x-[10px]/[20px];
+  }
+
+  &__logo {
+  }
+
+  &__nav {
+    @apply hidden;
+
+    @screen lg {
+      @apply flex w-full max-w-full justify-center;
+    }
+  }
+
+  &__contacts-w {
+  }
+
+  .header__socials {
+    @apply hidden;
+  }
+
+  &__contacts {
+  }
+}
