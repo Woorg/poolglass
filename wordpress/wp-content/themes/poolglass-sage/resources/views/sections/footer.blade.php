@@ -4,6 +4,8 @@
       {!! $logo !!}
     </a> --}}
 
+    {{-- @php(dynamic_sidebar('sidebar-footer')) --}}
+
     @if (has_nav_menu('secondary_navigation'))
       <nav class="footer__nav nav nav_secondary"
         aria-label="{{ wp_get_nav_menu_name('secondary_navigation') }}">
@@ -18,5 +20,4 @@
 
     <div class="footer__copyright">{{ $copyright }}</div>
 
-    {{-- @php(dynamic_sidebar('sidebar-footer')) --}}
 </footer>

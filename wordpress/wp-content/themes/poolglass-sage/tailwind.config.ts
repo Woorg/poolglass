@@ -37,8 +37,8 @@ export default {
       sm: '480px',
       md: '768px',
       lg: '999px',
-      xl: '1280px',
-      // '2xl': '1920px',
+      xl: '1220px',
+      '2xl': '1920px',
     },
     fontSize,
     extend: {
@@ -75,22 +75,28 @@ export default {
         raleway: ['var(--raleway)'],
       },
       colors: {
+        title: '#0D0F22',
+        block_title: '#9899ac',
+        text: '#555666',
         blue: '#264279',
+        box: 'rgba(38, 66, 121, 0.04)',
         dirty_gray: '#899CC1',
         gray: '#dee0f1',
+        fixed_bg: 'rgba(22,27,35,.7)',
         // light: {},
       },
 
       backgroundImage: {
-        'vercel-gradient': 'linear-gradient(180deg, #000, #111013);',
-        'vercel-gradient-invert': 'linear-gradient(180deg, #111013, #000);',
+        'box-gradient':
+          'linear-gradient(129deg, #f1fafc 10.69%, #39afdd 21.04%, #1664ab 47.29%, #08367a 59.98%, #142c52 100%);',
       },
       boxShadow: {},
       aspectRatio: {
-        bioAvatar: '2170 / 2945',
-        '26/31': '267 / 316',
-        '7/10': '720 / 1024',
-        '7/4': '720 / 422',
+        parallax_first_320: '795/410',
+        parallax_first_480: '1130/586',
+        parallax_first_768: '1427/736',
+        parallax_first_big: '1920/1096',
+        about_figure: '222/153',
       },
 
       keyframes: {

@@ -538,7 +538,7 @@ if ( typeof Symbol === "function" ) {
 }
 
 // Populate the class2type map
-jQuery.each( "Boolean Number String Function Array Date RegExp Object Error Symbol".split( " " ),
+jQuery.each( "Boolean Number String Function Array Date RegExp Object Error Symbol".split( "" ),
 	function( _i, name ) {
 		class2type[ "[object " + name + "]" ] = name.toLowerCase();
 	} );
@@ -616,7 +616,7 @@ function fcssescape( ch, asCodePoint ) {
 		}
 
 		// Control characters and (dependent upon position) numbers get escaped as code points
-		return ch.slice( 0, -1 ) + "\\" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
+		return ch.slice( 0, -1 ) + "\\" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + "";
 	}
 
 	// Other potentially-special ASCII characters get backslash-escaped
@@ -873,7 +873,7 @@ function find( selector, context, results, seed ) {
 			}
 
 			// Take advantage of querySelectorAll
-			if ( !nonnativeSelectorCache[ selector + " " ] &&
+			if ( !nonnativeSelectorCache[ selector + "" ] &&
 				( !rbuggyQSA || !rbuggyQSA.test( selector ) ) ) {
 
 				newSelector = selector;
@@ -913,7 +913,7 @@ function find( selector, context, results, seed ) {
 					groups = tokenize( selector );
 					i = groups.length;
 					while ( i-- ) {
-						groups[ i ] = ( nid ? "#" + nid : ":scope" ) + " " +
+						groups[ i ] = ( nid ? "#" + nid : ":scope" ) + "" +
 							toSelector( groups[ i ] );
 					}
 					newSelector = groups.join( "," );
@@ -950,14 +950,14 @@ function createCache() {
 
 	function cache( key, value ) {
 
-		// Use (key + " ") to avoid collision with native prototype properties
+		// Use (key + "") to avoid collision with native prototype properties
 		// (see https://github.com/jquery/sizzle/issues/157)
-		if ( keys.push( key + " " ) > Expr.cacheLength ) {
+		if ( keys.push( key + "" ) > Expr.cacheLength ) {
 
 			// Only keep the most recent entries
 			delete cache[ keys.shift() ];
 		}
-		return ( cache[ key + " " ] = value );
+		return ( cache[ key + "" ] = value );
 	}
 	return cache;
 }
@@ -1422,7 +1422,7 @@ find.matchesSelector = function( elem, expr ) {
 	setDocument( elem );
 
 	if ( documentIsHTML &&
-		!nonnativeSelectorCache[ expr + " " ] &&
+		!nonnativeSelectorCache[ expr + "" ] &&
 		( !rbuggyQSA || !rbuggyQSA.test( expr ) ) ) {
 
 		try {
@@ -1543,7 +1543,7 @@ Expr = jQuery.expr = {
 
 	relative: {
 		">": { dir: "parentNode", first: true },
-		" ": { dir: "parentNode" },
+		"": { dir: "parentNode" },
 		"+": { dir: "previousSibling", first: true },
 		"~": { dir: "previousSibling" }
 	},
@@ -1557,7 +1557,7 @@ Expr = jQuery.expr = {
 				.replace( runescape, funescape );
 
 			if ( match[ 2 ] === "~=" ) {
-				match[ 3 ] = " " + match[ 3 ] + " ";
+				match[ 3 ] = "" + match[ 3 ] + "";
 			}
 
 			return match.slice( 0, 4 );
@@ -1645,7 +1645,7 @@ Expr = jQuery.expr = {
 		},
 
 		CLASS: function( className ) {
-			var pattern = classCache[ className + " " ];
+			var pattern = classCache[ className + "" ];
 
 			return pattern ||
 				( pattern = new RegExp( "(^|" + whitespace + ")" + className +
@@ -1689,7 +1689,7 @@ Expr = jQuery.expr = {
 					return check && result.slice( -check.length ) === check;
 				}
 				if ( operator === "~=" ) {
-					return ( " " + result.replace( rwhitespace, " " ) + " " )
+					return ( "" + result.replace( rwhitespace, "" ) + "" )
 						.indexOf( check ) > -1;
 				}
 				if ( operator === "|=" ) {
@@ -2087,7 +2087,7 @@ Expr.setFilters = new setFilters();
 function tokenize( selector, parseOnly ) {
 	var matched, match, tokens, type,
 		soFar, groups, preFilters,
-		cached = tokenCache[ selector + " " ];
+		cached = tokenCache[ selector + "" ];
 
 	if ( cached ) {
 		return parseOnly ? 0 : cached.slice( 0 );
@@ -2118,7 +2118,7 @@ function tokenize( selector, parseOnly ) {
 				value: matched,
 
 				// Cast descendant combinators to space
-				type: match[ 0 ].replace( rtrimCSS, " " )
+				type: match[ 0 ].replace( rtrimCSS, "" )
 			} );
 			soFar = soFar.slice( matched.length );
 		}
@@ -2375,7 +2375,7 @@ function matcherFromTokens( tokens ) {
 	var checkContext, matcher, j,
 		len = tokens.length,
 		leadingRelative = Expr.relative[ tokens[ 0 ].type ],
-		implicitRelative = leadingRelative || Expr.relative[ " " ],
+		implicitRelative = leadingRelative || Expr.relative[ "" ],
 		i = leadingRelative ? 1 : 0,
 
 		// The foundational matcher ensures that elements are reachable from top-level context(s)
@@ -2424,7 +2424,7 @@ function matcherFromTokens( tokens ) {
 
 						// If the preceding token was a descendant combinator, insert an implicit any-element `*`
 						tokens.slice( 0, i - 1 )
-							.concat( { value: tokens[ i - 2 ].type === " " ? "*" : "" } )
+							.concat( { value: tokens[ i - 2 ].type === "" ? "*" : "" } )
 					).replace( rtrimCSS, "$1" ),
 					matcher,
 					i < j && matcherFromTokens( tokens.slice( i, j ) ),
@@ -2569,7 +2569,7 @@ function compile( selector, match /* Internal Use Only */ ) {
 	var i,
 		setMatchers = [],
 		elementMatchers = [],
-		cached = compilerCache[ selector + " " ];
+		cached = compilerCache[ selector + "" ];
 
 	if ( !cached ) {
 
@@ -5193,7 +5193,7 @@ jQuery.event = {
 						handleObj = handlers[ i ];
 
 						// Don't conflict with Object.prototype properties (trac-13203)
-						sel = handleObj.selector + " ";
+						sel = handleObj.selector + "";
 
 						if ( matchedSelectors[ sel ] === undefined ) {
 							matchedSelectors[ sel ] = handleObj.needsContext ?
@@ -6990,7 +6990,7 @@ jQuery.each( {
 				expanded = {},
 
 				// Assumes a single number if not a string
-				parts = typeof value === "string" ? value.split( " " ) : [ value ];
+				parts = typeof value === "string" ? value.split( "" ) : [ value ];
 
 			for ( ; i < 4; i++ ) {
 				expanded[ prefix + cssExpand[ i ] + suffix ] =
@@ -8135,7 +8135,7 @@ jQuery.each( [
 	// https://infra.spec.whatwg.org/#strip-and-collapse-ascii-whitespace
 	function stripAndCollapse( value ) {
 		var tokens = value.match( rnothtmlwhite ) || [];
-		return tokens.join( " " );
+		return tokens.join( "" );
 	}
 
 
@@ -8168,13 +8168,13 @@ jQuery.fn.extend( {
 		if ( classNames.length ) {
 			return this.each( function() {
 				curValue = getClass( this );
-				cur = this.nodeType === 1 && ( " " + stripAndCollapse( curValue ) + " " );
+				cur = this.nodeType === 1 && ( "" + stripAndCollapse( curValue ) + "" );
 
 				if ( cur ) {
 					for ( i = 0; i < classNames.length; i++ ) {
 						className = classNames[ i ];
-						if ( cur.indexOf( " " + className + " " ) < 0 ) {
-							cur += className + " ";
+						if ( cur.indexOf( "" + className + "" ) < 0 ) {
+							cur += className + "";
 						}
 					}
 
@@ -8210,15 +8210,15 @@ jQuery.fn.extend( {
 				curValue = getClass( this );
 
 				// This expression is here for better compressibility (see addClass)
-				cur = this.nodeType === 1 && ( " " + stripAndCollapse( curValue ) + " " );
+				cur = this.nodeType === 1 && ( "" + stripAndCollapse( curValue ) + "" );
 
 				if ( cur ) {
 					for ( i = 0; i < classNames.length; i++ ) {
 						className = classNames[ i ];
 
 						// Remove *all* instances
-						while ( cur.indexOf( " " + className + " " ) > -1 ) {
-							cur = cur.replace( " " + className + " ", " " );
+						while ( cur.indexOf( "" + className + "" ) > -1 ) {
+							cur = cur.replace( "" + className + "", "" );
 						}
 					}
 
@@ -8299,10 +8299,10 @@ jQuery.fn.extend( {
 		var className, elem,
 			i = 0;
 
-		className = " " + selector + " ";
+		className = "" + selector + "";
 		while ( ( elem = this[ i++ ] ) ) {
 			if ( elem.nodeType === 1 &&
-				( " " + stripAndCollapse( getClass( elem ) ) + " " ).indexOf( className ) > -1 ) {
+				( "" + stripAndCollapse( getClass( elem ) ) + "" ).indexOf( className ) > -1 ) {
 				return true;
 			}
 		}
@@ -8989,7 +8989,7 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 
 		// Try convertible dataTypes
 		for ( type in responses ) {
-			if ( !dataTypes[ 0 ] || s.converters[ type + " " + dataTypes[ 0 ] ] ) {
+			if ( !dataTypes[ 0 ] || s.converters[ type + "" + dataTypes[ 0 ] ] ) {
 				finalDataType = type;
 				break;
 			}
@@ -9058,18 +9058,18 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 			} else if ( prev !== "*" && prev !== current ) {
 
 				// Seek a direct converter
-				conv = converters[ prev + " " + current ] || converters[ "* " + current ];
+				conv = converters[ prev + "" + current ] || converters[ "* " + current ];
 
 				// If none found, seek a pair
 				if ( !conv ) {
 					for ( conv2 in converters ) {
 
 						// If conv2 outputs current
-						tmp = conv2.split( " " );
+						tmp = conv2.split( "" );
 						if ( tmp[ 1 ] === current ) {
 
 							// If prev can be converted to accepted input
-							conv = converters[ prev + " " + tmp[ 0 ] ] ||
+							conv = converters[ prev + "" + tmp[ 0 ] ] ||
 								converters[ "* " + tmp[ 0 ] ];
 							if ( conv ) {
 
@@ -9281,12 +9281,12 @@ jQuery.extend( {
 						if ( !responseHeaders ) {
 							responseHeaders = {};
 							while ( ( match = rheaders.exec( responseHeadersString ) ) ) {
-								responseHeaders[ match[ 1 ].toLowerCase() + " " ] =
-									( responseHeaders[ match[ 1 ].toLowerCase() + " " ] || [] )
+								responseHeaders[ match[ 1 ].toLowerCase() + "" ] =
+									( responseHeaders[ match[ 1 ].toLowerCase() + "" ] || [] )
 										.concat( match[ 2 ] );
 							}
 						}
-						match = responseHeaders[ key.toLowerCase() + " " ];
+						match = responseHeaders[ key.toLowerCase() + "" ];
 					}
 					return match == null ? null : match.join( ", " );
 				},
@@ -10191,7 +10191,7 @@ jQuery.parseHTML = function( data, context, keepScripts ) {
 jQuery.fn.load = function( url, params, callback ) {
 	var selector, type, response,
 		self = this,
-		off = url.indexOf( " " );
+		off = url.indexOf( "" );
 
 	if ( off > -1 ) {
 		selector = stripAndCollapse( url.slice( off ) );
@@ -10569,7 +10569,7 @@ jQuery.fn.extend( {
 jQuery.each(
 	( "blur focus focusin focusout resize scroll click dblclick " +
 	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
-	"change select submit keydown keypress keyup contextmenu" ).split( " " ),
+	"change select submit keydown keypress keyup contextmenu" ).split( "" ),
 	function( _i, name ) {
 
 		// Handle event binding

@@ -1,0 +1,100 @@
+.first {
+  @apply relative overflow-hidden ~pt-[112px]/[124px];
+
+  &_parallax {
+    @apply h-[742px];
+
+    /* aspect-parallax_first; */
+  }
+
+  &__wave {
+    @apply absolute left-0 top-0 z-0 hidden w-full;
+
+    @screen sm {
+    }
+
+    @screen md {
+    }
+
+    @screen lg {
+    }
+
+    &_320 {
+      @apply block sm:hidden;
+    }
+
+    &_480 {
+      @apply hidden sm:block md:hidden;
+    }
+
+    &_768 {
+      @apply hidden md:block lg:hidden;
+    }
+
+    &_1000 {
+      @apply 2xl:hidden hidden lg:block;
+    }
+
+    &_big {
+      @apply 2xl:block hidden;
+    }
+  }
+
+  &__image {
+    @apply absolute left-0 right-0 top-0 z-0 overflow-hidden;
+
+    &_320 {
+      @apply h-[722px] sm:h-auto;
+    }
+
+    &_480 {
+      @apply sm:h-[787px] md:h-auto;
+    }
+
+    &_768 {
+      @apply md:h-[928px] lg:h-auto;
+    }
+
+    &_1000 {
+      @apply lg:h-[944px] xl:h-auto;
+    }
+
+    &_big {
+      @apply xl:h-[1030px];
+    }
+  }
+
+  &__img {
+    @apply aspect-parallax_first_320 sm:aspect-parallax_first_480 md:aspect-parallax_first_768 xl:aspect-parallax_first_big;
+
+    /* absolute left-0 top-0 h-full w-full object-contain object-left-bottom; */
+  }
+
+  &__container {
+    @apply relative z-0;
+  }
+
+  &__title {
+    @apply mt-0 text-white ~mb-[25px]/[33px];
+  }
+
+  &__entry {
+    @apply flex flex-col-reverse flex-wrap items-center ~gap-[20px]/[40px] md:flex-row md:flex-nowrap;
+  }
+
+  &__buttons {
+    @apply flex w-full flex-col gap-4 sm:flex-row md:w-auto md:flex-col;
+  }
+
+  &__btn {
+    @apply w-full;
+  }
+
+  &__list {
+    @apply w-full list-inside list-disc text-gray ~text-[14px]/[17px] md:w-auto;
+  }
+
+  &__item {
+    @apply ~mb-[6px]/[10px] last-of-type:mb-0;
+  }
+}

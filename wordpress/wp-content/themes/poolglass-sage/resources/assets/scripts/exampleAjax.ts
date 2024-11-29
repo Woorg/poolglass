@@ -10,7 +10,8 @@ export default class ExampleAjax {
     let url = document.querySelector('meta[name=base]').getAttribute('content');
 
     // // Get admin-ajax.php URL
-    const ajaxURL: string = this.ensureTrailingSlash('/') + 'wp-admin/admin-ajax.php';
+    const ajaxURL: string =
+      this.ensureTrailingSlash('/') + 'wp-admin/admin-ajax.php';
     // create the params
     const params = new URLSearchParams({
       action: 'example_ajax_func',

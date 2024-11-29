@@ -1,4 +1,4 @@
-{{-- @php(the_content()) --}}
+@php(the_content())
 
 {!! wp_link_pages([
     'echo' => 0,

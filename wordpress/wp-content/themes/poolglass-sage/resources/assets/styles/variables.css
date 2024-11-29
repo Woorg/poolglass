@@ -16,7 +16,7 @@
 }
 
 /* переменная используемая в html для подключения скейлинга */
-$fz-default: 16px;
+$fz-default: 17px;
 
 /* у некоторых шрифтов в ios возникают проблемы с символом рубля */
 /* https://www.artlebedev.ru/kovodstvo/sections/159/#13 */

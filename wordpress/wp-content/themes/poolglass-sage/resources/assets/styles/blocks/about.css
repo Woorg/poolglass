@@ -1,0 +1,88 @@
+.about {
+  @apply relative;
+  &__container {
+    @apply pb-10 pt-[125px];
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      'card-1 card-2 entry entry'
+      'card-3 card-4 entry entry'
+      'card-5 card-6 card-7 card-8';
+    @screen xl {
+      display: grid;
+    }
+  }
+
+  &__entry {
+    @apply pb-7 pl-5;
+    grid-area: entry;
+  }
+
+  &__block-title {
+    @apply uppercase ~text-[14px]/[17px] ~mb-[5px]/[10px];
+  }
+
+  &__title {
+    @apply ~mb-[20px]/[30px];
+  }
+
+  &__text {
+    @apply flex flex-wrap text-text;
+  }
+
+  /* &__grid {
+
+  } */
+
+  &__card {
+    @apply rounded-[10px] bg-box ~p-[10px]/[28px];
+    &_1 {
+      grid-area: card-1;
+      /* @apply h-[282px]; */
+    }
+    &_2 {
+      grid-area: card-2;
+      /* @apply h-[282px]; */
+    }
+    &_3 {
+      grid-area: card-3;
+      /* @apply h-[282px]; */
+    }
+    &_4 {
+      grid-area: card-4;
+      /* @apply h-[282px]; */
+    }
+    &_5 {
+      grid-area: card-5;
+      /* @apply h-[282px]; */
+    }
+    &_6 {
+      grid-area: card-6;
+      /* @apply h-[282px]; */
+    }
+    &_7 {
+      grid-area: card-7;
+      /* @apply h-[282px]; */
+    }
+    &_8 {
+      grid-area: card-8;
+      /* @apply h-[282px]; */
+    }
+  }
+
+  &__card-link {
+  }
+
+  &__card-title {
+    @apply font-medium leading-normal ~text-[14px]/[17px];
+  }
+
+  &__card-figure {
+    @apply aspect-about_figure mb-[15px] grid items-center justify-center;
+  }
+
+  &__card-img {
+    @apply h-auto w-auto;
+  }
+}

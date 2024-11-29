@@ -1,0 +1,32 @@
+.contacts {
+  @apply hidden;
+  &__container {
+  }
+
+  &__block-title {
+  }
+
+  &__title {
+  }
+
+  &__entries {
+  }
+
+  &__item {
+  }
+
+  &__item-title {
+  }
+
+  &__list {
+  }
+
+  &__list-item {
+  }
+
+  &__list-value {
+  }
+
+  &__socials {
+  }
+}

@@ -1,4 +1,5 @@
 .footer {
+  @apply hidden;
   &__container {
     @apply flex items-center justify-between py-5;
 

@@ -436,7 +436,7 @@ tinymce.PluginManager.add( 'wpeditimage', function( editor ) {
 
 			id = imageData.attachment_id ? 'attachment_' + imageData.attachment_id : null;
 			align = 'align' + ( imageData.align || 'none' );
-			className = 'wp-caption ' + align;
+			className = 'wp-caption' + align;
 
 			if ( imageData.captionClassName ) {
 				className += ' ' + imageData.captionClassName.replace( /[<>&]+/g,  '' );

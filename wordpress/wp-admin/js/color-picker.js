@@ -157,7 +157,7 @@
 
 			// Wrap the wrapping label in its wrapper and append the Clear/Default button.
 			self.wrappingLabel
-				.wrap( '<span class="wp-picker-input-wrap hidden" />' )
+				.wrap( '<span class="hidden wp-picker-input-wrap" />' )
 				.after( self.button );
 
 			/*

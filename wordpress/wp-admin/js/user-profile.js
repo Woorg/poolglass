@@ -499,10 +499,10 @@
 		}).done( function( response ) {
 			$this.prop( 'disabled', true );
 			$this.siblings( '.notice' ).remove();
-			$this.before( '<div class="notice notice-success inline" role="alert"><p>' + response.message + '</p></div>' );
+			$this.before( '<div class="inline notice notice-success" role="alert"><p>' + response.message + '</p></div>' );
 		}).fail( function( response ) {
 			$this.siblings( '.notice' ).remove();
-			$this.before( '<div class="notice notice-error inline" role="alert"><p>' + response.message + '</p></div>' );
+			$this.before( '<div class="inline notice notice-error" role="alert"><p>' + response.message + '</p></div>' );
 		});
 
 		e.preventDefault();

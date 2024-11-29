@@ -6,12 +6,28 @@
   &__item {
     &.current-menu-item {
       .nav__link {
+        &:after {
+          @apply origin-bottom-left scale-x-100;
+        }
       }
     }
   }
 
   &__link {
-    @apply relative flex cursor-pointer whitespace-nowrap font-medium text-gray ~text-[15px]/[17px];
+    @apply relative inline-flex cursor-pointer whitespace-nowrap pb-1 font-medium text-gray ~text-[15px]/[17px];
+
+    &:after {
+      @apply absolute bottom-0 left-0 h-[1px] w-full origin-bottom-right scale-x-0 bg-white transition-transform ease-out content-[''];
+      transition-duration: 0.25s;
+    }
+
+    &:hover {
+      &:after {
+        @apply origin-bottom-left scale-x-100;
+
+        /* transform: scaleX(1); */
+      }
+    }
 
     @screen sm {
     }

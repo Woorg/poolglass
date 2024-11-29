@@ -1,6 +1,6 @@
 .contact-list {
   &__item {
-    @apply mb-2;
+    @apply mb-2 lg:mb-0 xl:mb-2;
   }
 
   &__link {

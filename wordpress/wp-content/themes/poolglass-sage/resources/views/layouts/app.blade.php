@@ -12,10 +12,8 @@
   @php(wp_head())
 </head>
 
-<body @php(body_class('font-raleway font-regular page flex flex-col min-h-screen'))>
+<body @php(body_class('font-raleway font-regular page flex flex-col min-h-screen '))>
   @php(wp_body_open())
-
-  {{-- <div id="app"> --}}
 
   <a class="sr-only focus:not-sr-only" href="#main">
     {{ __('Skip to content') }}
@@ -23,7 +21,7 @@
 
   @include('sections.header')
 
-  <main id="main" class="main grow">
+  <main class="main grow">
 
     @yield('content')
   </main>
@@ -35,7 +33,6 @@
     @endif --}}
 
   @include('sections.footer')
-  {{-- </div> --}}
 
   @php(do_action('get_footer'))
   @php(wp_footer())

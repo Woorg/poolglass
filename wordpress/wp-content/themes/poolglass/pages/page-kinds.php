@@ -15,7 +15,6 @@ get_header('page')
     <div class="page-kinds__wrapper">
 
 			<?php
-
 			// параметры по умолчанию
 			$my_posts = get_posts(array(
 				'numberposts' => -1,
