@@ -2,10 +2,6 @@
   style="<?php echo e($block->inlineStyle); ?>">
 
   
-  
-  
-  <?php echo e(get_svg('latest-works-bg', 'latest-projects__bg', [])); ?>
-
 
   <div class="latest-projects__container container">
     <h2 class="latest-projects__title title title_h1"><?php echo e($title); ?></h2>
@@ -32,8 +28,6 @@
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
         <?php if($more): ?>
-          
-          
           <div class="latest-projects__item latest-projects__item_more">
             <figure class='latest-projects__item-figure'>
               <?php echo wp_get_attachment_image($more['image']['ID'], 'full', null, [
@@ -42,9 +36,10 @@
 
             </figure>
             <a href="<?php echo e($more['link']); ?>"
-              class="latest-projects__more-text">Смотреть
-              все
-              проекты</a>
+              class="latest-projects__more-text title "><span>
+                Смотреть
+                все
+                проекты</span></a>
           </div>
         <?php endif; ?>
       </div>

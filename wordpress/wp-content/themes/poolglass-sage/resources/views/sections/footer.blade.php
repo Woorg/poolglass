@@ -1,8 +1,8 @@
 <footer class="footer">
   <div class="footer__container container">
-    {{-- <a href="{{ home_url('/') }}" class="footer__logo logo">
+    <a href="{{ home_url('/') }}" class="footer__logo logo">
       {!! $logo !!}
-    </a> --}}
+    </a>
 
     {{-- @php(dynamic_sidebar('sidebar-footer')) --}}
 
@@ -11,7 +11,7 @@
         aria-label="{{ wp_get_nav_menu_name('secondary_navigation') }}">
         {!! wp_nav_menu([
             'theme_location' => 'secondary_navigation',
-            'menu_class' => 'nav__list',
+            'menu_class' => 'footer__nav-list nav__list',
             'container' => false,
             'active' => '',
         ]) !!}

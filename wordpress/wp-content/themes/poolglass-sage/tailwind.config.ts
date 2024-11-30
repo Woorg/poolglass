@@ -109,6 +109,11 @@ export default {
         wave_down_768: '768/193',
         wave_down_1000: '1000/232',
         wave_down_big: '1920/288',
+        footer_wave_320: '320/177',
+        footer_wave_480: '480/301',
+        footer_wave_768: '768/408',
+        footer_wave_1000: '1000/465',
+        footer_wave_big: '1920/467',
       },
 
       keyframes: {

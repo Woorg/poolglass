@@ -1,13 +1,33 @@
 .footer {
-  @apply hidden;
+  @apply aspect-footer_wave_320 sm:aspect-footer_wave_480 md:aspect-footer_wave_768 lg:aspect-footer_wave_1000 xl:aspect-footer_wave_big relative z-0 flex h-auto w-full;
+  background: url('../../images/icons/footer-waves.svg');
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @screen sm {
+  }
+
+  @screen md {
+  }
+
+  @screen lg {
+  }
+
+  @screen xl {
+  }
+
+  /* &:before {
+    @apply absolute left-0;
+  } */
   &__container {
-    @apply flex items-center justify-between py-5;
+    @apply mt-auto flex items-center justify-between py-2 ~gap-[20px]/[40px] sm:py-8;
 
     @screen md {
-      @apply py-9;
+      @apply py-5;
     }
 
-    @screen lg {
+    @screen 2xl {
       @apply py-10;
     }
   }
@@ -16,8 +36,18 @@
   }
 
   &__nav {
+    @apply hidden xl:flex xl:w-full;
+  }
+
+  &__nav-list {
+    @apply w-full justify-center;
+
+    .nav__link {
+      @apply text-gray;
+    }
   }
 
   &__copyright {
+    @apply ml-auto whitespace-nowrap text-gray ~text-[10px]/[14px];
   }
 }

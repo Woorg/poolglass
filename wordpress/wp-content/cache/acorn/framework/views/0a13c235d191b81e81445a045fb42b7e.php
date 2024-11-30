@@ -15,10 +15,7 @@
 <body <?php (body_class('font-raleway font-regular page flex flex-col min-h-screen ')); ?>>
   <?php (wp_body_open()); ?>
 
-  <a class="sr-only focus:not-sr-only" href="#main">
-    <?php echo e(__('Skip to content')); ?>
-
-  </a>
+  
 
   <?php echo $__env->make('sections.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 

@@ -97,7 +97,7 @@
   }
 
   &__container {
-    @apply 2xl:pb-[330px] 2xl:pt-[261px] relative z-10 pb-[51px] pt-[43px] sm:pb-16 sm:pt-16 md:pb-24 md:pt-24 lg:pb-[225px];
+    @apply 2xl:pb-[350px] 2xl:pt-[261px] relative z-10 pb-[101px] pt-[43px] sm:pb-16 sm:pt-16 md:pb-24 md:pt-24 lg:pb-[225px] xl:pb-[300px] xl:pt-[201px];
   }
 
   /* &__bg {
@@ -161,7 +161,7 @@
   }
 
   &__item-img {
-    @apply h-full w-full rounded-[7px] object-cover;
+    @apply block h-full w-full rounded-[7px] object-cover;
   }
 
   &__more {

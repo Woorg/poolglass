@@ -1,6 +1,9 @@
 <footer class="footer">
   <div class="footer__container container">
-    
+    <a href="<?php echo e(home_url('/')); ?>" class="footer__logo logo">
+      <?php echo $logo; ?>
+
+    </a>
 
     
 
@@ -9,7 +12,7 @@
         aria-label="<?php echo e(wp_get_nav_menu_name('secondary_navigation')); ?>">
         <?php echo wp_nav_menu([
             'theme_location' => 'secondary_navigation',
-            'menu_class' => 'nav__list',
+            'menu_class' => 'footer__nav-list nav__list',
             'container' => false,
             'active' => '',
         ]); ?>

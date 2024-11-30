@@ -1,7 +1,7 @@
 .about {
   @apply relative;
   &__container {
-    @apply pb-10 pt-10 xl:pt-[125px];
+    @apply pb-32 pt-10 sm:pb-36 md:pb-48 xl:pt-[125px];
     gap: 10px 10px;
     @screen sm {
       display: grid;
@@ -100,6 +100,6 @@
   }
 
   &__card-img {
-    @apply h-auto xl:max-h-[100px] w-auto;
+    @apply h-auto w-auto xl:max-h-[100px];
   }
 }

@@ -23,7 +23,7 @@
     }
 
     &_1000 {
-      @apply hidden lg:block 2xl:hidden;
+      @apply 2xl:hidden hidden lg:block;
     }
 
     &_big {
@@ -69,7 +69,7 @@
   }
 
   &__img {
-    @apply mt-auto flex w-full;
+    @apply mx-auto mt-auto flex w-full;
     /* h-auto w-full object-contain object-center; */
 
     /* absolute left-0 top-0 h-full w-full object-contain object-left-bottom; */

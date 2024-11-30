@@ -25,7 +25,7 @@
   }
 
   &__list {
-    @apply grid gap-[5px];
+    @apply grid gap-[5px] ~ml-[15px]/[35px];
   }
 
   &__list-item {
