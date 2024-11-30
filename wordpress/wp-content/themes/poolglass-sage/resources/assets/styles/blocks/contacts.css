@@ -1,32 +1,44 @@
 .contacts {
-  @apply hidden;
+  /* @apply ; */
   &__container {
+    @apply pb-10 pt-10;
   }
 
   &__block-title {
+    @apply mb-2.5 font-medium uppercase text-block_title ~text-[14px]/[17px];
   }
 
   &__title {
+    @apply ~mb-[25px]/[46px];
   }
 
   &__entries {
+    @apply grid ~gap-[10px]/[20px] xl:grid-cols-3;
   }
 
   &__item {
+    @apply grid items-center rounded-[10px] bg-box p-5 pb-8;
   }
 
   &__item-title {
+    @apply mb-3 text-block_title ~text-[15px]/[17px];
   }
 
   &__list {
+    @apply grid gap-[5px];
   }
 
   &__list-item {
+    @apply font-medium ~text-[14px]/[20px];
   }
 
   &__list-value {
+    /* @apply; */
   }
 
   &__socials {
+    .socials__link {
+      @apply text-blue;
+    }
   }
 }

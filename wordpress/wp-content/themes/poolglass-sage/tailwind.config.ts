@@ -33,7 +33,7 @@ export default {
   theme: {
     // screens,
     screens: {
-      // xs: '320px',
+      // xs: '346px',
       sm: '480px',
       md: '768px',
       lg: '999px',
@@ -83,6 +83,8 @@ export default {
         dirty_gray: '#899CC1',
         gray: '#dee0f1',
         fixed_bg: 'rgba(22,27,35,.7)',
+        thumbnail_bg: 'rgba(33,123,187,.2)',
+        latest_item_bg: '#0B3875',
         // light: {},
       },
 
@@ -97,6 +99,16 @@ export default {
         parallax_first_768: '1427/736',
         parallax_first_big: '1920/1096',
         about_figure: '222/153',
+        wave_up_320: '320/74',
+        wave_up_480: '480/101',
+        wave_up_768: '768/143',
+        wave_up_1000: '1000/210',
+        wave_up_big: '1920/296',
+        wave_down_320: '320/77',
+        wave_down_480: '480/128',
+        wave_down_768: '768/193',
+        wave_down_1000: '1000/232',
+        wave_down_big: '1920/288',
       },
 
       keyframes: {

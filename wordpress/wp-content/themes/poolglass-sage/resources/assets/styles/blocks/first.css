@@ -2,22 +2,13 @@
   @apply relative overflow-hidden ~pt-[112px]/[124px];
 
   &_parallax {
-    @apply h-[742px];
+    @apply h-[570px] sm:h-[570px] md:h-[750px] lg:h-[890px] xl:h-[990px];
 
     /* aspect-parallax_first; */
   }
 
   &__wave {
     @apply absolute left-0 top-0 z-0 hidden w-full;
-
-    @screen sm {
-    }
-
-    @screen md {
-    }
-
-    @screen lg {
-    }
 
     &_320 {
       @apply block sm:hidden;
@@ -32,7 +23,7 @@
     }
 
     &_1000 {
-      @apply 2xl:hidden hidden lg:block;
+      @apply hidden lg:block 2xl:hidden;
     }
 
     &_big {
@@ -41,18 +32,27 @@
   }
 
   &__image {
-    @apply absolute left-0 right-0 top-0 z-0 overflow-hidden;
+    @apply absolute bottom-0 left-0 right-0 z-0 flex overflow-hidden;
 
     &_320 {
       @apply h-[722px] sm:h-auto;
+      img {
+        @apply w-[795px];
+      }
     }
 
     &_480 {
       @apply sm:h-[787px] md:h-auto;
+      img {
+        @apply w-[1136px];
+      }
     }
 
     &_768 {
       @apply md:h-[928px] lg:h-auto;
+      img {
+        @apply w-[1422px];
+      }
     }
 
     &_1000 {
@@ -61,11 +61,16 @@
 
     &_big {
       @apply xl:h-[1030px];
+
+      img {
+        @apply w-[1920px];
+      }
     }
   }
 
   &__img {
-    @apply aspect-parallax_first_320 sm:aspect-parallax_first_480 md:aspect-parallax_first_768 xl:aspect-parallax_first_big;
+    @apply mt-auto flex w-full;
+    /* h-auto w-full object-contain object-center; */
 
     /* absolute left-0 top-0 h-full w-full object-contain object-left-bottom; */
   }

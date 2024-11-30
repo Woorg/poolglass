@@ -1,21 +1,38 @@
 .about {
   @apply relative;
   &__container {
-    @apply pb-10 pt-[125px];
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    @apply pb-10 pt-10 xl:pt-[125px];
     gap: 10px 10px;
-    grid-template-areas:
-      'card-1 card-2 entry entry'
-      'card-3 card-4 entry entry'
-      'card-5 card-6 card-7 card-8';
+    @screen sm {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      gap: 10px 10px;
+      grid-template-areas:
+        'entry entry'
+        'card-1 card-2'
+        'card-3 card-4'
+        'card-5 card-6'
+        'card-7 card-8';
+    }
+
     @screen xl {
       display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: minmax(204px, 282px) minmax(204px, 282px) minmax(
+          204px,
+          282px
+        );
+      gap: 10px 10px;
+      grid-template-areas:
+        'card-1 card-2 entry entry'
+        'card-3 card-4 entry entry'
+        'card-5 card-6 card-7 card-8';
     }
   }
 
   &__entry {
-    @apply pb-7 pl-5;
+    @apply pb-7 lg:pl-5;
     grid-area: entry;
   }
 
@@ -79,10 +96,10 @@
   }
 
   &__card-figure {
-    @apply aspect-about_figure mb-[15px] grid items-center justify-center;
+    @apply aspect-about_figure bg-thumbnail_bg mb-[15px] grid items-center justify-center;
   }
 
   &__card-img {
-    @apply h-auto w-auto;
+    @apply h-auto xl:max-h-[100px] w-auto;
   }
 }

@@ -3,7 +3,8 @@
   <div class="contacts__container container">
     <div class="contacts__block-title">Контакты</div>
 
-    <h2 class="contacts__title">Свяжитесь с нами любым удобным способом</h2>
+    <h2 class="contacts__title title title_h1">Свяжитесь с нами любым удобным
+      способом</h2>
     <div class="contacts__entries">
       <article class="contacts__item">
         <div class="contacts__item-title">Телефон / Почта</div>

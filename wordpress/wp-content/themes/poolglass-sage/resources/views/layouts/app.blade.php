@@ -15,9 +15,9 @@
 <body @php(body_class('font-raleway font-regular page flex flex-col min-h-screen '))>
   @php(wp_body_open())
 
-  <a class="sr-only focus:not-sr-only" href="#main">
+  {{-- <a class="sr-only focus:not-sr-only" href="#main">
     {{ __('Skip to content') }}
-  </a>
+  </a> --}}
 
   @include('sections.header')
 

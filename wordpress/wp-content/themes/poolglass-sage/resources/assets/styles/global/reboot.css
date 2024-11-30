@@ -16,8 +16,8 @@ body {
 }
 
 html {
-  /* @apply bg-red-600; */
-  font-size: $fz-default;
+  @apply ~text-[14px]/[17px];
+  /* font-size: $fz-default; */
   /* font-family: $ff-suise-intl; */
   font-style: normal;
   -webkit-font-smoothing: antialiased;

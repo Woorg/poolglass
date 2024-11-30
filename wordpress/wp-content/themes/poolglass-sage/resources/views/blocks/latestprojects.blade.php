@@ -1,10 +1,7 @@
 <section class="latest-projects {{ $block->classes }}"
   style="{{ $block->inlineStyle }}">
 
-  {{-- {{ get_svg('wave-up', 'latest-projects__wave-up', []) }} --}}
-  {{-- {{ get_svg('wave-down', 'latest-projects__wave-down', []) }} --}}
-  {{-- {{ get_svg('blue-bg', 'latest-projects__bg', []) }} --}}
-  {{ get_svg('latest-works-bg', 'latest-projects__bg', []) }}
+  {{-- {{ get_svg('wave-up-320', 'latest-projects__up latest-projects__up_320', []) }} --}}
 
   <div class="latest-projects__container container">
     <h2 class="latest-projects__title title title_h1">{{ $title }}</h2>
@@ -29,8 +26,6 @@
         @endforeach
 
         @if ($more)
-          {{-- @dump($more) --}}
-          {{-- @dump($more_link, $more_image) --}}
           <div class="latest-projects__item latest-projects__item_more">
             <figure class='latest-projects__item-figure'>
               {!! wp_get_attachment_image($more['image']['ID'], 'full', null, [
@@ -38,9 +33,10 @@
               ]) !!}
             </figure>
             <a href="{{ $more['link'] }}"
-              class="latest-projects__more-text">Смотреть
-              все
-              проекты</a>
+              class="latest-projects__more-text title "><span>
+                Смотреть
+                все
+                проекты</span></a>
           </div>
         @endif
       </div>
