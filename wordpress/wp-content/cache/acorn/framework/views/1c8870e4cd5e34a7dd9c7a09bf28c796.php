@@ -1,8 +1,9 @@
 <section
-  class="first <?php echo e($parallax ? 'first_parallax' : ''); ?>  <?php echo e($block->classes); ?>">
+  class="first <?php echo e($parallax ? 'first_parallax' : ''); ?>  <?php echo e($block->classes); ?> <?php echo e(is_front_page() ? 'first_front' : 'first_inner'); ?>">
   <?php if($parallax): ?>
     <div
       class="first__image first__image_320 first__image_480 first__image_768 first__image_1000 first__image_big">
+
       <?php echo wp_get_attachment_image($parallax_image, 'full', null, [
           'class' => 'first__img',
       ]); ?>
@@ -10,16 +11,30 @@
     </div>
   <?php endif; ?>
 
-  <?php echo e(get_svg('wave-320', 'first__wave first__wave_320', [])); ?>
+  <?php if(is_front_page()): ?>
+    <?php echo e(get_svg('wave-320', 'first__wave first__wave_320', [])); ?>
 
-  <?php echo e(get_svg('wave-480', 'first__wave first__wave_480', [])); ?>
+    <?php echo e(get_svg('wave-480', 'first__wave first__wave_480', [])); ?>
 
-  <?php echo e(get_svg('wave-768', 'first__wave first__wave_768', [])); ?>
+    <?php echo e(get_svg('wave-768', 'first__wave first__wave_768', [])); ?>
 
-  <?php echo e(get_svg('wave-1000', 'first__wave first__wave_1000', [])); ?>
+    <?php echo e(get_svg('wave-1000', 'first__wave first__wave_1000', [])); ?>
 
-  <?php echo e(get_svg('wave-1920', 'first__wave first__wave_big', [])); ?>
+    
+    <?php echo e(get_svg('wave-1920', 'first__wave first__wave_big', [])); ?>
 
+  <?php else: ?>
+    <?php echo e(get_svg('first-inner-320', 'first__inner-wave first__inner-wave_320', [])); ?>
+
+    <?php echo e(get_svg('first-inner-480', 'first__inner-wave first__inner-wave_480', [])); ?>
+
+    <?php echo e(get_svg('first-inner-768', 'first__inner-wave first__inner-wave_768', [])); ?>
+
+    <?php echo e(get_svg('first-inner-1000', 'first__inner-wave first__inner-wave_1000', [])); ?>
+
+    <?php echo e(get_svg('first-inner-big', 'first__inner-wave first__inner-wave_big', [])); ?>
+
+  <?php endif; ?>
 
   <div class="first__container container">
     <h1 class="first__title title title_h1"><?php echo $title; ?></h1>

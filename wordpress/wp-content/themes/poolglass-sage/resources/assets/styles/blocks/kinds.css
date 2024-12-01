@@ -1,0 +1,21 @@
+.kinds {
+  &__container {
+    @apply pt-[300px];
+  }
+  &__grid {
+  }
+  &__item {
+  }
+  &__link {
+  }
+  &__figure {
+  }
+  &__title {
+  }
+  &__entry {
+  }
+  &__text {
+  }
+  &__more {
+  }
+}
