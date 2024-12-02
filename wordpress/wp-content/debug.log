@@ -232,3 +232,10 @@
 [01-Dec-2024 15:46:05 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
 [01-Dec-2024 15:46:12 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
 [01-Dec-2024 15:46:12 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
+[02-Dec-2024 01:01:45 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[02-Dec-2024 01:04:35 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"},"migration_id":"3aeaf78b-2c18-4574-827e-ea6bacd0765a"}
+[02-Dec-2024 01:09:32 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[02-Dec-2024 13:56:57 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[02-Dec-2024 13:56:59 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[02-Dec-2024 13:57:00 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[02-Dec-2024 19:11:12 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 333463552 bytes) in /var/www/poolglass/wordpress/wp-content/cache/acorn/framework/views/7b0ad34a7a23f5b3cb6a91bffe74761e.php on line 18

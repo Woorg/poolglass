@@ -2,6 +2,7 @@
 
 namespace App\Blocks;
 
+use Illuminate\Support\Collection;
 use Log1x\AcfComposer\Block;
 use Log1x\AcfComposer\Builder;
 
@@ -148,6 +149,8 @@ class Contacts extends Block
       'block_title' => $this->block_title(),
       'title' => $this->title(),
       'list' => $this->list(),
+      'map' => $this->map(),
+      'show_map' => $this->show_map(),
     ];
   }
 
@@ -190,13 +193,37 @@ class Contacts extends Block
           'width' => 100,
         ],
         'rows' => 2,
+        'new_lines' => 'br',
       ])
 
       ->endRepeater()
 
-      ->endRepeater();
+      ->endRepeater()
+      ->addTextarea('map', [
+        'label' => __('Карта Iframe, Виджет с картой', 'sage'),
+        'wrapper' => [
+          'width' => 80,
+        ],
+      ])
+      ->addTrueFalse('show_map', [
+        'label' => __('Показать карту', 'sage'),
+        'wrapper' => [
+          'width' => 20,
+        ],
+        'default_value' => 0,
+      ]);
 
     return $fields->build();
+  }
+
+  public function map()
+  {
+    return get_field('map');
+  }
+
+  public function show_map()
+  {
+    return get_field('show_map');
   }
 
   public function block_title()

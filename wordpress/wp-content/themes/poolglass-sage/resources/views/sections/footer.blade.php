@@ -3,13 +3,16 @@
 
   <div class="footer__container-w">
 
+    @if (is_front_page() || is_page(438))
+    @else
+      @php(dynamic_sidebar('sidebar-footer'))
+    @endif
+
     <div class="footer__container container">
 
       <a href="{{ home_url('/') }}" class="footer__logo logo">
         {!! $logo !!}
       </a>
-
-      {{-- @php(dynamic_sidebar('sidebar-footer')) --}}
 
       @if (has_nav_menu('secondary_navigation'))
         <nav class="footer__nav nav nav_secondary"
@@ -27,8 +30,8 @@
     </div>
   </div>
 
-  @if (is_front_page() || is_page(438))
-    {{ get_svg('footer-wave', 'footer__wave', []) }}
-  @endif
+  {{-- @if (is_front_page() || is_page(438)) --}}
+  {{ get_svg('footer-wave', 'footer__wave', []) }}
+  {{-- @endif --}}
 
 </footer>

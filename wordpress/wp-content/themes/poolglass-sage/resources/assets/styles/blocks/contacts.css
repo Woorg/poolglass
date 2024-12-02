@@ -2,9 +2,19 @@
   @apply relative;
   &_front {
     @apply bg-white;
+    @apply md:pb-[179px] lg:pb-[300px] xl:pb-[370px];
   }
+
+  &_contact-page {
+    @apply md:pb-[179px] lg:pb-[300px] xl:pb-[370px];
+
+    .contacts__container {
+      @apply pb-32 pt-10 sm:pb-40 md:pb-20 lg:pb-0;
+    }
+  }
+
   &__container {
-    @apply pb-10 pt-10;
+    @apply pb-24 pt-10 sm:pb-44 sm:pt-14 md:pb-20 md:pt-[70px] lg:pb-0 lg:pt-[90px] xl:pt-28;
   }
 
   &__block-title {
@@ -16,11 +26,11 @@
   }
 
   &__entries {
-    @apply grid ~gap-[10px]/[20px] sm:ml-[126px] md:grid-cols-2 lg:ml-0 lg:grid-cols-3;
+    @apply grid justify-center ~gap-[10px]/[20px] sm:ml-[126px] md:grid-cols-2 lg:ml-0 lg:grid-cols-3;
   }
 
   &__item {
-    @apply col-span-1 grid items-center rounded-[10px] bg-box p-5 pb-8;
+    @apply col-span-1 grid min-h-[118px] items-center rounded-[10px] bg-box p-5 pb-8 pr-10 shrink;
     &:last-child {
       @apply sm:col-span-2 md:col-span-1;
     }
@@ -49,6 +59,13 @@
   }
 
   &__map {
-    @apply aspect-map relative mt-5 hidden bg-box sm:flex;
+    @apply relative mt-5 hidden aspect-map w-full bg-box md:flex;
+    div {
+    }
+
+    iframe {
+      @apply absolute left-0 top-0 h-full w-full object-cover;
+      /* @apply h-full w-full; */
+    }
   }
 }

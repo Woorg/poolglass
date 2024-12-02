@@ -8,7 +8,7 @@
   }
 
   &__wave {
-    @apply aspect-footer_wave absolute bottom-full left-0 z-0 w-full content-[''];
+    @apply absolute bottom-full left-0 z-0 aspect-footer_wave w-full content-[''];
     background-color: white;
     object-fit: cover;
     object-position: 50% 0%;
@@ -53,5 +53,17 @@
 
   &__copyright {
     @apply ml-auto whitespace-nowrap text-gray ~text-[10px]/[14px];
+  }
+
+  .widgets {
+    /* @apply text-; */
+
+    .contacts__title {
+      @apply text-white;
+    }
+
+    .contacts__item {
+      @apply bg-white;
+    }
   }
 }

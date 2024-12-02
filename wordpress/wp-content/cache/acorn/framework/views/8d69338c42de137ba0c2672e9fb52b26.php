@@ -3,14 +3,17 @@
 
   <div class="footer__container-w">
 
+    <?php if(is_front_page() || is_page(438)): ?>
+    <?php else: ?>
+      <?php (dynamic_sidebar('sidebar-footer')); ?>
+    <?php endif; ?>
+
     <div class="footer__container container">
 
       <a href="<?php echo e(home_url('/')); ?>" class="footer__logo logo">
         <?php echo $logo; ?>
 
       </a>
-
-      
 
       <?php if(has_nav_menu('secondary_navigation')): ?>
         <nav class="footer__nav nav nav_secondary"
@@ -29,10 +32,10 @@
     </div>
   </div>
 
-  <?php if(is_front_page() || is_page(438)): ?>
-    <?php echo e(get_svg('footer-wave', 'footer__wave', [])); ?>
+  
+  <?php echo e(get_svg('footer-wave', 'footer__wave', [])); ?>
 
-  <?php endif; ?>
+  
 
 </footer>
 <?php /**PATH /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/resources/views/sections/footer.blade.php ENDPATH**/ ?>
