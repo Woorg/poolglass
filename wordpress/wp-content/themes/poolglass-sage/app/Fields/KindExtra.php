@@ -27,7 +27,7 @@ class KindExtra extends Field
         'label' => 'Описание карточки',
         'wrapper' => ['width' => 70],
         'rows' => '6',
-        'new_lines' => 'br',
+        'new_lines' => 'wpautop',
       ]);
 
     return $fields->build();

@@ -43,7 +43,14 @@
     @apply h-0.5 w-[50px] bg-white transition-transform;
   }
   &_fixed {
-    @apply fixed z-20 bg-blue transition-all;
+    @apply fixed z-20 transition-all;
+    background-image: linear-gradient(
+      to right,
+      #2889c4 0%,
+      #1868ad 15%,
+      #0b3370 50%,
+      #142c52 100%
+    );
 
     .header__container {
       @apply py-2;
@@ -56,7 +63,7 @@
 
   &_nav_open {
     &:after {
-      @apply bg-fixed_bg fixed right-0 top-0 h-screen w-screen content-[''];
+      @apply fixed right-0 top-0 h-screen w-screen bg-fixed_bg content-[''];
     }
 
     .header__nav-w {

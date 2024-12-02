@@ -212,3 +212,23 @@
 [28-Nov-2024 22:48:45 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
 [28-Nov-2024 22:49:56 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
 [28-Nov-2024 22:49:56 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:28 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:29 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:30 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:42 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:44 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:50 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:52 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:52 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:54 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:54 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 14:16:56 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
+[01-Dec-2024 15:45:59 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[01-Dec-2024 15:46:05 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[01-Dec-2024 15:46:05 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[01-Dec-2024 15:46:05 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[01-Dec-2024 15:46:05 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[01-Dec-2024 15:46:05 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[01-Dec-2024 15:46:05 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[01-Dec-2024 15:46:12 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
+[01-Dec-2024 15:46:12 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33

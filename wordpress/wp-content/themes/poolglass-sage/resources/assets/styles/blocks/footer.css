@@ -1,35 +1,39 @@
 .footer {
-  @apply aspect-footer_wave_320 sm:aspect-footer_wave_480 md:aspect-footer_wave_768 lg:aspect-footer_wave_1000 xl:aspect-footer_wave_big relative z-0 flex h-auto w-full;
-  background: url('../../images/icons/footer-waves.svg');
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @apply relative;
 
-  @screen sm {
+  &_front {
   }
 
-  @screen md {
+  &_inner {
   }
 
-  @screen lg {
+  &__wave {
+    @apply aspect-footer_wave absolute bottom-full left-0 z-0 w-full content-[''];
+    background-color: white;
+    object-fit: cover;
+    object-position: 50% 0%;
   }
 
-  @screen xl {
+  &__container-w {
+    background-image: linear-gradient(
+      to right,
+      #142c52 0%,
+      #0c336d 50%,
+      #0a3472 55%,
+      #13599f 100%
+    );
   }
 
-  /* &:before {
-    @apply absolute left-0;
-  } */
   &__container {
-    @apply mt-auto flex items-center justify-between py-2 ~gap-[20px]/[40px] sm:py-8;
+    @apply mt-auto flex h-[180px] items-center justify-between pb-10 pt-[73px] ~gap-[20px]/[40px] sm:py-8;
 
-    @screen md {
+    /* @screen md {
       @apply py-5;
     }
 
     @screen 2xl {
       @apply py-10;
-    }
+    } */
   }
 
   &__logo {

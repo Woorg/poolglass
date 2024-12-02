@@ -1,110 +1,83 @@
 .first {
-  @apply relative overflow-hidden ~pt-[112px]/[124px];
-
-  &_inner {
-    @apply overflow-visible;
-  }
+  @apply relative z-0 overflow-hidden;
 
   &_parallax {
-    @apply h-[722px] sm:h-[787px] md:h-[928px] lg:h-[946px] xl:h-[1028px];
+    /* @apply h-[722px] sm:h-[787px] md:h-[928px] lg:h-[946px] xl:h-[1028px]; */
+    @apply h-screen;
 
     /* aspect-parallax_first; */
   }
 
-  &__wave {
-    @apply absolute left-0 top-0 z-0 hidden aspect-first_bg_320 w-full;
+  &__bg {
+    @apply aspect-first_wave_bg absolute left-0 top-full z-0 w-full content-[''] xl:top-[60%];
 
-    &_320 {
-      @apply block sm:hidden;
-    }
-
-    &_480 {
-      @apply hidden aspect-first_bg_480 sm:block md:hidden;
-    }
-
-    &_768 {
-      @apply hidden aspect-first_bg_768 md:block xl:hidden;
-    }
-
-    &_1000 {
-      @apply aspect-first_bg_1220 hidden xl:block 2xl:hidden;
-    }
-
-    /* &_xl {
-      @apply aspect-first_bg_1220 hidden xl:block 2xl:hidden;
-    } */
-
-    &_big {
-      @apply hidden aspect-first_bg_big 2xl:block;
-    }
-  }
-
-  &__inner-wave {
-    @apply absolute left-0 top-0 z-0 hidden aspect-first_inner_320 h-auto w-full;
-
-    &_320 {
-      @apply block sm:hidden;
-    }
-
-    &_480 {
-      @apply hidden aspect-first_inner_480 sm:block md:hidden;
-    }
-
-    &_768 {
-      @apply hidden aspect-first_inner_768 md:block lg:hidden;
-    }
-
-    &_1000 {
-      @apply hidden aspect-first_inner_1000 lg:block 2xl:hidden;
-    }
-
-    &_big {
-      @apply hidden aspect-first_inner_big 2xl:block;
-    }
+    object-fit: cover;
+    object-position: 50% 100%;
   }
 
   &__image {
-    @apply absolute left-0 right-0 top-0 z-0 m-auto flex w-full overflow-hidden;
+    @apply fixed bottom-0 left-0 right-0 top-0 mx-auto flex w-full overflow-hidden;
+    /* z-index: -1; */
+    dislay: none;
 
     &_320 {
-      @apply top-[312px] h-[722px] sm:h-auto;
+      /* @apply h-[722px] sm:h-; */
       img {
-        @apply w-[795px] max-w-[795px];
+        /* @apply w-[795px] max-w-[795px]; */
       }
     }
 
     &_480 {
-      @apply top-[201px] sm:h-[787px] md:h-auto;
+      /* @apply sm:h-[787px] md:h-auto; */
       img {
-        @apply w-[1136px] max-w-[1136px];
+        /* @apply w-[1136px] max-w-[1136px]; */
       }
     }
 
     &_768 {
-      @apply top-[192px] md:h-[928px] lg:h-auto;
+      /* @apply md:h-[928px] lg:h-auto; */
       img {
-        @apply w-[1422px] max-w-[1422px];
+        /* @apply w-[1422px] max-w-[1422px]; */
       }
     }
 
     &_1000 {
-      @apply top-[210px] lg:h-[944px] xl:h-auto;
+      /* @apply lg:h-[944px] xl:h-auto; */
     }
 
     &_big {
-      @apply aspect-parallax_first_big xl:h-[1030px];
+      /* @apply aspect-parallax_first_big xl:h-screen; */
 
       img {
-        @apply w-full max-w-[2560px];
+        /* @apply w-full max-w-[2560px]; */
       }
     }
   }
 
   &__img {
     @apply absolute left-0 top-0 mx-auto flex h-full w-full object-cover;
-    /* h-auto w-full object-contain object-center; */
+    object-position: 70% 100%;
 
-    /* absolute left-0 top-0 h-full w-full object-contain object-left-bottom; */
+    @screen lg {
+      object-position: 50% 50%;
+    }
+  }
+
+  &__inner-bg {
+    @apply aspect-first_inner_wave absolute bottom-0 left-0 z-0 w-full content-[''];
+    /* background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: white;
+    object-fit: cover;
+    object-position: 50% 100%;
+  }
+
+  &__container-w {
+    @apply relative z-10 ~pt-[112px]/[124px];
+  }
+
+  &__container-w-w {
   }
 
   &__container {
@@ -134,5 +107,51 @@
 
   &__item {
     @apply ~mb-[6px]/[10px] last-of-type:mb-0;
+  }
+
+  &_front {
+    .first__container-w {
+      &:after {
+        @apply absolute left-0 top-0 z-0 h-full w-full content-[''] xl:h-[60%];
+
+        background-image: linear-gradient(
+          to right,
+          #2889c4 0%,
+          #1868ad 15%,
+          #0b3370 50%,
+          #142c52 100%
+        );
+      }
+    }
+  }
+
+  &_inner {
+    @apply relative h-[238px] items-center overflow-visible sm:h-[278px] md:h-[387px] lg:h-[384px] xl:h-[429px];
+
+    background-image: linear-gradient(
+      to right,
+      #2889c4 0%,
+      #1868ad 15%,
+      #0b3370 50%,
+      #142c52 100%
+    );
+
+    /* &::after {
+      @apply aspect-first_inner_wave absolute bottom-0 left-0 z-0 w-full content-[''];
+      background-image: url('../../images/icons/first-inner-bg.svg');
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: white;
+      object-fit: cover;
+      object-position: 50% 100%;
+    } */
+
+    @screen sm {
+    }
+
+    .first__container {
+      @apply flex items-center;
+    }
   }
 }

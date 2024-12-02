@@ -1,4 +1,6 @@
-<section class="contacts {{ $block->classes }}" style="{{ $block->inlineStyle }}">
+<section
+  class="contacts {{ $block->classes }} {{ is_front_page() ? 'contacts_front' : 'contacts_inner' }}"
+  style="{{ $block->inlineStyle }}">
 
   <div class="contacts__container container">
     <div class="contacts__block-title">Контакты</div>
@@ -44,6 +46,10 @@
       </article>
 
     </div>
+
+    <div class="contacts__map">
+    </div>
+
 </section>
 
 {{-- <InnerBlocks template="{{ $block->template }}" /> --}}

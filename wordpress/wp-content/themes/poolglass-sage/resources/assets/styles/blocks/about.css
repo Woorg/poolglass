@@ -1,5 +1,5 @@
 .about {
-  @apply relative;
+  @apply relative bg-white;
   &__container {
     @apply pb-32 pt-10 sm:pb-36 md:pb-48 xl:pt-[125px];
     gap: 10px 10px;
@@ -96,7 +96,7 @@
   }
 
   &__card-figure {
-    @apply aspect-about_figure bg-thumbnail_bg mb-[15px] grid items-center justify-center;
+    @apply mb-[15px] grid aspect-about_figure items-center justify-center bg-thumbnail_bg;
   }
 
   &__card-img {

@@ -1,5 +1,8 @@
 .contacts {
-  /* @apply ; */
+  @apply relative;
+  &_front {
+    @apply bg-white;
+  }
   &__container {
     @apply pb-10 pt-10;
   }
@@ -13,11 +16,14 @@
   }
 
   &__entries {
-    @apply grid ~gap-[10px]/[20px] xl:grid-cols-3;
+    @apply grid ~gap-[10px]/[20px] sm:ml-[126px] md:grid-cols-2 lg:ml-0 lg:grid-cols-3;
   }
 
   &__item {
-    @apply grid items-center rounded-[10px] bg-box p-5 pb-8;
+    @apply col-span-1 grid items-center rounded-[10px] bg-box p-5 pb-8;
+    &:last-child {
+      @apply sm:col-span-2 md:col-span-1;
+    }
   }
 
   &__item-title {
@@ -40,5 +46,9 @@
     .socials__link {
       @apply text-blue;
     }
+  }
+
+  &__map {
+    @apply aspect-map relative mt-5 hidden bg-box sm:flex;
   }
 }

@@ -1,4 +1,6 @@
-<section class="contacts <?php echo e($block->classes); ?>" style="<?php echo e($block->inlineStyle); ?>">
+<section
+  class="contacts <?php echo e($block->classes); ?> <?php echo e(is_front_page() ? 'contacts_front' : 'contacts_inner'); ?>"
+  style="<?php echo e($block->inlineStyle); ?>">
 
   <div class="contacts__container container">
     <div class="contacts__block-title">Контакты</div>
@@ -45,6 +47,10 @@
       </article>
 
     </div>
+
+    <div class="contacts__map">
+    </div>
+
 </section>
 
 

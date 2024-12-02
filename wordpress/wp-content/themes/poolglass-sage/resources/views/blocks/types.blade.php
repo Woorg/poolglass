@@ -17,14 +17,19 @@
           <article class="kinds__item">
             <a href="{{ get_permalink($item->ID) }}" class="kinds__link">
               <figure class="kinds__figure">
-                {!! wp_get_attachment_image($kind_image, 'full', null, [
+                {!! wp_get_attachment_image($kind_image, 'thumbnail', null, [
                     'class' => 'kinds__img',
                 ]) !!}
+                <h3 class="kinds__title title title_item">
+                  <span class="kinds__title-text">
+                    {{ $item->post_title }}
+                  </span>
+                </h3>
               </figure>
-              <h3 class="kinds__title">{!! $kind_excerpt !!}</h3>
               </figure>
               <div class="kinds__entry">
-                <div class="kinds__text">
+                <div class="kinds__text text">
+                  {!! $kind_excerpt !!}
                 </div>
 
                 <span class="kinds__more" href="">Читать подробнее</span>
