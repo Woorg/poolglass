@@ -11,13 +11,18 @@
           <article class="products__item">
             {{-- @dump($item) --}}
             <a href="{{ get_permalink($item->ID) }}" class="products__link">
+              <h3 class="products__item-title title title_item">
+                {{ $item->post_title }}</h3>
+
               <div class="products__entry">
-                <h3 class="products__item-title">{{ $item->post_title }}</h3>
-                <span class="products__text">{{ $item->post_excerpt }}</span>
+
+                <p class="products__text">{{ $item->post_excerpt }}</p>
+
+                <figure class="products__figure"> {!! get_the_post_thumbnail($item->ID, 'medium', null, [
+                    'class' => 'products__img',
+                ]) !!}
+                </figure>
               </div>
-              <figure class="products__figure"> {!! get_the_post_thumbnail($item->ID, 'medium', null, [
-                  'class' => 'products__img',
-              ]) !!}</figure>
             </a>
           </article>
         @endforeach

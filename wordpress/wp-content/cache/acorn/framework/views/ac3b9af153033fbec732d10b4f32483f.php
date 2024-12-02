@@ -11,13 +11,19 @@
           <article class="products__item">
             
             <a href="<?php echo e(get_permalink($item->ID)); ?>" class="products__link">
+              <h3 class="products__item-title title title_item">
+                <?php echo e($item->post_title); ?></h3>
+
               <div class="products__entry">
-                <h3 class="products__item-title"><?php echo e($item->post_title); ?></h3>
-                <span class="products__text"><?php echo e($item->post_excerpt); ?></span>
+
+                <p class="products__text"><?php echo e($item->post_excerpt); ?></p>
+
+                <figure class="products__figure"> <?php echo get_the_post_thumbnail($item->ID, 'medium', null, [
+                    'class' => 'products__img',
+                ]); ?>
+
+                </figure>
               </div>
-              <figure class="products__figure"> <?php echo get_the_post_thumbnail($item->ID, 'medium', null, [
-                  'class' => 'products__img',
-              ]); ?></figure>
             </a>
           </article>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
