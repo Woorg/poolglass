@@ -239,3 +239,33 @@
 [02-Dec-2024 13:56:59 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
 [02-Dec-2024 13:57:00 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 325
 [02-Dec-2024 19:11:12 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 333463552 bytes) in /var/www/poolglass/wordpress/wp-content/cache/acorn/framework/views/7b0ad34a7a23f5b3cb6a91bffe74761e.php on line 18
+[03-Dec-2024 02:50:23 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[03-Dec-2024 02:50:29 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:50:29 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:50:29 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:50:29 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:50:29 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:50:29 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:50:35 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
+[03-Dec-2024 02:50:35 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
+[03-Dec-2024 02:50:35 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[03-Dec-2024 02:51:10 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[03-Dec-2024 02:51:26 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:51:26 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:51:26 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:51:26 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:51:26 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:51:26 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:51:42 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
+[03-Dec-2024 02:51:42 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
+[03-Dec-2024 02:51:42 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[03-Dec-2024 02:53:34 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[03-Dec-2024 02:54:11 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:54:11 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:54:11 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:54:11 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:54:11 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:54:11 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 02:54:49 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
+[03-Dec-2024 02:54:49 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
+[03-Dec-2024 02:54:50 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}

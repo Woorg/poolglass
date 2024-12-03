@@ -46,8 +46,9 @@
                         <a class="contacts__list-value"
                           href="<?php echo e($href); ?>"><?php echo $text; ?></a>
                       <?php else: ?>
-                        <span
-                          class="contacts__list-value"><?php echo $text; ?></span>
+                        <p class="contacts__list-value"><?php echo $text; ?>
+
+                        </p>
                       <?php endif; ?>
 
                     </li>

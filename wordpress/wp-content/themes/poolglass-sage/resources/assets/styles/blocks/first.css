@@ -9,7 +9,7 @@
   }
 
   &__bg {
-    @apply aspect-first_wave_bg absolute left-0 top-full z-0 w-full content-[''] xl:top-[60%];
+    @apply absolute left-0 top-full z-0 aspect-first_wave_bg w-full content-[''] xl:top-[60%];
 
     object-fit: cover;
     object-position: 50% 100%;
@@ -64,7 +64,7 @@
   }
 
   &__inner-bg {
-    @apply aspect-first_inner_wave absolute bottom-0 left-0 z-0 w-full content-[''];
+    @apply absolute bottom-0 left-0 z-0 aspect-first_inner_wave w-full content-[''];
     /* background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: cover; */
@@ -130,8 +130,8 @@
 
     background-image: linear-gradient(
       to right,
-      #2889c4 0%,
-      #1868ad 15%,
+      #2b90c8 0%,
+      #1868ad 16%,
       #0b3370 50%,
       #142c52 100%
     );

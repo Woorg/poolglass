@@ -46,8 +46,8 @@
                         <a class="contacts__list-value"
                           href="{{ $href }}">{!! $text !!}</a>
                       @else
-                        <span
-                          class="contacts__list-value">{!! $text !!}</span>
+                        <p class="contacts__list-value">{!! $text !!}
+                        </p>
                       @endif
 
                     </li>

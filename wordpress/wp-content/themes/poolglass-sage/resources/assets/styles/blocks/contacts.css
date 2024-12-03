@@ -30,7 +30,7 @@
   }
 
   &__item {
-    @apply col-span-1 grid min-h-[118px] items-center rounded-[10px] bg-box p-5 pb-8 pr-10 shrink;
+    @apply col-span-1 grid min-h-[118px] items-center rounded-[10px] bg-box p-5 pb-8 shrink;
     &:last-child {
       @apply sm:col-span-2 md:col-span-1;
     }
@@ -41,7 +41,7 @@
   }
 
   &__list {
-    @apply grid gap-[5px] ~ml-[15px]/[35px];
+    @apply grid gap-[5px] ~ml-[15px]/[30px];
   }
 
   &__list-item {
@@ -64,7 +64,7 @@
     }
 
     iframe {
-      @apply absolute left-0 top-0 h-full w-full object-cover;
+      @apply absolute left-0 top-0 h-full w-full object-cover grayscale;
       /* @apply h-full w-full; */
     }
   }

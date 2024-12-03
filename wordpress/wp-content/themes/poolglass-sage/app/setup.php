@@ -39,9 +39,9 @@ add_action(
   function () {
     if (hmr_enabled()) {
       $namespace = strtolower(wp_get_theme()->get('Name'));
-
-      wp_enqueue_script($namespace, hmr_asset('app'), [], null, true);
-
+      if (is_admin()) {
+        wp_enqueue_script($namespace, hmr_asset('editor'), [], null, true);
+      }
       return;
     }
 
@@ -85,6 +85,7 @@ add_action(
     register_nav_menus([
       'primary_navigation' => __('Primary Navigation', 'sage'),
       'secondary_navigation' => __('Secondary Navigation', 'sage'),
+      // 'projects_navigation' => __('Projects Navigation', 'sage'),
     ]);
 
     /**

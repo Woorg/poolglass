@@ -17,7 +17,7 @@
           <article class="kinds__item">
             <a href="{{ get_permalink($item->ID) }}" class="kinds__link">
               <figure class="kinds__figure">
-                {!! wp_get_attachment_image($kind_image, 'thumbnail', null, [
+                {!! wp_get_attachment_image($kind_image, 'medium', null, [
                     'class' => 'kinds__img',
                 ]) !!}
                 <h3 class="kinds__title title title_item">

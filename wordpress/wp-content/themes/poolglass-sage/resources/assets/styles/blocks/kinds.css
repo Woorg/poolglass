@@ -1,7 +1,7 @@
 .kinds {
   @apply bg-white;
   &__container {
-    @apply pb-[122px] pt-[100px] sm:pt-[100px] md:pt-[200px] lg:pt-[200px] 2xl:pt-[200px];
+    @apply pb-[150px] ~pt-[50px]/[80px] sm:pb-[200px] md:pb-[250px] xl:pb-[350px];
   }
   &__grid {
     @apply grid gap-5 md:grid-cols-2;
@@ -12,6 +12,7 @@
   &__link {
     @apply flex h-full flex-col;
     .kinds__more {
+      @apply font-semibold;
     }
     &:hover {
       .kinds__more {
@@ -24,11 +25,11 @@
     }
   }
   &__figure {
-    @apply aspect-types_thumbnail relative h-auto w-full rounded-[10px];
+    @apply relative aspect-types_thumbnail h-auto w-full rounded-[10px];
   }
 
   &__img {
-    @apply absolute left-0 top-0 block h-full w-full rounded-[10px] object-cover object-right-top;
+    @apply absolute bottom-0 left-0 block h-full w-full rounded-[10px] object-cover object-center;
   }
   &__title {
     @apply absolute bottom-0 left-0 w-full bg-blue leading-tight text-white ~px-[18px]/[35px] ~py-[15px]/[20px];

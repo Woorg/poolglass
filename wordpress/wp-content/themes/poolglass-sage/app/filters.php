@@ -55,6 +55,7 @@ add_filter(
   'nav_menu_css_class',
   function ($classes, $item, $args) {
     $classes[] = 'nav__item';
+
     return $classes;
   },
   1,

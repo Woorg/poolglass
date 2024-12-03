@@ -17,7 +17,7 @@
           <article class="kinds__item">
             <a href="<?php echo e(get_permalink($item->ID)); ?>" class="kinds__link">
               <figure class="kinds__figure">
-                <?php echo wp_get_attachment_image($kind_image, 'thumbnail', null, [
+                <?php echo wp_get_attachment_image($kind_image, 'medium', null, [
                     'class' => 'kinds__img',
                 ]); ?>
 

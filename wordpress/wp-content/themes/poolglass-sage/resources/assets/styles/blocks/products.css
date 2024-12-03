@@ -1,6 +1,6 @@
 .products {
   &__container {
-    @apply pb-[350px] ~pt-[50px]/[115px];
+    @apply pb-[150px] ~pt-[50px]/[80px] sm:pb-[200px] md:pb-[250px] xl:pb-[350px];
   }
 
   &__grid {
@@ -10,7 +10,7 @@
     @apply col-span-1 rounded-[10px] bg-box;
   }
   &__link {
-    @apply relative flex h-full min-h-[350px] flex-col items-start justify-start pr-[13px] ~pt-[35px]/[60px] ~pl-[25px]/[60px];
+    @apply relative flex h-full min-h-[350px] flex-col items-start justify-start pb-[13px] pr-[13px] ~pt-[35px]/[60px] ~pl-[25px]/[60px];
   }
 
   &__item-title {
@@ -18,7 +18,7 @@
   }
 
   &__entry {
-    @apply flex flex-wrap items-start justify-start ~gap-[10px]/[20px] md:flex-nowrap;
+    @apply flex flex-wrap items-start justify-start ~gap-[10px]/[20px] lg:flex-nowrap;
   }
 
   &__text {

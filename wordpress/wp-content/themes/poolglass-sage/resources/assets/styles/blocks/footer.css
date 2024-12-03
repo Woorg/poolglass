@@ -57,6 +57,9 @@
 
   .widgets {
     /* @apply text-; */
+    .contacts__container {
+      @apply pb-0 sm:pb-0 lg:pb-10;
+    }
 
     .contacts__title {
       @apply text-white;

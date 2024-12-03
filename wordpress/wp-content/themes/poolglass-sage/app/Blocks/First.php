@@ -164,11 +164,11 @@ class First extends Block
 
     $fields
       ->addTextarea('title', [
-        'label' => __('Заголовок', 'sage'),
+        'label' => __('Заголовок h1', 'sage'),
         'wrapper' => [
           'width' => '50',
         ],
-        'default_value' => 'Стеклянный бассейн  ',
+        'default_value' => 'Стеклянный бассейн',
         'new_lines' => 'br',
         'rows' => 2,
       ])

@@ -5,6 +5,7 @@ namespace App\Blocks;
 use WP_Query;
 use Log1x\AcfComposer\Block;
 use Log1x\AcfComposer\Builder;
+use Log1x\Navi\Navi;
 
 class Projects extends Block
 {
@@ -145,6 +146,13 @@ class Projects extends Block
    */
   public function with(): array
   {
+    // $menu = Navi::make()->build('projects_navigation');
+
+    $terms = get_terms([
+      'taxonomy' => 'pool_kinds',
+      'hide_empty' => true,
+    ]);
+
     $args = [
       'post_type' => 'last_projects',
       'posts_per_page' => -1,
@@ -156,6 +164,8 @@ class Projects extends Block
 
     return [
       'projects' => $query->posts,
+      'terms' => $terms,
+      // 'menu' => $menu,
     ];
   }
 

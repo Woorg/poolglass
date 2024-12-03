@@ -11,8 +11,8 @@
             <a href="{{ get_permalink($item->ID) }}" class="articles__link">
 
               <figure class="articles__figure">
-                {!! get_the_post_thumbnail($item->ID, 'medium', null, [
-                    'class' => 'articles__img',
+                {!! get_the_post_thumbnail($item->ID, 'medium', [
+                    'class' => 'articles__img ',
                 ]) !!}
               </figure>
               <div class="articles__entry">

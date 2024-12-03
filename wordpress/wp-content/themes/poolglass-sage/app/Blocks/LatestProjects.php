@@ -206,7 +206,7 @@ class LatestProjects extends Block
         'wrapper' => [
           'width' => 40,
         ],
-        'post_type' => ['last_projects'],
+        'post_type' => ['kinds'],
       ])
       ->addText('more_text', [
         'label' => __('Текст подробнее'),
@@ -229,7 +229,7 @@ class LatestProjects extends Block
         'wrapper' => [
           'width' => 60,
         ],
-        // 'post_type' => [''],
+        'post_type' => [],
       ])
       ->addImage('image', [
         'label' => __('Изображение'),

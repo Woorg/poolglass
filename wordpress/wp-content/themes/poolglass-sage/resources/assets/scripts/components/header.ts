@@ -15,7 +15,7 @@ export const headerFixed = () => {
     handleScroll() {
       const currentScroll = window.scrollY;
 
-      if (currentScroll > 120) {
+      if (currentScroll > 0) {
         this.isFixed = true;
         this.isHidden = currentScroll > this.lastScroll;
       } else {
