@@ -86,6 +86,7 @@ export default {
         thumbnail_bg: 'rgba(33,123,187,.2)',
         latest_item_bg: '#0B3875',
         filter: '#C6C6CA',
+        label: '#142C52',
         // light: {},
       },
 
@@ -95,6 +96,9 @@ export default {
       },
       boxShadow: {},
       aspectRatio: {
+        popup_wave_up: '572/123',
+        popup_wave_up_single: '730/129',
+        popup_wave_down: '572/128',
         article_thumbnail: '282/197',
         map: '1160/379',
         first_wave_bg: '1920/374',

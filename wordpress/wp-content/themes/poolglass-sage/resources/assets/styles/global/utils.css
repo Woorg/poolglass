@@ -28,26 +28,6 @@
     @apply mt-0;
   }
 
-  .form {
-    @apply grid gap-5;
-
-    &__submit {
-      @apply bg-blue-300 h-12 w-full;
-    }
-
-    &__bottom {
-      @apply mt-5 grid gap-5;
-    }
-
-    &__group {
-      @apply flex items-center gap-3;
-    }
-
-    &__login {
-      @apply text-blue-600 text-xl font-bold underline hover:no-underline;
-    }
-  }
-
   .btn {
     @apply grid h-[50px] items-center justify-center rounded-[50px] px-[30px] py-[14px] text-[15px] font-bold;
 
@@ -64,7 +44,7 @@
     @apply border border-2 bg-transparent text-white;
   }
 
-  .no-scroll {
+  .no_scroll {
     @apply h-screen overflow-hidden;
   }
 

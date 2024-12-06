@@ -269,3 +269,54 @@
 [03-Dec-2024 02:54:49 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
 [03-Dec-2024 02:54:49 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
 [03-Dec-2024 02:54:50 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[03-Dec-2024 23:50:39 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[03-Dec-2024 23:51:15 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 23:51:15 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 23:51:15 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 23:51:15 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 23:51:15 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 23:51:15 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[03-Dec-2024 23:51:54 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
+[03-Dec-2024 23:51:54 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
+[03-Dec-2024 23:51:55 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[04-Dec-2024 00:51:08 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "RouteServiceProvider" in /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/config/app.php:170
+Stack trace:
+#0 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Roots/Acorn/Bootstrap/LoadConfiguration.php(63): require()
+#1 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Roots/Acorn/Bootstrap/LoadConfiguration.php(36): Roots\Acorn\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Roots\Acorn\Application), Object(Illuminate\Config\Repository))
+#2 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Illuminate/Foundation/Application.php(263): Roots\Acorn\Bootstrap\LoadConfiguration->bootstrap(Object(Roots\Acorn\Application))
+#3 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Roots/Acorn/Bootloader.php(187): Illuminate\Foundation\Http\Kernel->bootstrap(Object(Illuminate\Http\Request))
+#5 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Roots/Acorn/Bootloader.php(103): Roots\Acorn\Bootloader->bootHttp()
+#6 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/functions.php(43): Roots\Acorn\Bootloader->boot()
+#7 /var/www/poolglass/wordpress/wp-settings.php(672): include('/var/www/poolgl...')
+#8 /var/www/poolglass/wordpress/wp-config.php(126): require_once('/var/www/poolgl...')
+#9 /var/www/poolglass/wordpress/wp-load.php(50): require_once('/var/www/poolgl...')
+#10 /var/www/poolglass/wordpress/wp-blog-header.php(13): require_once('/var/www/poolgl...')
+#11 /var/www/poolglass/wordpress/index.php(17): require('/var/www/poolgl...')
+#12 {main}
+  thrown in /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/config/app.php on line 170
+[04-Dec-2024 00:51:09 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "RouteServiceProvider" in /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/config/app.php:170
+Stack trace:
+#0 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Roots/Acorn/Bootstrap/LoadConfiguration.php(63): require()
+#1 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Roots/Acorn/Bootstrap/LoadConfiguration.php(36): Roots\Acorn\Bootstrap\LoadConfiguration->loadConfigurationFiles(Object(Roots\Acorn\Application), Object(Illuminate\Config\Repository))
+#2 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Illuminate/Foundation/Application.php(263): Roots\Acorn\Bootstrap\LoadConfiguration->bootstrap(Object(Roots\Acorn\Application))
+#3 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\Foundation\Application->bootstrapWith(Array)
+#4 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Roots/Acorn/Bootloader.php(187): Illuminate\Foundation\Http\Kernel->bootstrap(Object(Illuminate\Http\Request))
+#5 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/vendor/roots/acorn/src/Roots/Acorn/Bootloader.php(103): Roots\Acorn\Bootloader->bootHttp()
+#6 /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/functions.php(43): Roots\Acorn\Bootloader->boot()
+#7 /var/www/poolglass/wordpress/wp-settings.php(672): include('/var/www/poolgl...')
+#8 /var/www/poolglass/wordpress/wp-config.php(126): require_once('/var/www/poolgl...')
+#9 /var/www/poolglass/wordpress/wp-load.php(50): require_once('/var/www/poolgl...')
+#10 /var/www/poolglass/wordpress/wp-blog-header.php(13): require_once('/var/www/poolgl...')
+#11 /var/www/poolglass/wordpress/index.php(17): require('/var/www/poolgl...')
+#12 {main}
+  thrown in /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/config/app.php on line 170
+[04-Dec-2024 01:04:41 UTC] PHP Fatal error:  Cannot declare class App\Providers\RouteServiceProvider because the name is already in use in /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/app/Providers/RouteServiceProvider.php on line 8
+[04-Dec-2024 01:04:41 UTC] PHP Fatal error:  Cannot declare class App\Providers\RouteServiceProvider because the name is already in use in /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/app/Providers/RouteServiceProvider.php on line 8
+[04-Dec-2024 01:04:43 UTC] PHP Fatal error:  Cannot declare class App\Providers\RouteServiceProvider because the name is already in use in /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/app/Providers/RouteServiceProvider.php on line 8
+[04-Dec-2024 01:04:43 UTC] PHP Fatal error:  Cannot declare class App\Providers\RouteServiceProvider because the name is already in use in /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/app/Providers/RouteServiceProvider.php on line 8
+[06-Dec-2024 19:18:00 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>all-in-one-wp-migration</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /var/www/poolglass/wordpress/wp-includes/functions.php on line 6114
+[06-Dec-2024 19:18:00 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>all-in-one-wp-migration</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /var/www/poolglass/wordpress/wp-includes/functions.php on line 6114
+[06-Dec-2024 19:18:04 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>all-in-one-wp-migration</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /var/www/poolglass/wordpress/wp-includes/functions.php on line 6114
+[06-Dec-2024 19:18:15 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>all-in-one-wp-migration</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /var/www/poolglass/wordpress/wp-includes/functions.php on line 6114
+[06-Dec-2024 19:18:21 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>all-in-one-wp-migration</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /var/www/poolglass/wordpress/wp-includes/functions.php on line 6114

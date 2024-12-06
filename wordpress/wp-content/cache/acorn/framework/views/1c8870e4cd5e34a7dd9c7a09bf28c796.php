@@ -9,7 +9,9 @@
         <?php if($buttons_show): ?>
           <div class="first__buttons">
             <?php $__currentLoopData = $buttons; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $button): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-              <button
+              
+              <button x-data
+                x-on:click="$store.popup.openPopup('<?php echo e($button['url']); ?>')"
                 class="first__btn btn btn_<?php echo e($button['button_style']); ?>"><?php echo e($button['name']); ?></button>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </div>
@@ -46,6 +48,8 @@
     <?php echo e(get_svg('first-inner-bg', 'first__inner-bg', [])); ?>
 
   <?php endif; ?>
-  
+
+  <InnerBlocks template="<?php echo e($block->template); ?>" />
+
 </section>
 <?php /**PATH /var/www/poolglass/wordpress/wp-content/themes/poolglass-sage/resources/views/blocks/first.blade.php ENDPATH**/ ?>

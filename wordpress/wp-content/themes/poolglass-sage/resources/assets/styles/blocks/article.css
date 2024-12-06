@@ -56,10 +56,15 @@
     @apply mb-5 list-inside list-disc;
     li {
       @apply mb-4 last-of-type:mb-0;
+
+      em {
+        @apply mb-2 inline-flex font-medium;
+      }
     }
   }
 
-  strong {
+  strong,
+  em {
     @apply text-blue;
   }
 

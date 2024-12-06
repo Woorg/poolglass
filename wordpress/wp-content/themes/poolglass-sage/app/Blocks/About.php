@@ -198,7 +198,7 @@ class About extends Block
       ])
 
       ->addPostObject('post', [
-        'label' => 'Выберите пост',
+        'label' => __('Выберите пост'),
         'required' => 0,
         'conditional_logic' => [],
         'wrapper' => [

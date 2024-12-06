@@ -9,7 +9,9 @@
         @if ($buttons_show)
           <div class="first__buttons">
             @foreach ($buttons as $button)
-              <button
+              {{-- @dump($button['url']) --}}
+              <button x-data
+                x-on:click="$store.popup.openPopup('{{ $button['url'] }}')"
                 class="first__btn btn btn_{{ $button['button_style'] }}">{{ $button['name'] }}</button>
             @endforeach
           </div>
@@ -43,5 +45,7 @@
   @if (!is_front_page())
     {{ get_svg('first-inner-bg', 'first__inner-bg', []) }}
   @endif
-  {{-- <InnerBlocks template="{{ $block->template }}" /> --}}
+
+  <InnerBlocks template="{{ $block->template }}" />
+
 </section>

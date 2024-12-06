@@ -12,7 +12,9 @@
   @php(wp_head())
 </head>
 
-<body @php(body_class('font-raleway font-regular page flex flex-col min-h-screen '))>
+<body x-data :class="{ no_scroll: $store.popup.popup_open }"
+  x-on:keydown.escape.prevent.stop="$store.popup.closePopup()"
+  @php(body_class('font-raleway font-regular page flex flex-col min-h-screen relative'))>
   @php(wp_body_open())
 
   {{-- <a class="sr-only focus:not-sr-only" href="#main">

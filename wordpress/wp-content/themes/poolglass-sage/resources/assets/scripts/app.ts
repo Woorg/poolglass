@@ -2,6 +2,7 @@ import '@styles/app.css';
 
 import Alpine from 'alpinejs';
 import { headerFixed } from './components/header';
+import { initPopupStore } from './components/popup';
 import { nav } from './components/nav';
 import { projectFilter } from './components/projectsFilter';
 
@@ -14,10 +15,12 @@ import.meta.glob(['../images/**', '../fonts/**']);
 addEventListener('DOMContentLoaded', async () => {
   window.Alpine = Alpine;
   // alpine components
-  headerFixed();
-  nav();
   document.addEventListener('alpine:init', () => {
+    headerFixed();
+    nav();
     Alpine.data('projectFilter', projectFilter);
+    // Alpine.plugin(focus);
+    initPopupStore(); // Инициализируем глобальное хранилище
   });
 
   Alpine.start();

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@alpinejs/focus':
+        specifier: ^3.14.6
+        version: 3.14.6
       alpinejs:
         specifier: ^3.14.5
         version: 3.14.5
@@ -102,6 +105,9 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@alpinejs/focus@3.14.6':
+    resolution: {integrity: sha512-EHHYYp1I+j1rfSeNOf73QtDTmcaFXOWyBAvRfeFJcIKiKM3YhE5ejPsFAskZ9FoFcmXz/fmgYXXFLI2T2wknBg==}
 
   '@babel/runtime-corejs3@7.26.0':
     resolution: {integrity: sha512-YXHu5lN8kJCb1LOb9PgV6pvak43X2h4HvRApcN5SdWeaItQOzfn1hgP6jasD6KWQyJDBxrVmA9o9OivlnNJK/w==}
@@ -996,6 +1002,9 @@ packages:
     peerDependencies:
       tailwindcss: ^3.2.0
 
+  focus-trap@6.9.4:
+    resolution: {integrity: sha512-v2NTsZe2FF59Y+sDykKY+XjqZ0cPfhq/hikWVL88BqLivnNiEffAsac6rP6H45ff9wG9LL5ToiDqrLEP9GX9mw==}
+
   foreground-child@3.3.0:
     resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
     engines: {node: '>=14'}
@@ -1701,6 +1710,9 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  tabbable@5.3.3:
+    resolution: {integrity: sha512-QD9qKY3StfbZqWOPLp0++pOrAVb/HbUi5xCc8cUo4XjP19808oaMiDzn0leBY5mCespIBM0CIZePzZjgzR83kA==}
+
   tailwindcss-animate@1.0.7:
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
@@ -1854,6 +1866,11 @@ packages:
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
+
+  '@alpinejs/focus@3.14.6':
+    dependencies:
+      focus-trap: 6.9.4
+      tabbable: 5.3.3
 
   '@babel/runtime-corejs3@7.26.0':
     dependencies:
@@ -2660,6 +2677,10 @@ snapshots:
       picocolors: 1.1.1
       tailwindcss: 3.4.15
 
+  focus-trap@6.9.4:
+    dependencies:
+      tabbable: 5.3.3
+
   foreground-child@3.3.0:
     dependencies:
       cross-spawn: 7.0.6
@@ -3323,6 +3344,8 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  tabbable@5.3.3: {}
 
   tailwindcss-animate@1.0.7(tailwindcss@3.4.15):
     dependencies:

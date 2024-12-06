@@ -29,3 +29,6 @@
 @import 'blocks/products.css';
 @import 'blocks/projects.css';
 @import 'blocks/article.css';
+@import 'blocks/pagination.css';
+@import 'blocks/popup.css';
+@import 'blocks/form.css';
