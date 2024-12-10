@@ -8,10 +8,12 @@
   }
 
   &__wave {
-    @apply absolute bottom-full left-0 z-0 aspect-footer_wave w-full content-[''];
+    @apply absolute left-1/2 aspect-footer_wave w-full max-w-[2560px] -translate-x-1/2 content-[''];
     background-color: white;
     object-fit: cover;
     object-position: 50% 0%;
+    bottom: calc(100% - 40px);
+    z-index: 0;
   }
 
   &__container-w {
@@ -57,8 +59,9 @@
 
   .widgets {
     /* @apply text-; */
+
     .contacts__container {
-      @apply pb-0 sm:pb-0 lg:pb-10;
+      @apply pb-0 pt-20 sm:pb-0 lg:pb-10;
     }
 
     .contacts__title {

@@ -1,0 +1,129 @@
+.calculator {
+  &__container {
+    @apply pb-[150px] ~pt-[50px]/[80px] sm:pb-[200px] md:pb-[250px] lg:pb-[100px] xl:pb-[150px] 2xl:pb-[350px];
+
+    @screen md {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
+      gap: 0px 40px;
+      grid-template-areas:
+        'item-1 figure'
+        'item-2 figure'
+        'item-3 figure'
+        'item-4 info'
+        'item-5 info'
+        'item-6 info'
+        'item-7 info';
+    }
+  }
+
+  &__item {
+    @apply mb-8 h-auto gap-10;
+    &_1 {
+      grid-area: item-1;
+    }
+    &_2 {
+      grid-area: item-2;
+    }
+    &_3 {
+      grid-area: item-3;
+    }
+    &_4 {
+      grid-area: item-4;
+    }
+    &_5 {
+      grid-area: item-5;
+    }
+    &_6 {
+      grid-area: item-6;
+    }
+    &_7 {
+      grid-area: item-7;
+    }
+  }
+
+  &__entry {
+    /* @apply; */
+  }
+
+  &__item-title {
+    @apply mb-5;
+  }
+
+  &__field {
+    @apply mb-5;
+  }
+
+  &__select-w {
+    @apply relative;
+  }
+
+  &__select,
+  &__input,
+  &__textarea {
+    @apply relative h-[60px] w-full appearance-none overflow-hidden whitespace-nowrap rounded-[100px] bg-transparent px-9 text-ellipsis focus-within:outline-none focus-within:outline-[1px] focus-within:outline-offset-0 focus-within:outline-blue focus-within:ring-0;
+    box-shadow: 0 0 10px 0 rgba(168, 168, 168, 0.2);
+    z-index: 1;
+  }
+
+  &__input {
+    /* appearance: unset; */
+  }
+
+  &__textarea {
+    @apply mt-5 h-auto whitespace-normal rounded-[20px] py-5;
+  }
+
+  &__select {
+    /* @apply overflow-hidden whitespace-nowrap text-ellipsis; */
+    option {
+      &:hover,
+      &:focus {
+        @apply bg-box;
+      }
+    }
+
+    &:focus + .calculator__select-bg::after {
+      transform: rotate(0deg);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &__select-bg {
+    @apply absolute left-0 top-0 flex h-[60px] w-full;
+    &:after {
+      @apply absolute right-10 -translate-y-1/2 content-[''];
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 6px 10px 6px;
+      border-color: transparent transparent #41424f transparent;
+      transform: rotate(180deg);
+      /* z-index: 0; */
+      transition: transform 0.3s ease-in-out;
+      top: calc(50% - 4px);
+    }
+  }
+
+  &__note {
+    @apply mt-3 flex font-medium text-blue;
+  }
+
+  &__image {
+    @apply h-min bg-box text-center lg:px-16 lg:py-10;
+    grid-area: figure;
+    img {
+      @apply m-auto;
+    }
+  }
+
+  &__form {
+    @apply mt-[53px];
+    grid-area: info;
+  }
+
+  &__form-title {
+    @apply mb-11;
+  }
+}

@@ -39,6 +39,7 @@ export default {
       lg: '999px',
       xl: '1220px',
       '2xl': '1576px',
+      '3xl': '1920px',
     },
     fontSize,
     extend: {
@@ -73,6 +74,7 @@ export default {
       fontFamily: {
         // suisse_intl: ['var(--suisse-intl)'],
         raleway: ['var(--raleway)'],
+        montserrat: ['var(--montserrat)'],
       },
       colors: {
         title: '#0D0F22',
@@ -96,6 +98,7 @@ export default {
       },
       boxShadow: {},
       aspectRatio: {
+        first_tile: '284/155',
         popup_wave_up: '572/123',
         popup_wave_up_single: '730/129',
         popup_wave_down: '572/128',

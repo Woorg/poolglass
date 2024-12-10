@@ -50,11 +50,11 @@
 
   &:after,
   &:before {
-    @apply absolute left-0 z-0 block h-auto w-full bg-no-repeat content-[''];
+    @apply absolute left-1/2 z-0 block h-auto w-full max-w-[2560px] -translate-x-1/2 bg-no-repeat content-[''];
   }
 
   &:after {
-    @apply aspect-wave_down_320 bottom-[0];
+    @apply bottom-[0] aspect-wave_down_320;
 
     background: url('../../images/icons/wave-down.svg') 50% 0 / cover;
 
@@ -76,28 +76,28 @@
   }
 
   &:before {
-    @apply aspect-wave_up_320 -top-[74px] h-auto p-0;
+    @apply -top-[74px] aspect-wave_up_320 h-auto p-0;
     background: url('../../images/icons/wave-up.svg') 50% 0 / cover no-repeat;
 
     @screen sm {
-      @apply aspect-wave_up_480 -top-[101px];
+      @apply -top-[101px] aspect-wave_up_480;
     }
 
     @screen md {
-      @apply aspect-wave_up_768 -top-[143px];
+      @apply -top-[143px] aspect-wave_up_768;
     }
 
     @screen lg {
-      @apply aspect-wave_up_1000 -top-[210px];
+      @apply -top-[210px] aspect-wave_up_1000;
     }
 
     @screen xl {
-      @apply aspect-wave_up_big -top-[143px];
+      @apply -top-[143px] aspect-wave_up_big;
     }
   }
 
   &__container {
-    @apply 2xl:pb-[350px] 2xl:pt-[261px] relative z-10 pb-[101px] pt-[43px] sm:pb-16 sm:pt-16 md:pb-24 md:pt-24 lg:pb-[225px] xl:pb-[300px] xl:pt-[201px];
+    @apply relative z-10 pb-[101px] pt-[43px] sm:pb-16 sm:pt-16 md:pb-24 md:pt-24 lg:pb-[225px] xl:pb-[300px] xl:pt-[201px] 2xl:pb-[350px] 2xl:pt-[261px] 3xl:pt-[361px];
   }
 
   /* &__bg {
@@ -119,7 +119,7 @@
   }
 
   &__item {
-    @apply bg-thumbnail_bg rounded-[10px] ~px-[25px]/[44px] ~py-[25px]/[40px];
+    @apply rounded-[10px] bg-thumbnail_bg ~px-[25px]/[44px] ~py-[25px]/[40px];
     &_more {
       @apply relative grid min-h-[300px] items-center justify-center p-0;
     }

@@ -6,6 +6,7 @@ use WP_Query;
 use Log1x\AcfComposer\Block;
 use Log1x\AcfComposer\Builder;
 use Log1x\Navi\Navi;
+use Log1x\Pagi\Pagi;
 
 class Projects extends Block
 {
@@ -103,26 +104,12 @@ class Projects extends Block
   ];
 
   /**
-   * The block preview example data.
-   *
-   * @var array
-   */
-  public $example = [
-    'items' => [
-      ['item' => 'Item one'],
-      ['item' => 'Item two'],
-      ['item' => 'Item three'],
-    ],
-  ];
-
-  /**
    * The block template.
    *
    * @var array
    */
   public $template = [
     'core/heading' => ['placeholder' => 'Hello World'],
-    'core/paragraph' => ['placeholder' => 'Welcome to the Projects block.'],
   ];
 
   /**
@@ -153,18 +140,26 @@ class Projects extends Block
       'hide_empty' => true,
     ]);
 
+    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
     $args = [
       'post_type' => 'last_projects',
       'posts_per_page' => -1,
+      'paged' => $paged,
       'orderby' => 'title',
       'order' => 'DESC',
     ];
 
     $query = new WP_Query($args);
 
+    $pagination = new Pagi();
+    $pagination->setQuery($query);
+    $pagination->build();
+
     return [
       'projects' => $query->posts,
       'terms' => $terms,
+      'pagination' => $pagination->build(),
       // 'menu' => $menu,
     ];
   }

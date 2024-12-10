@@ -4,6 +4,7 @@ namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
 use Log1x\AcfComposer\Builder;
+use function Roots\bundle;
 
 class First extends Block
 {
@@ -101,26 +102,12 @@ class First extends Block
   ];
 
   /**
-   * The block preview example data.
-   *
-   * @var array
-   */
-  public $example = [
-    'items' => [
-      ['item' => 'Item one'],
-      ['item' => 'Item two'],
-      ['item' => 'Item three'],
-    ],
-  ];
-
-  /**
    * The block template.
    *
    * @var array
    */
   public $template = [
     'core/heading' => ['placeholder' => 'Hello World'],
-    'core/paragraph' => ['placeholder' => 'Welcome to the First block.'],
   ];
 
   /**
@@ -152,6 +139,8 @@ class First extends Block
       'list_show' => $this->list_show(),
       'buttons' => $this->buttons(),
       'list' => $this->list(),
+      'tiles' => $this->tiles(),
+      'tiles_show' => $this->tiles_show(),
     ];
   }
 
@@ -277,9 +266,107 @@ class First extends Block
         'wrapper' => [
           'width' => '10',
         ],
+      ])
+      ->addRepeater('tiles', [
+        'label' => __('Плитки', 'sage'),
+        'wrapper' => [
+          'width' => '90',
+        ],
+        'layout' => 'block',
+        'conditional_logic' => [
+          [
+            [
+              'field' => 'tiles_show',
+              'operator' => '==',
+              'value' => '1',
+            ],
+          ],
+        ],
+      ])
+      ->addSelect('tile_style', [
+        'label' => 'Выберите стиль плитки',
+        'required' => 0,
+        'wrapper' => [
+          'width' => '15',
+        ],
+        'choices' => [
+          'sale' => 'Sale',
+          'calc' => 'Calculator',
+          'price' => 'Price',
+          'install' => 'Install',
+          'callback' => 'Callback',
+          'tech' => 'Tech',
+        ],
+        'default_value' => [
+          'sale' => 'Sale',
+        ],
+        'allow_null' => 0,
+        'ui' => 1,
+        'ajax' => 0,
+        'return_format' => 'value',
+        'placeholder' => 'Выберите стиль плитки',
+      ])
+      ->addText('tile_text', [
+        'label' => __('Текст плитки', 'sage'),
+        'wrapper' => [
+          'width' => '35',
+        ],
+      ])
+      ->addLink('tile_link', [
+        'label' => __('Cсылка', 'sage'),
+        // 'type' => 'page_link',
+        'instructions' => '',
+        // 'required' => 0,
+        'wrapper' => [
+          'width' => '20',
+        ],
+        // 'post_type' => [],
+        // 'taxonomy' => [],
+        // 'allow_null' => 0,
+        // 'allow_archives' => 1,
+        // 'multiple' => 0,
+        'return_format' => 'array',
+        'conditional_logic' => [],
+      ])
+      ->addText('tile_popup_id', [
+        'label' => __('Id попапа', 'sage'),
+        'wrapper' => [
+          'width' => '20',
+        ],
+        'conditional_logic' => [
+          [
+            [
+              'field' => 'tile_link',
+              'operator' => '==empty',
+            ],
+          ],
+        ],
+      ])
+      ->addTrueFalse('tile_show', [
+        'label' => __('Показать плитку', 'sage'),
+        'wrapper' => [
+          'width' => '10',
+        ],
+      ])
+      ->endRepeater()
+      ->addTrueFalse('tiles_show', [
+        'label' => __('Показать список плиток', 'sage'),
+        'wrapper' => [
+          'width' => '10',
+        ],
       ]);
 
     return $fields->build();
+  }
+
+  public function tiles_show()
+  {
+    return get_field('tiles_show');
+  }
+
+  public function tiles()
+  {
+    return get_field('tiles');
   }
 
   public function parallax()
@@ -328,5 +415,7 @@ class First extends Block
   public function assets(array $block): void
   {
     //
+
+    // bundle('editor')->enqueue();
   }
 }

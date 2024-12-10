@@ -29,6 +29,7 @@ class App extends Composer
       'email' => $this->get_email(),
       'socials' => $this->get_socials(),
       'copyright' => $this->get_copyright(),
+      'custom_scripts' => $this->custom_scripts(),
     ];
   }
 
@@ -90,5 +91,10 @@ class App extends Composer
   public function siteName()
   {
     return get_bloginfo('name', 'display');
+  }
+
+  public function custom_scripts()
+  {
+    return get_field('custom_scripts_list', 'option');
   }
 }

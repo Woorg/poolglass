@@ -1,5 +1,5 @@
 .article {
-  @apply pb-[150px] sm:pb-[200px] md:pb-[250px] xl:pb-[350px];
+  @apply pb-0 lg:pb-[200px] xl:pb-[200px] 2xl:pb-[400px];
   .wp-block-heading {
     @apply mb-4 mt-7 font-bold leading-normal text-blue first-of-type:mt-0;
   }

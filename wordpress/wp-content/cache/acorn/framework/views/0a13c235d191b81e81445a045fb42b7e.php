@@ -21,7 +21,7 @@
 
   <?php echo $__env->make('sections.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-  <main class="main grow">
+  <main class="main grow <?php echo e(is_front_page() ? 'main_front' : 'main_inner'); ?>">
 
     <?php echo $__env->yieldContent('content'); ?>
   </main>
@@ -33,6 +33,13 @@
   <?php (do_action('get_footer')); ?>
   <?php (wp_footer()); ?>
   <?php echo $__env->yieldContent('footer_scripts'); ?>
+
+  <?php if($custom_scripts): ?>
+    <?php $__currentLoopData = $custom_scripts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $script): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php echo $script['script']; ?>
+
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+  <?php endif; ?>
 
 </body>
 

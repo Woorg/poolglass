@@ -48,7 +48,7 @@
         }
 
         &:after {
-          @apply aspect-popup_wave_up_single absolute left-0 top-full w-full content-[''];
+          @apply absolute left-0 top-full aspect-popup_wave_up_single w-full content-[''];
           background-image: url('../../images/global/popup/popup-wave-up-single.png');
           background-position: 50% 100%;
           background-repeat: no-repeat;
@@ -129,6 +129,22 @@
       #0e3166 100%
     );
     z-index: 1;
+
+    &:after {
+      @apply absolute left-0 top-full aspect-popup_wave_up w-full content-[''];
+      background-image: url('../../images/global/popup/popup-wave-up.png');
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: calc(100% - 40px);
+      @screen sm {
+        top: calc(100% - 60px);
+      }
+
+      @screen lg {
+        top: calc(100% - 20px);
+      }
+    }
   }
   &__content {
     @apply relative grid px-4 py-5 lg:px-12 lg:py-10;
@@ -145,18 +161,18 @@
   }
 
   &__title {
-    @apply mb-2 mt-3 text-white ~text-[17px]/[30px];
+    @apply mb-2 mt-3 leading-tight text-white ~text-[17px]/[30px];
   }
 
   &__note {
-    @apply text-dirty_gray;
+    @apply text-gray;
     sub {
       @apply text-[30px] text-dirty_gray;
     }
   }
 
   &__body {
-    @apply relative grid px-4 pt-20 md:px-12 md:pt-[118px];
+    @apply relative grid px-4 pt-14 sm:pt-20 md:px-12 md:pt-[80px] lg:pt-[118px];
     z-index: 2;
   }
 
@@ -168,7 +184,7 @@
     @apply absolute left-0 z-0 w-full;
   }
 
-  &__wave_up {
+  /* &__wave_up {
     @apply aspect-popup_wave_up;
     top: calc(100% - 20px);
 
@@ -179,7 +195,7 @@
     @screen md {
       top: calc(100% - 20px);
     }
-  }
+  } */
 
   &__wave_down {
     @apply bottom-full aspect-popup_wave_down;

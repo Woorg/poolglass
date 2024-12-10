@@ -96,7 +96,7 @@ export default defineConfig(async ({ mode }) => {
               return `assets/icons/[name].[hash][extname]`;
             }
             if (/\.(png|jpe?g|gif|svg|ico|webp)$/i.test(name)) {
-              return `assets/images/[name].[extname]`;
+              return `assets/images/[name][extname]`;
             }
             if (/\.(woff|woff2|eot|ttf|otf)$/i.test(name)) {
               return `assets/fonts/[name].[hash][extname]`;

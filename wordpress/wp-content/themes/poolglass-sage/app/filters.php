@@ -76,4 +76,36 @@ add_filter(
   4,
 );
 
+/**
+ * Disable auto-p for Contact Form 7.
+ *
+ * @see https://contactform7.com/2017/03/22/auto-p-and-label-element/
+ *
+ * @param bool $autop Whether to use autop or not.
+ * @return bool
+ */
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+add_action('wpcf7_init', function () {
+  $fields = [
+    'window_shape',
+    'window_diameter',
+    'window_width',
+    'window_height',
+    'water_level',
+    'window_count',
+    'pool_finish',
+    'special_wishes',
+    'custom_special_wishes',
+  ];
+
+  foreach ($fields as $field) {
+    wpcf7_add_form_tag($field, function ($tag) use ($field) {
+      return '<input type="hidden" name="' .
+        esc_attr($field) .
+        '" x-bind:value="' .
+        esc_attr($field) .
+        '">';
+    });
+  }
+});

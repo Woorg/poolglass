@@ -41,13 +41,15 @@
   },
   "require": {
     "php": ">=8.2",
+    "livewire/livewire": "^3.5",
     "log1x/acf-composer": "^3.1",
     "log1x/navi": "^3.1",
     "log1x/pagi": "^1.1",
     "log1x/poet": "^2.1.0",
     "log1x/sage-directives": "^2.0",
     "log1x/sage-svg": "^2.0",
-    "roots/acorn": "^4.3.0"
+    "roots/acorn": "^4.3.0",
+    "roots/acorn-mail": "^1.0"
   },
   "require-dev": {
     "laravel/pint": "^1.15.3"

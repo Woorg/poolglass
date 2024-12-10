@@ -1,4 +1,15 @@
 <?php return array (
+  'livewire/livewire' => 
+  array (
+    'aliases' => 
+    array (
+      'Livewire' => 'Livewire\\Livewire',
+    ),
+    'providers' => 
+    array (
+      0 => 'Livewire\\LivewireServiceProvider',
+    ),
+  ),
   'log1x/acf-composer' => 
   array (
     'providers' => 
@@ -65,6 +76,13 @@
     'providers' => 
     array (
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
+  'roots/acorn-mail' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Roots\\AcornMail\\AcornMailServiceProvider',
     ),
   ),
   'roots/sage' => 

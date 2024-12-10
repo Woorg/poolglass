@@ -58,6 +58,9 @@
       </div>
     @endif
 
+    @if ($pagination)
+      <x-pagination :pagi="$pagination" />
+    @endif
   </div>
 
   {{-- <InnerBlocks template="{{ $block->template }}" /> --}}

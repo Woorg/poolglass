@@ -1,3 +1,11 @@
 .main {
   @apply bg-white;
+
+  &_front {
+    @apply 3xl:pb-[100px];
+  }
+
+  &_inner {
+    @apply ~pb-[112px]/[124px] xl:min-h-[680px];
+  }
 }

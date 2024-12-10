@@ -99,7 +99,27 @@ class Options extends Field
       ])
       ->endRepeater()
 
-      ->endGroup();
+      ->endGroup()
+
+      ->addTab('metriks', [
+        'label' => __('Кастомные скрипты'),
+      ])
+      ->addRepeater('custom_scripts_list', [
+        'label' => __('Скрипты'),
+        'wrapper' => [
+          'width' => '100',
+        ],
+        // 'collapsed' => 'list_title',
+        'layout' => 'block',
+      ])
+      ->addTextarea('script', [
+        'label' => __('Script'),
+        'wrapper' => [
+          'width' => '100',
+        ],
+        'rows' => '6',
+      ])
+      ->endRepeater();
 
     return $fields->build();
   }

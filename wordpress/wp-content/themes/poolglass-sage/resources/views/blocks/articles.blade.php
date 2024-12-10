@@ -22,6 +22,11 @@
           </article>
         @endforeach
       </div>
+      {{-- @dump($pagination) --}}
+      @if ($pagination)
+        <x-pagination :pagi="$pagination" />
+      @endif
+
     @endif
   </div>
 

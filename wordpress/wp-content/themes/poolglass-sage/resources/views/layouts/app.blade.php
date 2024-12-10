@@ -23,7 +23,7 @@
 
   @include('sections.header')
 
-  <main class="main grow">
+  <main class="main grow {{ is_front_page() ? 'main_front' : 'main_inner' }}">
 
     @yield('content')
   </main>
@@ -39,6 +39,12 @@
   @php(do_action('get_footer'))
   @php(wp_footer())
   @yield('footer_scripts')
+
+  @if ($custom_scripts)
+    @foreach ($custom_scripts as $script)
+      {!! $script['script'] !!}
+    @endforeach
+  @endif
 
 </body>
 

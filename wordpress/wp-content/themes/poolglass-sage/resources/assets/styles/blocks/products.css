@@ -1,6 +1,6 @@
 .products {
   &__container {
-    @apply pb-[150px] ~pt-[50px]/[80px] sm:pb-[200px] md:pb-[250px] xl:pb-[350px];
+    @apply pb-[50px] ~pt-[50px]/[80px] sm:pb-[50px] md:pb-[150px] xl:pb-[150px] 2xl:pb-[450px];
   }
 
   &__grid {

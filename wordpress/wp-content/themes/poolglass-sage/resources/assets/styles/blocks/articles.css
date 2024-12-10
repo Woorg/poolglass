@@ -15,7 +15,7 @@
   }
 
   &__figure {
-    @apply overflow-hidden rounded-[10px];
+    @apply aspect-article_thumbnail overflow-hidden rounded-[10px];
   }
 
   &__img {

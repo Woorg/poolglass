@@ -46,8 +46,7 @@
       <small class="popup__note"><sub>*</sub>
         обязательные к заполнению поля</small>
     </div>
-    <?php echo e(get_svg('popup-wave-up', 'popup__wave popup__wave_up', [])); ?>
-
+    
     
   </div>
   <div class="popup__body">

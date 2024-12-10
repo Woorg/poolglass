@@ -1,6 +1,7 @@
 import '@styles/app.css';
 
 import Alpine from 'alpinejs';
+import calculator from './components/calculator';
 import { headerFixed } from './components/header';
 import { initPopupStore } from './components/popup';
 import { nav } from './components/nav';
@@ -19,6 +20,7 @@ addEventListener('DOMContentLoaded', async () => {
     headerFixed();
     nav();
     Alpine.data('projectFilter', projectFilter);
+    Alpine.data('calculator', calculator);
     // Alpine.plugin(focus);
     initPopupStore(); // Инициализируем глобальное хранилище
   });

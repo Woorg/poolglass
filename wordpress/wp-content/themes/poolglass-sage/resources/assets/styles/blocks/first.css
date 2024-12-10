@@ -9,7 +9,7 @@
   }
 
   &__bg {
-    @apply absolute left-0 top-full z-0 aspect-first_wave_bg w-full content-[''] xl:top-[60%];
+    @apply absolute left-1/2 top-full z-0 aspect-first_wave_bg w-full max-w-[2560px] -translate-x-1/2 content-[''] xl:top-[60%];
 
     object-fit: cover;
     object-position: 50% 100%;
@@ -18,40 +18,7 @@
   &__image {
     @apply fixed bottom-0 left-0 right-0 top-0 mx-auto flex w-full overflow-hidden;
     /* z-index: -1; */
-    dislay: none;
-
-    &_320 {
-      /* @apply h-[722px] sm:h-; */
-      img {
-        /* @apply w-[795px] max-w-[795px]; */
-      }
-    }
-
-    &_480 {
-      /* @apply sm:h-[787px] md:h-auto; */
-      img {
-        /* @apply w-[1136px] max-w-[1136px]; */
-      }
-    }
-
-    &_768 {
-      /* @apply md:h-[928px] lg:h-auto; */
-      img {
-        /* @apply w-[1422px] max-w-[1422px]; */
-      }
-    }
-
-    &_1000 {
-      /* @apply lg:h-[944px] xl:h-auto; */
-    }
-
-    &_big {
-      /* @apply aspect-parallax_first_big xl:h-screen; */
-
-      img {
-        /* @apply w-full max-w-[2560px]; */
-      }
-    }
+    /* display: none; */
   }
 
   &__img {
@@ -64,10 +31,8 @@
   }
 
   &__inner-bg {
-    @apply absolute bottom-0 left-0 z-0 aspect-first_inner_wave w-full content-[''];
-    /* background-position: 50% 100%;
-    background-repeat: no-repeat;
-    background-size: cover; */
+    @apply absolute bottom-0 left-1/2 z-0 aspect-first_inner_wave w-full -translate-x-1/2 content-[''];
+
     background-color: white;
     object-fit: cover;
     object-position: 50% 100%;
@@ -85,12 +50,12 @@
     z-index: 1;
   }
 
-  &__title {
-    @apply mt-0 text-white ~mb-[25px]/[33px];
+  .first__title {
+    @apply mt-0 text-pretty text-white ~mb-[25px]/[33px];
   }
 
   &__entry {
-    @apply flex flex-col-reverse flex-wrap items-center ~gap-[20px]/[40px] md:flex-row md:flex-nowrap;
+    @apply flex w-auto flex-col-reverse flex-wrap items-center ~gap-[20px]/[40px] md:flex-row md:flex-nowrap;
   }
 
   &__buttons {
@@ -109,10 +74,20 @@
     @apply ~mb-[6px]/[10px] last-of-type:mb-0;
   }
 
+  &__tiles {
+    @apply grid w-full justify-center gap-2 grow;
+    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  }
+
+  &__tile {
+    /* @apply lg:w-auto; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09);
+  }
+
   &_front {
     .first__container-w {
       &:after {
-        @apply absolute left-0 top-0 z-0 h-full w-full content-[''] xl:h-[60%];
+        @apply absolute left-1/2 top-0 z-0 h-full w-full -translate-x-1/2 content-[''] xl:h-[60%];
 
         background-image: linear-gradient(
           to right,
@@ -126,8 +101,7 @@
   }
 
   &_inner {
-    @apply relative h-[238px] items-center overflow-visible sm:h-[278px] md:h-[387px] lg:h-[384px] xl:h-[429px];
-
+    /* @apply ; */
     background-image: linear-gradient(
       to right,
       #2b90c8 0%,
@@ -135,23 +109,42 @@
       #0b3370 50%,
       #142c52 100%
     );
+    .first__bg {
+      @apply absolute bottom-0 left-1/2 top-auto h-[238px] max-w-[2560px] -translate-x-1/2 items-center overflow-visible sm:h-[278px] md:h-[387px] lg:h-[374px] xl:h-[390px] 2xl:h-[690px];
 
-    /* &::after {
-      @apply aspect-first_inner_wave absolute bottom-0 left-0 z-0 w-full content-[''];
-      background-image: url('../../images/icons/first-inner-bg.svg');
-      background-position: 50% 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: white;
-      object-fit: cover;
-      object-position: 50% 100%;
-    } */
+      background-image: linear-gradient(
+        to right,
+        #2b90c8 0%,
+        #1868ad 16%,
+        #0b3370 50%,
+        #142c52 100%
+      );
+    }
 
-    @screen sm {
+    .first__inner-bg {
+      /* t */
+    }
+    .first__container-w {
+      @apply flex ~pt-[112px]/[124px] ~pb-[20px]/[60px] lg:min-h-[374px] xl:min-h-[390px] 2xl:min-h-[490px];
     }
 
     .first__container {
-      @apply flex items-center;
+      @apply flex flex-wrap items-center ~gap-[15px]/[30px] lg:flex-nowrap;
+    }
+
+    .first__title-w {
+      @apply max-w-[420px];
+    }
+
+    .first__title {
+      @apply leading-tight ~mb-[25px]/[20px];
+    }
+    .first__entry {
+      @apply h-full w-full flex-col items-start ~gap-[20px]/[30px] lg:w-full lg:flex-row lg:items-center;
+    }
+
+    .first__buttons {
+      @apply gap-2;
     }
   }
 }

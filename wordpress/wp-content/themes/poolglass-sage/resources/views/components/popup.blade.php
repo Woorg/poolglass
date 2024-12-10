@@ -21,7 +21,7 @@
       <small class="popup__note"><sub>*</sub>
         обязательные к заполнению поля</small>
     </div>
-    {{ get_svg('popup-wave-up', 'popup__wave popup__wave_up', []) }}
+    {{-- {{ get_svg('popup-wave-up', 'popup__wave popup__wave_up', []) }} --}}
     {{-- {{ get_svg('popup-wave-up-single', 'popup__wave  popup__wave_up_single', []) }} --}}
   </div>
   <div class="popup__body">
