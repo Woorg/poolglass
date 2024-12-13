@@ -25,9 +25,9 @@ services:
       context: ./wordpress
       dockerfile: Dockerfile
     restart: always
-    depends_on:
-      # - mariadb
-      # - redis
+    # depends_on:
+    #   - mariadb
+    #   - redis
 
     expose:
       - '9000'
