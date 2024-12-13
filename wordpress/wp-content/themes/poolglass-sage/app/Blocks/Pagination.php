@@ -115,7 +115,7 @@ class Pagination extends Block
    */
   public function getName(): string
   {
-    return __('Блок: пагинация', 'sage');
+    return pll__('Блок: пагинация', 'sage');
   }
 
   /**
@@ -123,7 +123,7 @@ class Pagination extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Pagination block.', 'sage');
+    return pll__('A beautiful Pagination block.', 'sage');
   }
 
   /**

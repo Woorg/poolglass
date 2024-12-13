@@ -115,7 +115,7 @@ class Container extends Block
    */
   public function getName(): string
   {
-    return __('Блок: контейнер', 'sage');
+    return pll__('Блок: контейнер', 'sage');
   }
 
   /**
@@ -123,7 +123,7 @@ class Container extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Container block.', 'sage');
+    return pll__('A beautiful Container block.', 'sage');
   }
 
   /**
@@ -144,7 +144,7 @@ class Container extends Block
     $fields = Builder::make('container');
 
     $fields->addMessage('container', 'Контейнер', [
-      'label' => __('Контейнер', 'sage'),
+      'label' => pll__('Контейнер', 'sage'),
     ]);
 
     return $fields->build();

@@ -115,7 +115,7 @@ class Popup extends Block
    */
   public function getName(): string
   {
-    return __('Блок: попап', 'sage');
+    return pll__('Блок: попап', 'sage');
   }
 
   /**
@@ -123,7 +123,7 @@ class Popup extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Popup block.', 'sage');
+    return pll__('A beautiful Popup block.', 'sage');
   }
 
   /**
@@ -148,7 +148,7 @@ class Popup extends Block
 
     $fields
       ->addTextarea('title', [
-        'label' => __('Заголовок'),
+        'label' => pll__('Заголовок'),
         'wrapper' => [
           'width' => '50',
         ],
@@ -176,13 +176,13 @@ class Popup extends Block
         'placeholder' => 'Выберите стиль кнопки',
       ])
       ->addText('popup_id', [
-        'label' => __('ID попапа'),
+        'label' => pll__('ID попапа'),
         'wrapper' => [
           'width' => '30',
         ],
       ])
       ->addText('popup_shortcode', [
-        'label' => __('Форма из Contact Form 7'),
+        'label' => pll__('Форма из Contact Form 7'),
         'wrapper' => [
           'width' => '100',
         ],

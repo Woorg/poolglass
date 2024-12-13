@@ -142,7 +142,7 @@ class LatestProjects extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Последние проекты', 'sage');
+    return pll__('Блок: Последние проекты', 'sage');
   }
 
   /**
@@ -150,7 +150,7 @@ class LatestProjects extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Latest Projects block.', 'sage');
+    return pll__('A beautiful Latest Projects block.', 'sage');
   }
 
   /**
@@ -174,14 +174,14 @@ class LatestProjects extends Block
 
     $fields
       ->addText('title', [
-        'label' => __('Заголовок'),
+        'label' => pll__('Заголовок'),
         'wrapper' => [
           'width' => 100,
         ],
       ])
 
       ->addRepeater('list', [
-        'label' => __('Список'),
+        'label' => pll__('Список'),
         'wrapper' => [
           'width' => 100,
         ],
@@ -190,26 +190,26 @@ class LatestProjects extends Block
         'max' => 3,
       ])
       ->addText('item_title', [
-        'label' => __('Заголовок'),
+        'label' => pll__('Заголовок'),
         'wrapper' => [
           'width' => 100,
         ],
       ])
       ->addWysiwyg('text', [
-        'label' => __('Текст'),
+        'label' => pll__('Текст'),
         'wrapper' => [
           'width' => 60,
         ],
       ])
       ->addPostObject('post', [
-        'label' => __('Пост'),
+        'label' => pll__('Пост'),
         'wrapper' => [
           'width' => 40,
         ],
         'post_type' => ['kinds'],
       ])
       ->addText('more_text', [
-        'label' => __('Текст подробнее'),
+        'label' => pll__('Текст подробнее'),
         'wrapper' => [
           'width' => 100,
         ],
@@ -218,21 +218,21 @@ class LatestProjects extends Block
       ->endRepeater()
 
       ->addGroup('more', [
-        'label' => __('Ссылка на все проекты'),
+        'label' => pll__('Ссылка на все проекты'),
         'wrapper' => [
           'width' => 100,
         ],
         'layout' => 'block',
       ])
       ->addPageLink('link', [
-        'label' => __('Ссылка на страницу'),
+        'label' => pll__('Ссылка на страницу'),
         'wrapper' => [
           'width' => 60,
         ],
         'post_type' => [],
       ])
       ->addImage('image', [
-        'label' => __('Изображение'),
+        'label' => pll__('Изображение'),
         'wrapper' => [
           'width' => 40,
         ],

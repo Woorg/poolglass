@@ -101,26 +101,12 @@ class About extends Block
   ];
 
   /**
-   * The block preview example data.
-   *
-   * @var array
-   */
-  public $example = [
-    'items' => [
-      ['item' => 'Item one'],
-      ['item' => 'Item two'],
-      ['item' => 'Item three'],
-    ],
-  ];
-
-  /**
    * The block template.
    *
    * @var array
    */
   public $template = [
     'core/heading' => ['placeholder' => 'Hello World'],
-    'core/paragraph' => ['placeholder' => 'Welcome to the About block.'],
   ];
 
   /**
@@ -128,7 +114,7 @@ class About extends Block
    */
   public function getName(): string
   {
-    return __('Блок: О компании', 'sage');
+    return pll__('Блок: О компании', 'sage');
   }
 
   /**
@@ -136,7 +122,7 @@ class About extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful About block.', 'sage');
+    return pll__('A beautiful About block.', 'sage');
   }
 
   /**
@@ -161,50 +147,50 @@ class About extends Block
 
     $fields
       ->addText('block_title', [
-        'label' => __('Блок: О компании'),
+        'label' => pll__('Блок: О компании'),
         'wrapper' => [
           'width' => 100,
         ],
       ])
       ->addText('title', [
-        'label' => __('Заголовок'),
+        'label' => pll__('Заголовок'),
         'wrapper' => [
           'width' => 100,
         ],
       ])
       ->addWysiwyg('text', [
-        'label' => __('Текст'),
+        'label' => pll__('Текст'),
         'wrapper' => [
           'width' => 100,
         ],
       ])
       ->addRepeater('list', [
-        'label' => __('Список'),
+        'label' => pll__('Список'),
         'wrapper' => [
           'width' => 100,
         ],
       ])
       ->addText('item_title', [
-        'label' => __('Заголовок'),
+        'label' => pll__('Заголовок'),
         'wrapper' => [
           'width' => 40,
         ],
       ])
       ->addImage('image', [
-        'label' => __('Изображение'),
+        'label' => pll__('Изображение'),
         'wrapper' => [
           'width' => 20,
         ],
       ])
 
       ->addPostObject('post', [
-        'label' => __('Выберите пост'),
+        'label' => pll__('Выберите пост'),
         'required' => 0,
         'conditional_logic' => [],
         'wrapper' => [
           'width' => '40',
         ],
-        'post_type' => [],
+        'post_type' => ['icons-articles'],
         // 'taxonomy' => [],
         'allow_null' => 0,
         'multiple' => 0,

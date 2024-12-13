@@ -115,7 +115,7 @@ class First extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Заказать', 'sage');
+    return pll__('Блок: Заказать', 'sage');
   }
 
   /**
@@ -123,7 +123,7 @@ class First extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful First block.', 'sage');
+    return pll__('A beautiful First block.', 'sage');
   }
 
   /**
@@ -153,7 +153,7 @@ class First extends Block
 
     $fields
       ->addTextarea('title', [
-        'label' => __('Заголовок h1', 'sage'),
+        'label' => pll__('Заголовок h1', 'sage'),
         'wrapper' => [
           'width' => '50',
         ],
@@ -162,13 +162,13 @@ class First extends Block
         'rows' => 2,
       ])
       ->addTrueFalse('parallax', [
-        'label' => __('Параллакс', 'sage'),
+        'label' => pll__('Параллакс', 'sage'),
         'wrapper' => [
           'width' => '10',
         ],
       ])
       ->addImage('parallax_image', [
-        'label' => __('Изображение', 'sage'),
+        'label' => pll__('Изображение', 'sage'),
         'wrapper' => [
           'width' => '40',
         ],
@@ -184,7 +184,7 @@ class First extends Block
         ],
       ])
       ->addRepeater('buttons', [
-        'label' => __('Кнопки', 'sage'),
+        'label' => pll__('Кнопки', 'sage'),
         'wrapper' => [
           'width' => '90',
         ],
@@ -200,13 +200,13 @@ class First extends Block
         ],
       ])
       ->addText('url', [
-        'label' => __('URL', 'sage'),
+        'label' => pll__('URL', 'sage'),
         'wrapper' => [
           'width' => '40',
         ],
       ])
       ->addText('name', [
-        'label' => __('Текст кнопки', 'sage'),
+        'label' => pll__('Текст кнопки', 'sage'),
         'wrapper' => [
           'width' => '40',
         ],
@@ -233,13 +233,13 @@ class First extends Block
       ->endRepeater()
 
       ->addTrueFalse('buttons_show', [
-        'label' => __('Показать кнопки', 'sage'),
+        'label' => pll__('Показать кнопки', 'sage'),
         'wrapper' => [
           'width' => '10',
         ],
       ])
       ->addRepeater('list', [
-        'label' => __('Список', 'sage'),
+        'label' => pll__('Список', 'sage'),
         'wrapper' => [
           'width' => '90',
         ],
@@ -255,20 +255,20 @@ class First extends Block
         ],
       ])
       ->addText('item', [
-        'label' => __('Пункт списка', 'sage'),
+        'label' => pll__('Пункт списка', 'sage'),
         'wrapper' => [
           'width' => '100',
         ],
       ])
       ->endRepeater()
       ->addTrueFalse('list_show', [
-        'label' => __('Показать список', 'sage'),
+        'label' => pll__('Показать список', 'sage'),
         'wrapper' => [
           'width' => '10',
         ],
       ])
       ->addRepeater('tiles', [
-        'label' => __('Плитки', 'sage'),
+        'label' => pll__('Плитки', 'sage'),
         'wrapper' => [
           'width' => '90',
         ],
@@ -307,13 +307,13 @@ class First extends Block
         'placeholder' => 'Выберите стиль плитки',
       ])
       ->addText('tile_text', [
-        'label' => __('Текст плитки', 'sage'),
+        'label' => pll__('Текст плитки', 'sage'),
         'wrapper' => [
           'width' => '35',
         ],
       ])
       ->addLink('tile_link', [
-        'label' => __('Cсылка', 'sage'),
+        'label' => pll__('Cсылка', 'sage'),
         // 'type' => 'page_link',
         'instructions' => '',
         // 'required' => 0,
@@ -329,7 +329,7 @@ class First extends Block
         'conditional_logic' => [],
       ])
       ->addText('tile_popup_id', [
-        'label' => __('Id попапа', 'sage'),
+        'label' => pll__('Id попапа', 'sage'),
         'wrapper' => [
           'width' => '20',
         ],
@@ -343,14 +343,14 @@ class First extends Block
         ],
       ])
       ->addTrueFalse('tile_show', [
-        'label' => __('Показать плитку', 'sage'),
+        'label' => pll__('Показать плитку', 'sage'),
         'wrapper' => [
           'width' => '10',
         ],
       ])
       ->endRepeater()
       ->addTrueFalse('tiles_show', [
-        'label' => __('Показать список плиток', 'sage'),
+        'label' => pll__('Показать список плиток', 'sage'),
         'wrapper' => [
           'width' => '10',
         ],

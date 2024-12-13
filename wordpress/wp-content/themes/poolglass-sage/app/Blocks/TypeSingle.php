@@ -140,7 +140,7 @@ class TypeSingle extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Вид бассейнов (Single)', 'sage');
+    return pll__('Блок: Вид бассейнов (Single)', 'sage');
   }
 
   /**
@@ -148,7 +148,7 @@ class TypeSingle extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Type Single block.', 'sage');
+    return pll__('A beautiful Type Single block.', 'sage');
   }
 
   /**

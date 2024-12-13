@@ -129,7 +129,7 @@ class Contacts extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Контакты', 'sage');
+    return pll__('Блок: Контакты', 'sage');
   }
 
   /**
@@ -137,7 +137,7 @@ class Contacts extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Contacts block.', 'sage');
+    return pll__('A beautiful Contacts block.', 'sage');
   }
 
   /**
@@ -163,32 +163,32 @@ class Contacts extends Block
 
     $fields
       ->addText('block_title', [
-        'label' => __('Заголовок блокa', 'sage'),
+        'label' => pll__('Заголовок блокa', 'sage'),
       ])
       ->addText('title', [
-        'label' => __('Заголовок', 'sage'),
+        'label' => pll__('Заголовок', 'sage'),
       ])
 
       ->addRepeater('list', [
-        'label' => __('Список', 'sage'),
+        'label' => pll__('Список', 'sage'),
         'wrapper' => [
           'width' => 100,
         ],
       ])
       ->addText('item_title', [
-        'label' => __('Заголовок', 'sage'),
+        'label' => pll__('Заголовок', 'sage'),
         'wrapper' => [
           'width' => 30,
         ],
       ])
       ->addRepeater('list', [
-        'label' => __('Список', 'sage'),
+        'label' => pll__('Список', 'sage'),
         'wrapper' => [
           'width' => 70,
         ],
       ])
       ->addTextarea('text', [
-        'label' => __('Текст', 'sage'),
+        'label' => pll__('Текст', 'sage'),
         'wrapper' => [
           'width' => 100,
         ],
@@ -200,13 +200,13 @@ class Contacts extends Block
 
       ->endRepeater()
       ->addTextarea('map', [
-        'label' => __('Карта Iframe, Виджет с картой', 'sage'),
+        'label' => pll__('Карта Iframe, Виджет с картой', 'sage'),
         'wrapper' => [
           'width' => 80,
         ],
       ])
       ->addTrueFalse('show_map', [
-        'label' => __('Показать карту', 'sage'),
+        'label' => pll__('Показать карту', 'sage'),
         'wrapper' => [
           'width' => 20,
         ],

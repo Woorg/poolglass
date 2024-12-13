@@ -117,7 +117,7 @@ class Articles extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Статьи', 'sage');
+    return pll__('Блок: Статьи', 'sage');
   }
 
   /**
@@ -125,7 +125,7 @@ class Articles extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Articles block.', 'sage');
+    return pll__('A beautiful Articles block.', 'sage');
   }
 
   /**

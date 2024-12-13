@@ -55,13 +55,13 @@
   ),
   'log1x/sage-svg' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Log1x\\SageSvg\\SageSvgServiceProvider',
-    ),
     'aliases' => 
     array (
       'SageSvg' => 'Log1x\\SageSvg\\Facades\\SageSvg',
+    ),
+    'providers' => 
+    array (
+      0 => 'Log1x\\SageSvg\\SageSvgServiceProvider',
     ),
   ),
   'nesbot/carbon' => 
@@ -83,6 +83,13 @@
     'providers' => 
     array (
       0 => 'Roots\\AcornMail\\AcornMailServiceProvider',
+    ),
+  ),
+  'roots/acorn-prettify' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Roots\\AcornPrettify\\AcornPrettifyServiceProvider',
     ),
   ),
   'roots/sage' => 

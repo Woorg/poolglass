@@ -83,9 +83,9 @@ add_action(
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-      'primary_navigation' => __('Primary Navigation', 'sage'),
-      'secondary_navigation' => __('Secondary Navigation', 'sage'),
-      // 'projects_navigation' => __('Projects Navigation', 'sage'),
+      'primary_navigation' => pll__('Primary Navigation', 'sage'),
+      'secondary_navigation' => pll__('Secondary Navigation', 'sage'),
+      // 'projects_navigation' => pll__('Projects Navigation', 'sage'),
     ]);
 
     /**
@@ -137,6 +137,8 @@ add_action(
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    // load_theme_textdomain('sage', get_stylesheet_directory() . '/lang');
   },
   20,
 );
@@ -156,14 +158,14 @@ add_action('widgets_init', function () {
 
   // register_sidebar(
   //   [
-  //     'name' => __('Primary', 'sage'),
+  //     'name' => pll__('Primary', 'sage'),
   //     'id' => 'sidebar-primary',
   //   ] + $config,
   // );
 
   register_sidebar(
     [
-      'name' => __('Footer', 'sage'),
+      'name' => pll__('Footer', 'sage'),
       'id' => 'sidebar-footer',
     ] + $config,
   );

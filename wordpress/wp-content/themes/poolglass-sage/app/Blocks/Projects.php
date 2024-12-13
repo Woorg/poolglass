@@ -117,7 +117,7 @@ class Projects extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Проекты', 'sage');
+    return pll__('Блок: Проекты', 'sage');
   }
 
   /**
@@ -125,7 +125,7 @@ class Projects extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Projects block.', 'sage');
+    return pll__('A beautiful Projects block.', 'sage');
   }
 
   /**

@@ -11,8 +11,13 @@
 |
 */
 
-if (! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
-    wp_die(__('Error locating autoloader. Please run <code>composer install</code>.', 'sage'));
+if (!file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
+  wp_die(
+    pll__(
+      'Error locating autoloader. Please run <code>composer install</code>.',
+      'sage',
+    ),
+  );
 }
 
 require $composer;
@@ -29,15 +34,11 @@ require $composer;
 |
 */
 
-if (! function_exists('\Roots\bootloader')) {
-    wp_die(
-        __('You need to install Acorn to use this theme.', 'sage'),
-        '',
-        [
-            'link_url' => 'https://roots.io/acorn/docs/installation/',
-            'link_text' => __('Acorn Docs: Installation', 'sage'),
-        ]
-    );
+if (!function_exists('\Roots\bootloader')) {
+  wp_die(pll__('You need to install Acorn to use this theme.', 'sage'), '', [
+    'link_url' => 'https://roots.io/acorn/docs/installation/',
+    'link_text' => pll__('Acorn Docs: Installation', 'sage'),
+  ]);
 }
 
 \Roots\bootloader()->boot();
@@ -55,19 +56,21 @@ if (! function_exists('\Roots\bootloader')) {
 */
 
 $setup_files = [
-    'setup',            // Theme setup
-    'filters',          // Theme filters
-    'shortcodes',       // Shortcodes
-    'helpers',          // Helpers
-    'ajax',             // Ajax functions
+  'setup', // Theme setup
+  'filters', // Theme filters
+  'shortcodes', // Shortcodes
+  'helpers', // Helpers
+  'ajax', // Ajax functions
 ];
 
-collect( $setup_files )
-    ->each(function ($file) {
-        if (! locate_template($file = "app/{$file}.php", true, true)) {
-            wp_die(
-                /* translators: %s is replaced with the relative file path */
-                sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file)
-            );
-        }
-    });
+collect($setup_files)->each(function ($file) {
+  if (!locate_template($file = "app/{$file}.php", true, true)) {
+    wp_die(
+      /* translators: %s is replaced with the relative file path */
+      sprintf(
+        pll__('Error locating <code>%s</code> for inclusion.', 'sage'),
+        $file,
+      ),
+    );
+  }
+});

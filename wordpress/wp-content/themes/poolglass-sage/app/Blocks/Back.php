@@ -128,7 +128,7 @@ class Back extends Block
    */
   public function getName(): string
   {
-    return __('Блок: кнопка назад ', 'sage');
+    return pll__('Блок: кнопка назад ', 'sage');
   }
 
   /**
@@ -136,7 +136,7 @@ class Back extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Back block.', 'sage');
+    return pll__('A beautiful Back block.', 'sage');
   }
 
   /**
@@ -157,7 +157,7 @@ class Back extends Block
     $fields = Builder::make('back');
 
     $fields->addMessage('back_button', 'Кнопка назад', [
-      'label' => __('Кнопка назад', 'sage'),
+      'label' => pll__('Кнопка назад', 'sage'),
     ]);
 
     return $fields->build();

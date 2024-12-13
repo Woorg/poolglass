@@ -30,8 +30,9 @@
     26 => 'Carbon\\Laravel\\ServiceProvider',
     27 => 'Termwind\\Laravel\\TermwindServiceProvider',
     28 => 'Roots\\AcornMail\\AcornMailServiceProvider',
-    29 => 'App\\Providers\\ThemeServiceProvider',
+    29 => 'Roots\\AcornPrettify\\AcornPrettifyServiceProvider',
     30 => 'App\\Providers\\ThemeServiceProvider',
+    31 => 'App\\Providers\\ThemeServiceProvider',
   ),
   'eager' => 
   array (
@@ -56,8 +57,9 @@
     18 => 'Carbon\\Laravel\\ServiceProvider',
     19 => 'Termwind\\Laravel\\TermwindServiceProvider',
     20 => 'Roots\\AcornMail\\AcornMailServiceProvider',
-    21 => 'App\\Providers\\ThemeServiceProvider',
+    21 => 'Roots\\AcornPrettify\\AcornPrettifyServiceProvider',
     22 => 'App\\Providers\\ThemeServiceProvider',
+    23 => 'App\\Providers\\ThemeServiceProvider',
   ),
   'deferred' => 
   array (

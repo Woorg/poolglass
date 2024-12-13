@@ -30,14 +30,14 @@ class Options extends Field
 
     $fields
       ->addTab('general', [
-        'label' => __('General'),
+        'label' => pll__('General'),
       ])
       ->addGroup('general', [
-        'label' => __('General'),
+        'label' => pll__('General'),
         'layout' => 'block',
       ])
       ->addImage('logo', [
-        'label' => __('Logo'),
+        'label' => pll__('Logo'),
         'wrapper' => [
           'width' => '20',
         ],
@@ -46,26 +46,26 @@ class Options extends Field
         'library' => 'all',
       ])
       ->addText('phone', [
-        'label' => __('Phone'),
+        'label' => pll__('Phone'),
         'wrapper' => [
           'width' => '25',
         ],
       ])
       ->addEmail('email', [
-        'label' => __('Email'),
+        'label' => pll__('Email'),
         'wrapper' => [
           'width' => '25',
         ],
       ])
       ->addTextarea('address', [
-        'label' => __('Address'),
+        'label' => pll__('Address'),
         'wrapper' => [
           'width' => '30',
         ],
         'rows' => '2',
       ])
       ->addText('copyright', [
-        'label' => __('Copyright'),
+        'label' => pll__('Copyright'),
         'wrapper' => [
           'width' => '100',
         ],
@@ -73,12 +73,12 @@ class Options extends Field
       ->endGroup()
 
       ->addGroup('social', [
-        'label' => __('Social'),
+        'label' => pll__('Social'),
         'layout' => 'block',
       ])
 
       ->addRepeater('list', [
-        'label' => __('Social List'),
+        'label' => pll__('Social List'),
         'wrapper' => [
           'width' => '100',
         ],
@@ -86,13 +86,13 @@ class Options extends Field
         'layout' => 'block',
       ])
       ->addText('url', [
-        'label' => __('Url'),
+        'label' => pll__('Url'),
         'wrapper' => [
           'width' => '50',
         ],
       ])
       ->addText('icon_name', [
-        'label' => __('Icon Name'),
+        'label' => pll__('Icon Name'),
         'wrapper' => [
           'width' => '50',
         ],
@@ -102,10 +102,10 @@ class Options extends Field
       ->endGroup()
 
       ->addTab('metriks', [
-        'label' => __('Кастомные скрипты'),
+        'label' => pll__('Кастомные скрипты'),
       ])
       ->addRepeater('custom_scripts_list', [
-        'label' => __('Скрипты'),
+        'label' => pll__('Скрипты'),
         'wrapper' => [
           'width' => '100',
         ],
@@ -113,7 +113,7 @@ class Options extends Field
         'layout' => 'block',
       ])
       ->addTextarea('script', [
-        'label' => __('Script'),
+        'label' => pll__('Script'),
         'wrapper' => [
           'width' => '100',
         ],

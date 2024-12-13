@@ -37,7 +37,9 @@
     "psr-4": {
       "App\\": "app/"
     },
-    "exclude-from-classmap":["vendor/roots/acorn/src/Illuminate/Foundation/Vite.php"]
+    "exclude-from-classmap": [
+      "vendor/roots/acorn/src/Illuminate/Foundation/Vite.php"
+    ]
   },
   "require": {
     "php": ">=8.2",
@@ -49,7 +51,8 @@
     "log1x/sage-directives": "^2.0",
     "log1x/sage-svg": "^2.0",
     "roots/acorn": "^4.3.0",
-    "roots/acorn-mail": "^1.0"
+    "roots/acorn-mail": "^1.0",
+    "roots/acorn-prettify": "^1.0"
   },
   "require-dev": {
     "laravel/pint": "^1.15.3"
@@ -60,7 +63,10 @@
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,

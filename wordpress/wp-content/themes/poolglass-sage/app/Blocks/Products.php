@@ -129,7 +129,7 @@ class Products extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Продукты', 'sage');
+    return pll__('Блок: Продукты', 'sage');
   }
 
   /**
@@ -137,7 +137,7 @@ class Products extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Products block.', 'sage');
+    return pll__('A beautiful Products block.', 'sage');
   }
 
   /**

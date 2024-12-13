@@ -136,7 +136,7 @@ class Types extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Виды бассейнов', 'sage');
+    return pll__('Блок: Виды бассейнов', 'sage');
   }
 
   /**
@@ -144,7 +144,7 @@ class Types extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Types block.', 'sage');
+    return pll__('A beautiful Types block.', 'sage');
   }
 
   /**

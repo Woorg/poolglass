@@ -1,5 +1,5 @@
-<div x-data="calculator()" class="calculator <?php echo e($block->classes); ?>"
-  style="<?php echo e($block->inlineStyle); ?>">
+<div x-data="calculator()" @wpcf7mailsent.window="resetForm"
+  class="calculator <?php echo e($block->classes); ?>" style="<?php echo e($block->inlineStyle); ?>">
   <div class="calculator__container container">
 
     <div class="calculator__item calculator__item_1">
@@ -9,7 +9,7 @@
       <div class="calculator__select-w">
 
         <select class="calculator__select" x-model="window_shape" x-transition>
-          <option value="">Выберите форму подводного
+          <option value="" disabled>Выберите форму подводного
             окна</option>
           <option value="Круглое окно в стене">Круглое окно в стене</option>
           <option value="Прямоугольное окно">Прямоугольное окно</option>
@@ -28,15 +28,16 @@
       <span x-show="window_shape === ''"></span>
       <img x-show="window_shape
         === 'Круглое окно в стене'" x-transition
-        src="<?= \Roots\asset('public/assets/images/round-wall.webp'); ?>" />
+        src="<?php echo e(Vite::asset('public/assets/images/round-wall.webp')); ?>" />
       <img x-show="window_shape === 'Прямоугольное окно'" x-transition
-        src="<?= \Roots\asset('public/assets/images/rectangle-wall.webp'); ?>" />
+        src="<?php echo e(Vite::asset('public/assets/images/rectangle-wall.webp')); ?>" />
       <img x-show="window_shape === 'Трехопорная панель'" x-transition
-        src="<?= \Roots\asset('public/assets/images/three-point-wall.webp'); ?>" />
+        src="<?php echo e(Vite::asset('public/assets/images/three-point-wall.webp')); ?>" />
       <img x-show="window_shape === 'Панель с переливом'" x-transition
-        src="<?= \Roots\asset('public/assets/images/overflow-wall.webp'); ?>" />
+        src="<?php echo e(Vite::asset('public/assets/images/overflow-wall.webp')); ?>" />
       <img x-show="window_shape === 'Прямоугольное окно в дне бассейна'"
-        x-transition src="<?= \Roots\asset('public/assets/images/rectangle-floor.webp'); ?>" />
+        x-transition
+        src="<?php echo e(Vite::asset('public/assets/images/rectangle-floor.webp')); ?>" />
     </figure>
 
     <div class="calculator__item calculator__item_2">
@@ -92,6 +93,7 @@
       </div>
       <div class="calculator__select-w">
         <select class="calculator__select" x-model="pool_finish" x-transition>
+          <option value="" disabled>Выберите отделку</option>
           <option value="Плитка, камень или мрамор на бетоне1">Плитка, камень
             или мрамор на бетоне
           </option>
@@ -119,6 +121,9 @@
       <div class="calculator__select-w"
         x-show="special_wishes !== 'свой вариант'" x-transition>
         <select class="calculator__select" x-model="special_wishes">
+          <option value="мне нужен монтаж подводного окна" disabled>Выберите
+            пожелание
+          </option>
           <option value="мне нужен монтаж подводного окна">Мне нужен монтаж
             подводного окна
           </option>

@@ -114,7 +114,7 @@ class Calculator extends Block
    */
   public function getName(): string
   {
-    return __('Блок: Калькулятор', 'sage');
+    return pll__('Блок: Калькулятор', 'sage');
   }
 
   /**
@@ -122,7 +122,7 @@ class Calculator extends Block
    */
   public function getDescription(): string
   {
-    return __('A beautiful Calculator block.', 'sage');
+    return pll__('A beautiful Calculator block.', 'sage');
   }
 
   /**
@@ -149,7 +149,7 @@ class Calculator extends Block
         ],
       ])
       ->addText('form_shortcode', [
-        'label' => __('Шорткат формы'),
+        'label' => pll__('Шорткат формы'),
         'wrapper' => [
           'width' => 100,
         ],
