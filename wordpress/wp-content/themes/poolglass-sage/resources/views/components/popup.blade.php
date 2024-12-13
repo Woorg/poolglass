@@ -19,7 +19,7 @@
 
       <div class="popup__title title title_h2">{!! $popup_title !!}</div>
       <small class="popup__note"><sub>*</sub>
-        обязательные к заполнению поля</small>
+        {{ pll__('обязательные к заполнению поля', 'sage') }}</small>
     </div>
     {{-- {{ get_svg('popup-wave-up', 'popup__wave popup__wave_up', []) }} --}}
     {{-- {{ get_svg('popup-wave-up-single', 'popup__wave  popup__wave_up_single', []) }} --}}

@@ -1,9 +1,5 @@
 <div class="products <?php echo e($block->classes); ?>" style="<?php echo e($block->inlineStyle); ?>">
 
-  
-
-  
-
   <div class="products__container container">
     <?php if($products): ?>
       <div class="products__grid">

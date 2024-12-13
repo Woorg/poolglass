@@ -1,8 +1,6 @@
 <section class="latest-projects {{ $block->classes }}"
   style="{{ $block->inlineStyle }}">
 
-  {{-- {{ get_svg('wave-up-320', 'latest-projects__up latest-projects__up_320', []) }} --}}
-
   <div class="latest-projects__container container">
     <h2 class="latest-projects__title title title_h1">{{ $title }}</h2>
     @if ($list)
@@ -33,10 +31,7 @@
               ]) !!}
             </figure>
             <a href="{{ $more['link'] }}"
-              class="latest-projects__more-text title "><span>
-                Смотреть
-                все
-                проекты</span></a>
+              class="latest-projects__more-text title "><span>{{ pll__('Смотреть все проекты', 'sage') }}</span></a>
           </div>
         @endif
       </div>

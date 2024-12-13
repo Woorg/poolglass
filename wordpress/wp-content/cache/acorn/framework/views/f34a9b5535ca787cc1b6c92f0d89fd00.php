@@ -6,18 +6,6 @@
         'partials.content',
     ], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   <?php endwhile; ?>
-
-  
-
-  
-  
-
-  
-  
-
-  
-
-  
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('footer_scripts'); ?>

@@ -4,7 +4,7 @@
       <a href="{{ $pagi->previousPageUrl() }}" rel="prev"
         aria-label="Previous Page" class="pagination__back">
         {{ get_svg('arrow', 'pagination__icon', []) }}
-        <span aria-hidden="true">Предыдущая</span>
+        <span aria-hidden="true">{{ pll__('Предыдущая', 'sage') }}</span>
       </a>
     @endif
 
@@ -35,7 +35,7 @@
     @if ($pagi->hasMorePages())
       <a href="{{ $pagi->nextPageUrl() }}" rel="next" aria-label="Next Page"
         class="pagination__next">
-        <span aria-hidden="true">Следующая</span>
+        <span aria-hidden="true">{{ pll__('Следующая', 'sage') }}</span>
         {{ get_svg('arrow', 'pagination__icon', []) }}
       </a>
     @endif

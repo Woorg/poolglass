@@ -32,7 +32,8 @@
                   {!! $kind_excerpt !!}
                 </div>
 
-                <span class="kinds__more" href="">Читать подробнее</span>
+                <span class="kinds__more"
+                  href="">{{ pll__('Читать подробнее', 'sage') }}</span>
 
               </div>
             </a>

@@ -1,8 +1,6 @@
 <section class="latest-projects <?php echo e($block->classes); ?>"
   style="<?php echo e($block->inlineStyle); ?>">
 
-  
-
   <div class="latest-projects__container container">
     <h2 class="latest-projects__title title title_h1"><?php echo e($title); ?></h2>
     <?php if($list): ?>
@@ -36,10 +34,7 @@
 
             </figure>
             <a href="<?php echo e($more['link']); ?>"
-              class="latest-projects__more-text title "><span>
-                Смотреть
-                все
-                проекты</span></a>
+              class="latest-projects__more-text title "><span><?php echo e(pll__('Смотреть все проекты', 'sage')); ?></span></a>
           </div>
         <?php endif; ?>
       </div>

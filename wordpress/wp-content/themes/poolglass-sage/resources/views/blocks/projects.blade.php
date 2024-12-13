@@ -6,13 +6,13 @@
     @if ($projects)
 
       <nav class="projects__filter"
-        aria-label="{{ __('Filter projects', 'sage') }}">
+        aria-label="{{ pll__('Filter projects', 'sage') }}">
         @if ($terms)
           <ul class="projects__filter-list">
             <li class="projects__filter-item">
               <a data-filter="all" class="projects__filter-link" href="#"
                 :class="{ 'active': activeFilter === 'all' }"
-                @click.prevent="setFilter('all')">{{ __('Все', 'sage') }}</a>
+                @click.prevent="setFilter('all')">{{ pll__('Все', 'sage') }}</a>
             </li>
 
             @foreach ($terms as $term)

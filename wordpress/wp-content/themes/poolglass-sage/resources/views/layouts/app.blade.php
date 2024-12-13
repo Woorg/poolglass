@@ -18,7 +18,7 @@
   @php(wp_body_open())
 
   {{-- <a class="sr-only focus:not-sr-only" href="#main">
-    {{ __('Skip to content') }}
+    {{ pllpll__('Skip to content') }}
   </a> --}}
 
   @include('sections.header')

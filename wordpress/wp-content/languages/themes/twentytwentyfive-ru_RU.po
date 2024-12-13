@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-Five package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-11-12 20:47:59+0000\n"
+"PO-Revision-Date: 2024-12-09 08:37:40+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,25 @@ msgstr ""
 "X-Generator: GlotPress/4.0.1\n"
 "Language: ru\n"
 "Project-Id-Version: Themes - Twenty Twenty-Five\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "Twenty Twenty-Five emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide."
+msgstr "Twenty Twenty-Five подчеркивает простоту и адаптивность. Он предлагает гибкие варианты дизайна, поддерживаемые различными шаблонами для разных типов страниц, таких как сервисные и целевые страницы, что делает его идеальным для создания личных блогов, профессиональных портфолио, онлайн-журналов или бизнес-сайтов. Его шаблоны соответствуют различным стилям блогов, от текстово-ориентированных до насыщенных изображениями. Кроме того, он поддерживает международную типографику и разнообразные цветовые палитры, обеспечивая доступность и настройку для пользователей по всему миру."
+
+#. Theme Name of the theme
+#: style.css patterns/footer-columns.php:66 patterns/footer-newsletter.php:42
+#: patterns/footer.php:75 patterns/page-portfolio-home.php:226
+#, gp-priority: high
+msgid "Twenty Twenty-Five"
+msgstr "Twenty Twenty-Five"
+
+#: patterns/text-faqs.php:35 patterns/text-faqs.php:51
+#: patterns/text-faqs.php:71 patterns/text-faqs.php:87
+msgctxt "Answer in the FAQs pattern."
+msgid "This exquisite compilation showcases a diverse array of photographs that capture the essence of different eras and cultures, reflecting the unique styles and perspectives of each artist."
+msgstr "В этой изысканной подборке представлены разнообразные фотографии, передающие суть разных эпох и культур, отражающие уникальные стили и взгляды каждого художника."
 
 #: theme.json
 msgctxt "Custom template name"
@@ -51,46 +70,55 @@ msgctxt "Template part name"
 msgid "Header"
 msgstr "Заголовок"
 
-#: theme.json
+#: styles/02-noon.json styles/typography/typography-preset-1.json
 msgctxt "Font family name"
 msgid "Beiruti"
 msgstr "Beiruti"
 
-#: theme.json
+#: styles/05-twilight.json styles/typography/typography-preset-4.json
 msgctxt "Font family name"
 msgid "Roboto Slab"
 msgstr "Roboto Slab"
 
-#: theme.json
+#: styles/04-afternoon.json styles/07-sunrise.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-6.json
 msgctxt "Font family name"
 msgid "Platypi"
 msgstr "Platypi"
 
-#: theme.json
+#: styles/04-afternoon.json styles/06-morning.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-5.json
 msgctxt "Font family name"
 msgid "Ysabeau Office"
 msgstr "Ysabeau Office"
 
-#: theme.json
+#: styles/08-midnight.json styles/typography/typography-preset-7.json
 msgctxt "Font family name"
 msgid "Fira Sans"
 msgstr "Fira Sans"
 
-#: theme.json
+#: styles/03-dusk.json styles/typography/typography-preset-2.json theme.json
 msgctxt "Font family name"
 msgid "Fira Code"
 msgstr "Fira Code"
 
-#: theme.json
+#: styles/03-dusk.json styles/typography/typography-preset-2.json
 msgctxt "Font family name"
 msgid "Vollkorn"
 msgstr "Vollkorn"
 
-#: theme.json
+#: styles/02-noon.json styles/06-morning.json styles/07-sunrise.json
+#: styles/08-midnight.json styles/typography/typography-preset-1.json
+#: styles/typography/typography-preset-5.json
+#: styles/typography/typography-preset-6.json
+#: styles/typography/typography-preset-7.json
 msgctxt "Font family name"
 msgid "Literata"
 msgstr "Literata"
 
+#: styles/05-twilight.json styles/typography/typography-preset-4.json
 #: theme.json
 msgctxt "Font family name"
 msgid "Manrope"
@@ -211,7 +239,7 @@ msgctxt "Style variation name"
 msgid "Display"
 msgstr "Отображение"
 
-#: styles/08-midnight.json
+#: styles/08-midnight.json styles/colors/08-midnight.json
 msgctxt "Duotone name"
 msgid "Midnight filter"
 msgstr "Фильтр Полночь"
@@ -409,34 +437,22 @@ msgctxt "Pattern title"
 msgid "Vertical header"
 msgstr "Вертикальный заголовок"
 
-#: patterns/text-faqs.php:64
-msgctxt "Question in the FAQs pattern"
-msgid "Will The Stories Book be available in other languages other that English?"
-msgstr "Будет ли Книга историй доступна на других языках, кроме английского?"
-
-#: patterns/text-faqs.php:55
+#: patterns/text-faqs.php:83
 msgctxt "Question in the FAQs pattern."
 msgid "Are signed copies available?"
 msgstr "Можно ли приобрести подписанные копии?"
 
-#: patterns/text-faqs.php:46
+#: patterns/text-faqs.php:67
 msgctxt "Question in the FAQs pattern."
 msgid "When will The Stories Book be released?"
 msgstr "Когда выйдет Книга историй?"
 
-#: patterns/text-faqs.php:37
+#: patterns/text-faqs.php:47
 msgctxt "Question in the FAQs pattern."
 msgid "How much does The Stories Book cost?"
 msgstr "Сколько стоит Книга историй?"
 
-#: patterns/text-faqs.php:30 patterns/text-faqs.php:39
-#: patterns/text-faqs.php:48 patterns/text-faqs.php:57
-#: patterns/text-faqs.php:66
-msgctxt "Answer in the FAQs pattern."
-msgid "This exquisite compilation showcases a diverse array of photographs that capture the essence of different eras and cultures, reflecting the unique styles and perspectives of each artist. Fleckenstein's evocative imagery, Strand's groundbreaking modernist approach, and Kōno's meticulous documentation of Japanese life come together in a harmonious blend that celebrates the art of photography."
-msgstr "Эта изысканная коллекция включает разнообразные фотографии, которые передают суть различных эпох и культур, отражая уникальные стили и взгляды каждого художника. Образное искусство Флеккенштейна, новаторский модернизм Стрэнда и точная документация японской жизни от Коно гармонично сливаются, прославляя искусство фотографии."
-
-#: patterns/text-faqs.php:28
+#: patterns/text-faqs.php:31
 msgctxt "Question in the FAQs pattern."
 msgid "What is The Stories Book about?"
 msgstr "О чем Книга историй?"
@@ -445,11 +461,6 @@ msgstr "О чем Книга историй?"
 msgctxt "Heading of the FAQs pattern."
 msgid "Frequently Asked Questions"
 msgstr "Часто задаваемые вопросы"
-
-#: patterns/text-faqs.php
-msgctxt "Pattern description"
-msgid "A FAQs section with a FAQ heading and list of toggle questions and answers."
-msgstr "Раздел часто задаваемых вопросов с заголовком и списком переключаемых вопросов и ответов."
 
 #: patterns/text-faqs.php
 msgctxt "Pattern title"
@@ -586,6 +597,7 @@ msgctxt "Pattern title"
 msgid "News blog single post with sidebar"
 msgstr "Новостной блог с боковой панелью — одиночная запись"
 
+#: patterns/template-home-with-sidebar-news-blog.php:88
 #: patterns/template-single-left-aligned-content.php:56
 #: patterns/template-single-news-blog.php:39
 msgctxt "Separator between date and categories."
@@ -631,12 +643,6 @@ msgstr "Список записей, 1 колонка, с основной ка�
 msgctxt "Pattern title"
 msgid "List of posts, 1 column"
 msgstr "Список записей, 1 столбец"
-
-#: patterns/template-query-loop-vertical-header-blog.php:47
-#: patterns/template-query-loop.php:31
-msgctxt "Message explaining that there are no results returned from a search"
-msgid "Sorry, but nothing was found. Please try a search with different keywords."
-msgstr "Извините, ничего не найдено. Попробуйте использовать другие ключевые слова."
 
 #: patterns/template-query-loop-vertical-header-blog.php
 msgctxt "Pattern title"
@@ -685,11 +691,6 @@ msgstr "Шаблон страницы для блога с выравниван�
 msgctxt "Pattern title"
 msgid "Photo blog page"
 msgstr "Страница фотоблога"
-
-#: patterns/template-home-with-sidebar-news-blog.php:88
-msgctxt "Separator between date and categories"
-msgid "·"
-msgstr "·"
 
 #: patterns/template-home-with-sidebar-news-blog.php:42
 msgid "The Latest"
@@ -787,10 +788,6 @@ msgstr "Смартфоны фотографируют живописное цв�
 #: patterns/services-subscriber-only-section.php:55
 msgid "View plans"
 msgstr "Посмотреть тарифы"
-
-#: patterns/services-subscriber-only-section.php:31
-msgid "Join our IRL event."
-msgstr "Присоединяйтесь к нашему живому событию."
 
 #: patterns/services-subscriber-only-section.php:21
 msgid "Subscribe to get unlimited access"
@@ -917,6 +914,7 @@ msgid "Get a free tote bag."
 msgstr "Получите бесплатную сумку."
 
 #: patterns/pricing-2-col.php:48 patterns/pricing-2-col.php:92
+#: patterns/services-subscriber-only-section.php:31
 msgid "Join our IRL events."
 msgstr "Присоединяйтесь к нашим офлайн мероприятиям."
 
@@ -1257,6 +1255,8 @@ msgstr "Написано"
 #: patterns/template-query-loop-news-blog.php:55
 #: patterns/template-query-loop-photo-blog.php:22
 #: patterns/template-query-loop-text-blog.php:19
+#: patterns/template-query-loop-vertical-header-blog.php:47
+#: patterns/template-query-loop.php:31
 msgctxt "Message explaining that there are no results returned from a search."
 msgid "Sorry, but nothing was found. Please try a search with different keywords."
 msgstr "Извините, но ничего не найдено. Пожалуйста, попробуйте выполнить поиск с другими ключевыми словами."
@@ -1276,15 +1276,10 @@ msgctxt "Pattern title"
 msgid "Sidebar"
 msgstr "Область виджетов"
 
-#: patterns/hidden-search.php:14
+#: patterns/cta-heading-search.php:21 patterns/hidden-search.php:14
 msgctxt "Button text. Verb."
 msgid "Search"
 msgstr "Поиск"
-
-#: patterns/hidden-search.php:14
-msgctxt "Search input field placeholder text"
-msgid "Type here..."
-msgstr "Введите здесь..."
 
 #: patterns/hidden-search.php
 msgctxt "Pattern title"
@@ -1340,11 +1335,6 @@ msgstr "Spotify"
 msgctxt "Button text"
 msgid "Apple Podcasts"
 msgstr "Apple Podcasts"
-
-#: patterns/hero-podcast.php:49
-msgctxt "Button text"
-msgid "Youtube"
-msgstr "Youtube"
 
 #: patterns/hero-podcast.php:43
 msgid "Subscribe on your favorite platform"
@@ -1516,22 +1506,17 @@ msgctxt "Pattern title"
 msgid "Centered header"
 msgstr "Центрированный заголовок"
 
-#: patterns/grid-with-categories.php:57
+#: patterns/grid-with-categories.php:64
 msgid "Sunflowers"
 msgstr "Подсолнухи"
 
-#: patterns/grid-with-categories.php:45
+#: patterns/grid-with-categories.php:50
 msgid "Cactus"
 msgstr "Кактус"
 
-#: patterns/grid-with-categories.php:33
+#: patterns/grid-with-categories.php:36
 msgid "Anthuriums"
 msgstr "Антуриумы"
-
-#: patterns/grid-with-categories.php:29 patterns/grid-with-categories.php:40
-#: patterns/grid-with-categories.php:52
-msgid "Write title…"
-msgstr "Напишите заголовок…"
 
 #: patterns/grid-with-categories.php:29
 msgid "Close up of a red anthurium."
@@ -1682,7 +1667,7 @@ msgctxt "Pattern title"
 msgid "Footer with columns"
 msgstr "Подвал с колонками"
 
-#. Translators: Designed with WordPress. %s: WordPress link.
+#. translators: Designed with WordPress. %s: WordPress link.
 #: patterns/footer-centered.php:33 patterns/footer-columns.php:73
 #: patterns/footer-newsletter.php:49 patterns/footer-social.php:35
 #: patterns/footer.php:82
@@ -1703,17 +1688,9 @@ msgstr "Центрированный нижний колонтитул"
 msgid "An introduction to African dialects"
 msgstr "Введение в африканские диалекты"
 
-#: patterns/event-schedule.php:163
-msgid "Black and white photo of an african woman."
-msgstr "Черно-белое фото африканской женщины."
-
 #: patterns/event-schedule.php:142
 msgid "Ancient buildings and symbols"
 msgstr "Древние здания и символы"
-
-#: patterns/event-schedule.php:132 patterns/media-instagram-grid.php:52
-msgid "The acropolis in Athens."
-msgstr "Акрополь в Афинах."
 
 #: patterns/event-schedule.php:89
 msgid "Things you didn’t know about the deep ocean"
@@ -1832,12 +1809,7 @@ msgctxt "Pattern title"
 msgid "Newsletter sign-up"
 msgstr "Подписка на рассылку"
 
-#: patterns/cta-heading-search.php:21
-msgctxt "Button text. Verb"
-msgid "Search"
-msgstr "Поиск"
-
-#: patterns/cta-heading-search.php:21
+#: patterns/cta-heading-search.php:21 patterns/hidden-search.php:14
 msgctxt "Search input field placeholder text."
 msgid "Type here..."
 msgstr "Введите здесь..."
@@ -2423,10 +2395,6 @@ msgstr "Имя формата записи"
 msgid "A collection of post format patterns."
 msgstr "Коллекция паттернов форматов записей"
 
-#: functions.php:113
-msgid "Post format"
-msgstr "Формат записи"
-
 #: functions.php:106
 msgid "A collection of full page layouts."
 msgstr "Коллекция макетов полных страниц."
@@ -2440,26 +2408,21 @@ msgid "Checkmark"
 msgstr "Галочка"
 
 #. Author URI of the theme
-#: patterns/footer-centered.php:34 patterns/footer-columns.php:74
+#: style.css patterns/footer-centered.php:34 patterns/footer-columns.php:74
 #: patterns/footer-newsletter.php:50 patterns/footer-social.php:36
 #: patterns/footer.php:83
+#, gp-priority: low
 msgid "https://wordpress.org"
 msgstr "https://ru.wordpress.org"
 
 #. Author of the theme
+#: style.css
+#, gp-priority: low
 msgid "the WordPress team"
 msgstr "Команда WordPress"
 
-#. Description of the theme
-msgid "Twenty Twenty-Five emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide."
-msgstr "Twenty Twenty-Five подчеркивает простоту и адаптивность. Он предлагает гибкие варианты дизайна, поддерживаемые различными шаблонами для разных типов страниц, таких как сервисные и целевые страницы, что делает его идеальным для создания личных блогов, профессиональных портфолио, онлайн-журналов или бизнес-сайтов. Его шаблоны соответствуют различным стилям блогов, от текстово-ориентированных до насыщенных изображениями. Кроме того, он поддерживает международную типографику и разнообразные цветовые палитры, обеспечивая доступность и настройку для пользователей по всему миру."
-
 #. Theme URI of the theme
+#: style.css
+#, gp-priority: low
 msgid "https://wordpress.org/themes/twentytwentyfive/"
 msgstr "https://ru.wordpress.org/themes/twentytwentyfive/"
-
-#. Theme Name of the theme
-#: patterns/footer-columns.php:66 patterns/footer-newsletter.php:42
-#: patterns/footer.php:75 patterns/page-portfolio-home.php:226
-msgid "Twenty Twenty-Five"
-msgstr "Twenty Twenty-Five"

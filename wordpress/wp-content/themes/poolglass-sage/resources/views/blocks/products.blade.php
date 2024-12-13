@@ -1,9 +1,5 @@
 <div class="products {{ $block->classes }}" style="{{ $block->inlineStyle }}">
 
-  {{-- <InnerBlocks template="{{ $block->template }}" /> --}}
-
-  {{-- @dump($products) --}}
-
   <div class="products__container container">
     @if ($products)
       <div class="products__grid">

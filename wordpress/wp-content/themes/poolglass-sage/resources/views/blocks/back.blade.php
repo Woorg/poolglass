@@ -2,6 +2,6 @@
   <div class="back-button__container container">
 
     <a href="{{ wp_get_referer() ? wp_get_referer() : home_url() }}"
-      class="back-button__link">← Назад</a>
+      class="back-button__link">← {{ pll__('Назад', 'sage') }}</a>
   </div>
 </div>

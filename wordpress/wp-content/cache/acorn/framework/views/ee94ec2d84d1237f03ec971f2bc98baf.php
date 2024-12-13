@@ -12,7 +12,10 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-      <?php echo __('Sorry, but the page you are trying to view does not exist.', 'sage'); ?>
+      <?php echo pll__(
+          'Sorry, but the page you are trying to view does not exist.',
+          'sage',
+      ); ?>
 
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>

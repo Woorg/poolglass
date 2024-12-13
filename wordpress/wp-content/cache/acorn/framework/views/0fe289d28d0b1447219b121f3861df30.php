@@ -6,13 +6,13 @@
     <?php if($projects): ?>
 
       <nav class="projects__filter"
-        aria-label="<?php echo e(__('Filter projects', 'sage')); ?>">
+        aria-label="<?php echo e(pll__('Filter projects', 'sage')); ?>">
         <?php if($terms): ?>
           <ul class="projects__filter-list">
             <li class="projects__filter-item">
               <a data-filter="all" class="projects__filter-link" href="#"
                 :class="{ 'active': activeFilter === 'all' }"
-                @click.prevent="setFilter('all')"><?php echo e(__('Все', 'sage')); ?></a>
+                @click.prevent="setFilter('all')"><?php echo e(pll__('Все', 'sage')); ?></a>
             </li>
 
             <?php $__currentLoopData = $terms; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $term): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

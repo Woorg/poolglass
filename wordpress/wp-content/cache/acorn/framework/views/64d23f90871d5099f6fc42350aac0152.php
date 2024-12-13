@@ -5,7 +5,7 @@
         aria-label="Previous Page" class="pagination__back">
         <?php echo e(get_svg('arrow', 'pagination__icon', [])); ?>
 
-        <span aria-hidden="true">Предыдущая</span>
+        <span aria-hidden="true"><?php echo e(pll__('Предыдущая', 'sage')); ?></span>
       </a>
     <?php endif; ?>
 
@@ -36,7 +36,7 @@
     <?php if($pagi->hasMorePages()): ?>
       <a href="<?php echo e($pagi->nextPageUrl()); ?>" rel="next" aria-label="Next Page"
         class="pagination__next">
-        <span aria-hidden="true">Следующая</span>
+        <span aria-hidden="true"><?php echo e(pll__('Следующая', 'sage')); ?></span>
         <?php echo e(get_svg('arrow', 'pagination__icon', [])); ?>
 
       </a>

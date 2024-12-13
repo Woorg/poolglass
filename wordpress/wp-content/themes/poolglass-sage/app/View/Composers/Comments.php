@@ -77,7 +77,7 @@ class Comments extends Composer
         }
 
         return get_previous_comments_link(
-            __('&larr; Older comments', 'sage')
+            pll__('&larr; Older comments', 'sage')
         );
     }
 
@@ -93,7 +93,7 @@ class Comments extends Composer
         }
 
         return get_next_comments_link(
-            __('Newer comments &rarr;', 'sage')
+            pll__('Newer comments &rarr;', 'sage')
         );
     }
 

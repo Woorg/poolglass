@@ -44,7 +44,7 @@
 
       <div class="popup__title title title_h2"><?php echo $popup_title; ?></div>
       <small class="popup__note"><sub>*</sub>
-        обязательные к заполнению поля</small>
+        <?php echo e(pll__('обязательные к заполнению поля', 'sage')); ?></small>
     </div>
     
     
