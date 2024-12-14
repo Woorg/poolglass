@@ -17,7 +17,7 @@ services:
 
     volumes:
       - nginx_logs:/var/log/nginx
-      - wordpress-files:/var/www/html
+      # - wordpress-files:/var/www/html
       - ./wordpress:/var/www/html:rw
 
   wordpress:
@@ -25,9 +25,9 @@ services:
       context: ./wordpress
       dockerfile: Dockerfile
     restart: always
-    # depends_on:
-    #   - mariadb
-    #   - redis
+    depends_on:
+      # - mariadb
+      - redis
 
     expose:
       - '9000'
@@ -60,7 +60,7 @@ services:
           define( 'DISALLOW_FILE_EDIT', false);
     # privileged: true
     volumes:
-      - wordpress-files:/var/www/html
+      # - wordpress-files:/var/www/html
       - ./wordpress:/var/www/html:rw
       # - ./wordpress/wp-config.php:/var/www/html/wp-config.php  # Ваш файл конфигурации
       # - ./wordpress/vendor:/var/www/html/vendor # Папка для composer
@@ -110,18 +110,18 @@ services:
   #   ports:
   #     - '8080:8080'
 
-  # redis:
-  #   build:
-  #     context: ./redis
-  #     dockerfile: Dockerfile
-  #   container_name: ${APP_NAME}-redis
-  #   restart: always
-  #   expose:
-  #     - '6379'
-  #   privileged: true
-  #   volumes:
-  #     - redis:/var/lib/redis
-  #     - redis:/data
+  redis:
+    build:
+      context: ./redis
+      dockerfile: Dockerfile
+    container_name: ${APP_NAME}-redis
+    restart: always
+    expose:
+      - '6379'
+    privileged: true
+    volumes:
+      - redis:/var/lib/redis
+      - redis:/data
 # volumes:
 #   nginx_logs:
 #   wordpress-files:
