@@ -1,4 +1,14 @@
 <?php
+// Fallback for pll__ if Polylang is not active
+
+if (!function_exists('pll__')) {
+  function pll__($string) {
+      // Return the original string if Polylang isn't installed
+      return __($string, 'text-domain');
+  }
+}
+
+
 
 /**
  * Theme setup.
@@ -140,12 +150,7 @@ add_action(
 
     // load_theme_textdomain('sage', get_stylesheet_directory() . '/lang');
 
-    if (!function_exists('pll__')) {
-      function pll__($string) {
-          // Return the original string if Polylang isn't installed
-          return __($string, 'text-domain');
-      }
-  }
+
 
   },
   20,
