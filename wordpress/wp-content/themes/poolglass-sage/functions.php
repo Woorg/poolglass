@@ -23,7 +23,7 @@ if (!function_exists('pll__')) {
 
 if (!file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
   wp_die(
-    pll__(
+    __(
       'Error locating autoloader. Please run <code>composer install</code>.',
       'sage',
     ),

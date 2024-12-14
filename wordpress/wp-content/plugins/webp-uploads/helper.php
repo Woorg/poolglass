@@ -385,7 +385,7 @@ function webp_uploads_get_image_output_format(): string {
  * @return string Supported image format.
  */
 function webp_uploads_sanitize_image_format( $image_format ): string {
-	return in_array( $image_format, array( 'webp', 'avif' ), true ) ? $image_format : 'webp';
+	return in_array( $image_format, array( 'webp', 'avif' ), true ) ? $image_format : 'avif';
 }
 
 /**
