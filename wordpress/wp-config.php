@@ -94,7 +94,7 @@
 	define('WP_DEBUG_LOG', true);
 	define('WP_AUTO_UPDATE_CORE', true);
 	define('WP_CACHE_KEY_SALT', $_ENV['WP_CACHE_KEY_SALT']);
-// define('FS_METHOD', 'direct');
+define('FS_METHOD', 'direct');
 	define('WP_MEMORY_LIMIT', '512M');
 	define('WP_ALLOW_REPAIR', true);	
 	define('WP_DEFAULT_THEME', 'poolglass-sage');
