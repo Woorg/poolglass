@@ -31,16 +31,16 @@
 
 // ** Database settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
-	define('DB_NAME', $_ENV['DB_NAME']);
+	define('DB_NAME', getenv('DB_NAME') ?: 'default_db'); // Название базы
 	
 	/** Database username */
-	define('DB_USER', $_ENV['DB_USER']);
+	define('DB_USER', getenv('DB_USER') ?: 'root');      // Пользователь
 	
 	/** Database password */
-	define('DB_PASSWORD', $_ENV['DB_PASSWORD']);
+	define('DB_PASSWORD', getenv('DB_PASSWORD') ?: ''); // Пароль
 	
 	/** Database hostname */
-	define('DB_HOST', $_ENV['DB_HOST']);
+	define('DB_HOST', getenv('DB_HOST') ?: 'localhost'); // Хост базы данных
 	
 	/** Database charset to use in creating database tables. */
 	define('DB_CHARSET', 'utf8mb4');
@@ -90,11 +90,11 @@
 	 *
 	 * @link https://wordpress.org/support/article/debugging-in-wordpress/
 	 */
-	define('WP_DEBUG', $_ENV['WP_DEBUG']);
+	define('WP_DEBUG', getenv('WP_DEBUG') ?: false);
 	define('WP_DEBUG_LOG', true);
 	define('WP_AUTO_UPDATE_CORE', true);
-	define('WP_CACHE_KEY_SALT', $_ENV['WP_CACHE_KEY_SALT']);
-define('FS_METHOD', 'direct');
+	define('WP_CACHE_KEY_SALT', getenv('WP_CACHE_KEY_SALT') ?: '');
+	define('FS_METHOD', 'direct');
 	define('WP_MEMORY_LIMIT', '512M');
 	define('WP_ALLOW_REPAIR', true);	
 	define('WP_DEFAULT_THEME', 'poolglass-sage');
