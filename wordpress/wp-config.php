@@ -31,13 +31,13 @@
 
 // ** Database settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
-	define('DB_NAME', getenv('DB_NAME') ?: 'default_db'); // Название базы
+	define('DB_NAME', getenv('DB_NAME') ?: 'default'); // Название базы
 	
 	/** Database username */
 	define('DB_USER', getenv('DB_USER') ?: 'root');      // Пользователь
 	
 	/** Database password */
-	define('DB_PASSWORD', getenv('DB_PASSWORD') ?: ''); // Пароль
+	define('DB_PASSWORD', getenv('DB_PASSWORD') ?: 'root'); // Пароль
 	
 	/** Database hostname */
 	define('DB_HOST', getenv('DB_HOST') ?: 'localhost'); // Хост базы данных

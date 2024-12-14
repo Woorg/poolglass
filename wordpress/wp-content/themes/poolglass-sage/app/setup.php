@@ -139,6 +139,14 @@ add_action(
     add_theme_support('customize-selective-refresh-widgets');
 
     // load_theme_textdomain('sage', get_stylesheet_directory() . '/lang');
+
+    if (!function_exists('pll__')) {
+      function pll__($string) {
+          // Return the original string if Polylang isn't installed
+          return __($string, 'text-domain');
+      }
+  }
+
   },
   20,
 );
