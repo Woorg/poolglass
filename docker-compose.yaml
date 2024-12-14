@@ -25,9 +25,8 @@ services:
       context: ./wordpress
       dockerfile: Dockerfile
     restart: always
-    depends_on:
-      # - mariadb
-      - redis
+    # depends_on:
+    #   - redis
 
     expose:
       - '9000'
@@ -110,18 +109,18 @@ services:
   #   ports:
   #     - '8080:8080'
 
-  redis:
-    build:
-      context: ./redis
-      dockerfile: Dockerfile
-    container_name: ${APP_NAME}-redis
-    restart: always
-    expose:
-      - '6379'
-    privileged: true
-    volumes:
-      - redis:/var/lib/redis
-      - redis:/data
+  # redis:
+  #   build:
+  #     context: ./redis
+  #     dockerfile: Dockerfile
+  #   container_name: ${APP_NAME}-redis
+  #   restart: always
+  #   expose:
+  #     - '6379'
+  #   privileged: true
+  #   volumes:
+  #     - redis:/var/lib/redis
+  #     - redis:/data
 # volumes:
 #   nginx_logs:
 #   wordpress-files:
