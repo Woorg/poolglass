@@ -45,9 +45,9 @@ require $composer;
 */
 
 if (!function_exists('\Roots\bootloader')) {
-  wp_die(pll__('You need to install Acorn to use this theme.', 'sage'), '', [
+  wp_die(__('You need to install Acorn to use this theme.', 'sage'), '', [
     'link_url' => 'https://roots.io/acorn/docs/installation/',
-    'link_text' => pll__('Acorn Docs: Installation', 'sage'),
+    'link_text' => __('Acorn Docs: Installation', 'sage'),
   ]);
 }
 
@@ -78,7 +78,7 @@ collect($setup_files)->each(function ($file) {
     wp_die(
       /* translators: %s is replaced with the relative file path */
       sprintf(
-        pll__('Error locating <code>%s</code> for inclusion.', 'sage'),
+        __('Error locating <code>%s</code> for inclusion.', 'sage'),
         $file,
       ),
     );
