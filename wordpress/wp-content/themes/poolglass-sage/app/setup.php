@@ -1,13 +1,4 @@
 <?php
-// Fallback for pll__ if Polylang is not active
-
-if (!function_exists('pll__')) {
-  function pll__($string) {
-      // Return the original string if Polylang isn't installed
-      return __($string, 'text-domain');
-  }
-}
-
 
 
 /**
