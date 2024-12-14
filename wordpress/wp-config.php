@@ -98,7 +98,7 @@
 	define('WP_MEMORY_LIMIT', '512M');
 	define('WP_ALLOW_REPAIR', true);	
 	// define('WP_DEFAULT_THEME', 'poolglass-sage');
-	define('WP_DEFAULT_THEME', 'poolglass-sage');
+	define('WP_DEFAULT_THEME', 'twentytwentyfive');
 
 // define('WP_REDIS_CONFIG', [
 	// 	'token' => 'secret_redis',

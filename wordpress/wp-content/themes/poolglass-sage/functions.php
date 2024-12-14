@@ -1,19 +1,7 @@
 <?php
 
-// Fallback for pll__ if Polylang is not active
 
-if (!function_exists('pll__')) {
-  // Проверка на наличие плагина Polylang
-  if (function_exists('pll_register_string')) {
-      function pll__($string, $domain = 'sage') {
-          return \PLL()->get_language()->is_frontend() ? pll__('string', $domain) : __($string, $domain);
-      }
-  } else {
-      function pll__($string, $domain = 'sage') {
-          return __($string, $domain);
-      }
-  }
-}
+
 
 /*
 |--------------------------------------------------------------------------
