@@ -1,0 +1,207 @@
+.popup {
+  @apply fixed inset-0 z-20 overflow-y-auto;
+
+  &__overlay {
+    @apply popup relative flex min-h-screen items-center justify-center bg-fixed_bg p-4;
+  }
+
+  &__form {
+    @apply relative w-full max-w-[572px] overflow-hidden rounded-[10px] bg-white;
+
+    &__header {
+      @apply h-[175px];
+    }
+    &_multiple {
+      @apply max-w-[572px];
+    }
+
+    &_single {
+      @apply h-[350px] max-w-[730px] lg:min-h-[400px];
+      .popup__header {
+        @apply relative h-[260px] lg:h-[182px];
+        background-image: linear-gradient(
+          to right,
+          #298ec7 0%,
+          #1868ad 16%,
+          #0a3574 47%,
+          #142c52 100%
+        );
+
+        @screen md {
+          background-image: linear-gradient(
+            to right,
+            #2b90c8 0%,
+            #1561a8 17%,
+            #0a3574 55%,
+            #142c52 100%
+          );
+        }
+
+        @screen lg {
+          background-image: linear-gradient(
+            to right,
+            #2b90c8 0%,
+            #1561a8 17%,
+            #0a3574 55%,
+            #142c52 100%
+          );
+        }
+
+        &:after {
+          @apply absolute left-0 top-full aspect-popup_wave_up_single w-full content-[''];
+          background-image: url('../../images/global/popup/popup-wave-up-single.png');
+          background-position: 50% 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          @screen sm {
+            top: calc(100% - 80px);
+          }
+
+          @screen lg {
+            top: 100%;
+          }
+        }
+      }
+
+      .popup__content {
+        @apply px-4 pb-0 pt-5 md:px-[50px] lg:pt-[35px];
+      }
+      .popup__logo {
+        @apply mb-5;
+      }
+      .popup__title {
+        @apply mb-0 mt-0;
+      }
+
+      .popup__wave_down,
+      .popup__wave_up {
+        @apply hidden;
+      }
+      .popup__wave_up_single {
+        @apply aspect-popup_wave_up_single;
+        top: calc(100% - 20px);
+      }
+
+      .popup__body {
+        @apply -top-[130px] px-5 pt-0 sm:-top-[120px] md:-top-[110px] md:px-[50px] lg:top-0;
+      }
+
+      .popup__note {
+        @apply hidden;
+      }
+
+      .popup__footer {
+        @apply hidden;
+      }
+
+      .form {
+        @apply relative;
+      }
+      .form__field {
+        @apply mb-0 w-full grow;
+      }
+
+      .form__label-text {
+        @apply text-[13px];
+      }
+      .form__input {
+        @apply h-[40px] sm:h-[60px];
+      }
+
+      .form__submit {
+        @apply right-[2px] top-[2px] mt-4 h-[50px] sm:absolute sm:mt-0 sm:h-[55px] sm:w-auto;
+      }
+
+      .wpcf7-spinner {
+        @apply absolute right-0 top-full;
+      }
+    }
+  }
+
+  &__header {
+    @apply relative h-[175px];
+    background-image: linear-gradient(
+      to right,
+      #298ec7 0%,
+      #1868ad 17%,
+      #0a3574 55%,
+      #0e3166 100%
+    );
+    z-index: 1;
+
+    &:after {
+      @apply absolute left-0 top-full aspect-popup_wave_up w-full content-[''];
+      background-image: url('../../images/global/popup/popup-wave-up.png');
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: calc(100% - 40px);
+      @screen sm {
+        top: calc(100% - 60px);
+      }
+
+      @screen lg {
+        top: calc(100% - 20px);
+      }
+    }
+  }
+  &__content {
+    @apply relative grid px-4 py-5 lg:px-12 lg:py-10;
+    z-index: 1;
+  }
+
+  &__top {
+    @apply min-h-[175px];
+  }
+
+  &__logo {
+    @apply relative max-w-[179px];
+    z-index: 1;
+  }
+
+  &__title {
+    @apply mb-2 mt-3 leading-tight text-white ~text-[17px]/[30px];
+  }
+
+  &__note {
+    @apply text-gray;
+    sub {
+      @apply text-[30px] text-dirty_gray;
+    }
+  }
+
+  &__body {
+    @apply relative grid px-4 pt-14 sm:pt-20 md:px-12 md:pt-[80px] lg:pt-[118px];
+    z-index: 2;
+  }
+
+  &__footer {
+    @apply absolute bottom-0 left-0 h-[65px] w-full bg-[#eef4ff] pb-11;
+  }
+
+  &__wave {
+    @apply absolute left-0 z-0 w-full;
+  }
+
+  /* &__wave_up {
+    @apply aspect-popup_wave_up;
+    top: calc(100% - 20px);
+
+    @screen sm {
+      top: calc(100% - 80px);
+    }
+
+    @screen md {
+      top: calc(100% - 20px);
+    }
+  } */
+
+  &__wave_down {
+    @apply bottom-full aspect-popup_wave_down;
+  }
+
+  &__close {
+    @apply absolute right-5 top-5 z-20 size-6 border-none hover:opacity-90;
+  }
+}

@@ -1,0 +1,71 @@
+.contacts {
+  @apply relative;
+  &_front {
+    @apply bg-white;
+    @apply md:pb-[179px] lg:pb-[300px] 2xl:pb-[370px];
+  }
+
+  &_contact-page {
+    @apply md:pb-[179px] lg:pb-[300px] xl:pb-[370px];
+
+    .contacts__container {
+      @apply pb-32 pt-10 sm:pb-40 md:pb-20 lg:pb-0;
+    }
+  }
+
+  &__container {
+    @apply pb-24 pt-10 sm:pb-44 sm:pt-14 md:pb-20 md:pt-[70px] lg:pb-0 lg:pt-[90px] xl:pt-28;
+  }
+
+  &__block-title {
+    @apply mb-2.5 font-medium uppercase text-block_title ~text-[14px]/[17px];
+  }
+
+  &__title {
+    @apply ~mb-[25px]/[46px];
+  }
+
+  &__entries {
+    @apply grid justify-center ~gap-[10px]/[20px] md:ml-[100px] md:grid-cols-2 lg:ml-0 lg:grid-cols-3;
+  }
+
+  &__item {
+    @apply col-span-1 grid min-h-[118px] items-center rounded-[10px] bg-box p-5 pb-8 shrink;
+    &:last-child {
+      @apply sm:col-span-2 md:col-span-1;
+    }
+  }
+
+  &__item-title {
+    @apply mb-3 text-block_title ~text-[15px]/[17px];
+  }
+
+  &__list {
+    @apply grid gap-[5px] ~ml-[15px]/[30px];
+  }
+
+  &__list-item {
+    @apply font-medium ~text-[14px]/[20px];
+  }
+
+  &__list-value {
+    /* @apply; */
+  }
+
+  &__socials {
+    .socials__link {
+      @apply text-blue;
+    }
+  }
+
+  &__map {
+    @apply relative mt-5 hidden aspect-map w-full bg-box md:flex;
+    div {
+    }
+
+    iframe {
+      @apply absolute left-0 top-0 h-full w-full object-cover grayscale;
+      /* @apply h-full w-full; */
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.footer {
+  @apply relative;
+
+  &_front {
+  }
+
+  &_inner {
+  }
+
+  &__wave {
+    @apply absolute left-1/2 aspect-footer_wave w-full max-w-[2560px] -translate-x-1/2 content-[''];
+    background-color: white;
+    object-fit: cover;
+    object-position: 50% 0%;
+    bottom: calc(100% - 40px);
+    z-index: 0;
+  }
+
+  &__container-w {
+    background-image: linear-gradient(
+      to right,
+      #142c52 0%,
+      #0c336d 50%,
+      #0a3472 55%,
+      #13599f 100%
+    );
+  }
+
+  &__container {
+    @apply mt-auto flex h-[180px] items-center justify-between pb-10 pt-[73px] ~gap-[20px]/[40px] sm:py-8;
+
+    /* @screen md {
+      @apply py-5;
+    }
+
+    @screen 2xl {
+      @apply py-10;
+    } */
+  }
+
+  &__logo {
+  }
+
+  &__nav {
+    @apply hidden xl:flex xl:w-full;
+  }
+
+  &__nav-list {
+    @apply w-full justify-center;
+
+    .nav__link {
+      @apply text-gray;
+    }
+  }
+
+  &__copyright {
+    @apply ml-auto whitespace-nowrap text-gray ~text-[10px]/[14px];
+  }
+
+  .widgets {
+    /* @apply text-; */
+
+    .contacts__container {
+      @apply pb-0 pt-20 sm:pb-0 lg:pb-10;
+    }
+
+    .contacts__title {
+      @apply text-white;
+    }
+
+    .contacts__item {
+      @apply bg-white;
+    }
+  }
+}

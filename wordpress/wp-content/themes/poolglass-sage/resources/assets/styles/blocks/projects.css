@@ -1,0 +1,52 @@
+.projects {
+  &__container {
+    @apply pb-[150px] ~pt-[50px]/[80px] sm:pb-[200px] md:pb-[250px] xl:pb-[350px];
+  }
+
+  &__filter {
+    @apply ~mb-[30px]/[50px];
+  }
+
+  &__filter-list {
+    @apply flex flex-wrap gap-[15px];
+  }
+
+  &__filter-item {
+  }
+
+  &__filter-link {
+    @apply border-filter text-filter flex rounded-[100px] border-[2px] px-5 py-[7px] text-[15px] font-semibold;
+    &.active {
+      @apply border-blue text-blue;
+    }
+  }
+
+  &__grid {
+    @apply grid ~gap-[10px]/[20px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+  &__item {
+    @apply col-span-1 rounded-[10px] bg-box;
+    &.activeFilter {
+      @apply block bg-blue;
+    }
+  }
+
+  &__link {
+    @apply flex h-full flex-col;
+  }
+
+  &__figure {
+    @apply overflow-hidden rounded-[10px];
+  }
+
+  &__img {
+    @apply aspect-article_thumbnail object-cover;
+  }
+
+  &__entry {
+    @apply flex items-center px-[16px] py-[23px] grow;
+  }
+
+  &__item-title {
+  }
+}

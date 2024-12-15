@@ -1,0 +1,22 @@
+.contact-list {
+  &__item {
+    @apply mb-2 lg:mb-0 xl:mb-2;
+  }
+
+  &__link {
+    @apply flex items-center gap-2 text-[15px] font-medium text-white;
+
+    @screen sm {
+    }
+
+    @screen lg {
+    }
+  }
+
+  &__icon {
+    @apply text-gray;
+  }
+
+  &__text {
+  }
+}

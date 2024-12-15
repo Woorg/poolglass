@@ -1,0 +1,68 @@
+.form {
+  &__section {
+  }
+
+  &__section-title {
+    @apply mb-3 font-semibold text-blue;
+  }
+
+  &__row {
+    @apply relative items-center sm:flex;
+  }
+
+  &__field {
+    @apply mb-3;
+  }
+
+  &__label {
+  }
+
+  &__label-text {
+    @apply mb-3 mt-3 text-[14px] text-gray ~ml-[20px]/[35px];
+  }
+
+  &__input,
+  &__textarea {
+    @apply h-[40px] w-full rounded-[100px] bg-white px-6 py-2.5 font-medium text-title ~text-[13px]/[17px] placeholder:text-block_title last-of-type:mb-0 focus-within:outline-none focus-within:outline-[1px] focus-within:outline-offset-0 focus-within:outline-blue focus-within:ring-0 lg:h-[57px] lg:px-9 lg:py-4;
+    box-shadow: 0 0 10px 0 rgba(168, 168, 168, 0.2);
+    &.wpcf7-not-valid {
+      @apply border border-red-600 focus-within:outline-none;
+    }
+    &.wpcf7-valid {
+      @apply border border-green-600 focus-within:outline-none;
+    }
+  }
+
+  &__textarea {
+    @apply h-[103px] rounded-[20px];
+  }
+
+  &__submit {
+    @apply mt-5 flex w-full cursor-pointer rounded-[100px] px-9 py-4 font-bold text-white transition-all;
+    background-image: linear-gradient(
+      to right,
+      #1a6db1 0%,
+      #1664ab 17%,
+      #08367a 55%,
+      #142c52 100%
+    );
+    &:hover {
+      @apply opacity-95 transition-all;
+    }
+  }
+}
+
+.wpcf7 {
+  form {
+    .wpcf7-response-output {
+      @apply mt-0 rounded-[10px] bg-white;
+    }
+    .wpcf7-not-valid-tip,
+    .wpcf7-valid-tip {
+      @apply text-[14px];
+    }
+  }
+  form.submitting .wpcf7-spinner {
+    @apply flex justify-center;
+  }
+}

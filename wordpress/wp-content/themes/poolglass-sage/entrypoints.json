@@ -1,0 +1,27 @@
+{
+  "app": {
+    "js": [
+      "app.BmfgKdjM.js"
+    ],
+    "css": [
+      "app.DsC1gW2Q.css"
+    ],
+    "dependencies": []
+  },
+  "editor": {
+    "js": [
+      "editor.D3j-KF9U.js"
+    ],
+    "css": [
+      "editor.B-ufdmu9.css"
+    ],
+    "dependencies": []
+  },
+  "front-page": {
+    "js": [
+      "pages/front-page.l0sNRNKZ.js"
+    ],
+    "css": [],
+    "dependencies": []
+  }
+}

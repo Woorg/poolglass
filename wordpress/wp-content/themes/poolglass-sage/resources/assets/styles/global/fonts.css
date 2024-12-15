@@ -1,0 +1,68 @@
+/* @font-face {
+	font-family: 'Inter';
+	font-weight: 300 400 500 600 700;
+	font-stretch: normal;
+	font-style: normal;
+	font-display: swap;
+	src:
+		local('Inter'),
+		url('../../Vite::assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');
+} */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('@fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400 700;
+  font-stretch: 0 100%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('@fonts/Raleway/Raleway-VariableFont_wght.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400 700;
+  font-stretch: 0 100%;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'SuisseIntl';
+  src: url('../../fonts/hinted-subset-SuisseIntl-Bold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../../fonts/hinted-subset-SuisseIntl-Light.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../../fonts/hinted-subset-SuisseIntl-Medium.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../../fonts/hinted-subset-SuisseIntl-SemiBold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../../fonts/hinted-subset-SuisseIntl-Thin.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 100;
+  font-style: normal;
+} */

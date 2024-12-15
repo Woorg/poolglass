@@ -1,0 +1,36 @@
+@import 'tailwind.css';
+@import 'vendor/normalize.css';
+@import 'variables.css';
+@import 'mixins.css';
+/* @import 'functions.css'; */
+@import 'keyframes.css';
+
+@import 'global/fonts.css';
+@import 'global/reboot.css';
+@import 'global/utils.css';
+
+@import 'typography.css';
+
+@import 'blocks/header.css';
+@import 'blocks/logo.css';
+@import 'blocks/nav.css';
+@import 'blocks/contact-list.css';
+@import 'blocks/socials.css';
+
+@import 'blocks/footer.css';
+
+@import 'blocks/main.css';
+@import 'blocks/first.css';
+@import 'blocks/about.css';
+@import 'blocks/latest-projects.css';
+@import 'blocks/articles.css';
+@import 'blocks/contacts.css';
+@import 'blocks/kinds.css';
+@import 'blocks/products.css';
+@import 'blocks/projects.css';
+@import 'blocks/article.css';
+@import 'blocks/pagination.css';
+@import 'blocks/popup.css';
+@import 'blocks/form.css';
+@import 'blocks/tile.css';
+@import 'blocks/calculator.css';
