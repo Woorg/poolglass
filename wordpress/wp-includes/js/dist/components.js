@@ -1509,7 +1509,7 @@ module.exports = window["React"];
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -1523,14 +1523,14 @@ module.exports = window["React"];
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -1543,7 +1543,7 @@ module.exports = window["React"];
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/create fake namespace object */
 /******/ 	(() => {
 /******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
@@ -1573,7 +1573,7 @@ module.exports = window["React"];
 /******/ 			return ns;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -1585,12 +1585,12 @@ module.exports = window["React"];
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -1601,12 +1601,12 @@ module.exports = window["React"];
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
-/******/
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -16328,7 +16328,7 @@ function useMotionRef(visualState, visualElement, externalRef) {
                 externalRef.current = instance;
             }
         }
-    },
+    }, 
     /**
      * Only pass a new ref callback to React if we've received a visual element
      * factory. Otherwise we'll be mounting/remounting every time externalRef
@@ -17293,7 +17293,7 @@ function buildSVGPath(attrs, length, spacing = 1, offset = 0, useDashCase = true
 /**
  * Build SVG visual attrbutes, like cx and style.transform
  */
-function buildSVGAttrs(state, { attrX, attrY, attrScale, originX, originY, pathLength, pathSpacing = 1, pathOffset = 0,
+function buildSVGAttrs(state, { attrX, attrY, attrScale, originX, originY, pathLength, pathSpacing = 1, pathOffset = 0, 
 // This is object creation, which we try to avoid per-frame.
 ...latest }, options, isSVGTag, transformTemplate) {
     buildHTMLStyles(state, latest, options, transformTemplate);
@@ -18505,7 +18505,7 @@ const isNumericalString = (v) => /^-?(?:\d+(?:\.\d+)?|\.\d+)$/u.test(v);
  *
  * @param current
  */
-const splitCSSVariableRegex =
+const splitCSSVariableRegex = 
 // eslint-disable-next-line redos-detector/no-unsafe-regex -- false positive, as it can match a lot of words
 /^var\(--(?:([\w-]+)|([\w-]+), ?([a-zA-Z\d ()%#.,-]+))\)/u;
 function parseCSSVariable(current) {
@@ -23759,7 +23759,7 @@ const asNumber = (value) => typeof value === "string" ? parseFloat(value) : valu
 const isPx = (value) => typeof value === "number" || px.test(value);
 function mixValues(target, follow, lead, progress, shouldCrossfadeOpacity, isOnlyMember) {
     if (shouldCrossfadeOpacity) {
-        target.opacity = mixNumber(0,
+        target.opacity = mixNumber(0, 
         // TODO Reinstate this if only child
         lead.opacity !== undefined ? lead.opacity : 1, easeCrossfadeIn(progress));
         target.opacityExit = mixNumber(follow.opacity !== undefined ? follow.opacity : 1, 0, easeCrossfadeOut(progress));
@@ -25962,7 +25962,7 @@ class VisualElement {
         return {};
     }
     constructor({ parent, props, presenceContext, reducedMotionConfig, blockInitialAnimation, visualState, }, options = {}) {
-        this.resolveKeyframes = (keyframes,
+        this.resolveKeyframes = (keyframes, 
         // We use an onComplete callback here rather than a Promise as a Promise
         // resolution is a microtask and we want to retain the ability to force
         // the resolution of keyframes synchronously.
@@ -26795,7 +26795,7 @@ const PresenceChild = ({ children, initial, isPresent, onExitComplete, custom, p
             presenceChildren.set(childId, false);
             return () => presenceChildren.delete(childId);
         },
-    }),
+    }), 
     /**
      * If the presence of a child affects the layout of the components around it,
      * we want to make a new context value to ensure they get re-rendered

@@ -333,12 +333,12 @@ tinymce.PluginManager.add( 'wordpress', function( editor ) {
 		// Main section, default and additional shortcuts.
 		html = html +
 			'<h2>' + __( 'Default shortcuts,' ) + ' ' + meta + '</h2>' +
-			'<table class="fixed wp-help-th-center">' +
+			'<table class="wp-help-th-center fixed">' +
 				header +
 				table1.join('') +
 			'</table>' +
 			'<h2>' + __( 'Additional shortcuts,' ) + ' ' + access + '</h2>' +
-			'<table class="fixed wp-help-th-center">' +
+			'<table class="wp-help-th-center fixed">' +
 				header +
 				table2.join('') +
 			'</table>';
@@ -347,7 +347,7 @@ tinymce.PluginManager.add( 'wordpress', function( editor ) {
 			// Text pattern section.
 			html = html +
 				'<h2>' + __( 'When starting a new paragraph with one of these formatting shortcuts followed by a space, the formatting will be applied automatically. Press Backspace or Escape to undo.' ) + '</h2>' +
-				'<table class="fixed wp-help-th-center">' +
+				'<table class="wp-help-th-center fixed">' +
 					tr({ '*':  'Bullet list', '1.':  'Numbered list' }) +
 					tr({ '-':  'Bullet list', '1)':  'Numbered list' }) +
 				'</table>';
@@ -992,18 +992,18 @@ tinymce.PluginManager.add( 'wordpress', function( editor ) {
 
 				if ( this.bottom ) {
 					if ( spaceBottom >= spaceNeeded ) {
-						className = 'mce-arrow-up';
+						className = ' mce-arrow-up';
 						top = selection.bottom + iframeRect.top + scrollY - iosOffsetBottom;
 					} else if ( spaceTop >= spaceNeeded ) {
-						className = 'mce-arrow-down';
+						className = ' mce-arrow-down';
 						top = selection.top + iframeRect.top + scrollY - toolbarHeight + iosOffsetTop;
 					}
 				} else {
 					if ( spaceTop >= spaceNeeded ) {
-						className = 'mce-arrow-down';
+						className = ' mce-arrow-down';
 						top = selection.top + iframeRect.top + scrollY - toolbarHeight + iosOffsetTop;
 					} else if ( spaceBottom >= spaceNeeded && editorHeight / 2 > selection.bottom + iframeRect.top - blockedTop ) {
-						className = 'mce-arrow-up';
+						className = ' mce-arrow-up';
 						top = selection.bottom + iframeRect.top + scrollY - iosOffsetBottom;
 					}
 				}
