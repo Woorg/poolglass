@@ -34,7 +34,7 @@ RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 755 /var/www/html
 
 
-RUN if [ -f "composer.json" ]; then composer install --no-dev --optimize-autoloader; fi
+RUN if [ -f "composer.json" ]; then composer install --no-dev --optimize-autoloader --ignore-platform-req=ext-redis; fi
 
 
 USER www-data
