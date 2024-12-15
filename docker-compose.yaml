@@ -44,7 +44,7 @@ services:
       WORDPRESS_TABLE_PREFIX: '${WP_DB_PREFIX}'
       WORDPRESS_DEBUG: '${WP_DEBUG:-true}'
 
-      WORDPRESS_CONFIG_EXTRA: >
+      WORDPRESS_CONFIG_EXTRA: |
         define('WP_CACHE', true);
         define('EIO_WEBP_SHARP_YUV', true);
         define('COMPRESS_CSS', false);
