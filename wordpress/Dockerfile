@@ -1,18 +1,24 @@
-
-
-
 # Используем образ PHP с поддержкой FPM
 FROM php:8.3-fpm
 
-# Устанавливаем необходимые расширения PHP
+# Устанавливаем необходимые системные зависимости и расширения PHP
 RUN apt-get update && apt-get install -y \
   libzip-dev \
   libpng-dev \
   libjpeg-dev \
   libfreetype6-dev \
+  libonig-dev \
+  libxslt1-dev \
   unzip \
+  curl \
+  git \
   && docker-php-ext-configure gd --with-freetype --with-jpeg \
-  && docker-php-ext-install zip mysqli gd
+  && docker-php-ext-install zip mysqli gd xsl \
+  && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Устанавливаем Redis через PECL и активируем его
+RUN pecl install redis \
+  && docker-php-ext-enable redis
 
 # Устанавливаем Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -25,25 +31,19 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 # Копируем php.ini в контейнер
 COPY php.ini /usr/local/etc/php/conf.d/php.ini
 
-# Копируем файлы WordPress в контейнер
+# Копируем файлы проекта в контейнер
 COPY . /var/www/html
 WORKDIR /var/www/html
 
-RUN composer install --no-dev --optimize-autoloader --ignore-platform-req=ext-redis
+# Устанавливаем зависимости через Composer
+RUN composer install --no-dev --optimize-autoloader
 
+# Настраиваем права на папки
+RUN chown -R www-data:www-data /var/www/html \
+  && chmod -R 755 /var/www/html
 
-# Устанавливаем права на папку
-RUN chown -R www-data:www-data /var/www/html 
-RUN chmod -R 755 /var/www/html
-
-
-
-
+# Переходим на пользователя www-data для безопасности
 USER www-data
-
-# RUN chmod a+rwx -R /var/www/html
-
-# Устанавливаем рабочую директорию
 
 # Запускаем PHP-FPM
 CMD ["php-fpm"]
