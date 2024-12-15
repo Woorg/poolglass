@@ -1,5 +1,4 @@
 <?php
-// define('WP_CACHE', false); // Added by WP Rocket
 	
 	/**
 	 * The base configuration for WordPress
@@ -20,11 +19,10 @@
 	 * @package WordPress
 	 */
 	
-	require_once dirname(__FILE__) . '/vendor/autoload.php';
-	
-	$dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__));
-	$dotenv->load();
+	 require_once dirname(__FILE__) . '/vendor/autoload.php';
 
+	 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__));
+	 $dotenv->load();
 
 // define( 'WP_REDIS_HOST', $_ENV['WP_REDIS_HOST'] );
 // define( 'WP_REDIS_PASSWORD', $_ENV['WP_REDIS_PASSWORD'] );
@@ -94,10 +92,11 @@
 	define('WP_DEBUG_LOG', true);
 	define('WP_AUTO_UPDATE_CORE', true);
 	define('WP_CACHE_KEY_SALT', $_ENV['WP_CACHE_KEY_SALT']);
-define('FS_METHOD', 'direct');
+	define('FS_METHOD', 'direct');
 	define('WP_MEMORY_LIMIT', '512M');
-	define('WP_ALLOW_REPAIR', true);	
-	define('WP_DEFAULT_THEME', 'poolglass-sage');
+	define('WP_DEFAULT_THEME', 'twentytwentyfive'); 
+	// define('WP_ALLOW_REPAIR', true);	
+	// define('WP_DEFAULT_THEME', 'poolglass-sage');
 // define('WP_REDIS_CONFIG', [
 	// 	'token' => 'secret_redis',
 	// 	'url' => 'tcp://127.0.0.1:6379',
