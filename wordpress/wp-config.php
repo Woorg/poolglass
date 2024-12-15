@@ -23,7 +23,7 @@
 	require_once dirname(__FILE__) . '/vendor/autoload.php';
 	
 	$dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__));
-	$dotenv->safeLoad();
+	$dotenv->load();
 
 
 // define( 'WP_REDIS_HOST', $_ENV['WP_REDIS_HOST'] );
