@@ -36,11 +36,7 @@ COPY . /var/www/html
 WORKDIR /var/www/html
 
 # Устанавливаем зависимости через Composer
-RUN composer install --no-dev --optimize-autoloader
-
-# Устанавливаем зависимости через Composer в теме `poolglass-sage`
-WORKDIR /var/www/html/wp-content/themes/poolglass-sage
-RUN composer install --no-dev --optimize-autoloader
+RUN composer i
 
 
 # Настраиваем права на папки

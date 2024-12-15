@@ -44,19 +44,6 @@ services:
       WORDPRESS_TABLE_PREFIX: '${WP_DB_PREFIX}'
       WORDPRESS_DEBUG: '${WP_DEBUG:-true}'
 
-      WORDPRESS_CONFIG_EXTRA: |
-        define('WP_CACHE', true);
-        define('EIO_WEBP_SHARP_YUV', true);
-        define('COMPRESS_CSS', false);
-        define('COMPRESS_SCRIPTS', false);
-        define('CONCATENATE_SCRIPTS', false);
-        define('ENFORCE_GZIP', true);
-        define('AUTOSAVE_INTERVAL', 120);
-        define('WP_POST_REVISIONS', 10);
-        define('MEDIA_TRASH', true);
-        define('EMPTY_TRASH_DAYS', 30);
-        define('IMAGE_EDIT_OVERWRITE', true);
-        define('DISALLOW_FILE_EDIT', false);
     # privileged: true
     volumes:
       # - wordpress-files:/var/www/html
