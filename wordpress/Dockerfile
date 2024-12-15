@@ -29,12 +29,14 @@ COPY php.ini /usr/local/etc/php/conf.d/php.ini
 COPY . /var/www/html
 WORKDIR /var/www/html
 
+RUN composer install --no-dev --optimize-autoloader --ignore-platform-req=ext-redis
+
+
 # Устанавливаем права на папку
 RUN chown -R www-data:www-data /var/www/html 
 RUN chmod -R 755 /var/www/html
 
 
-RUN if [ -f "composer.json" ]; then composer install --no-dev --optimize-autoloader --ignore-platform-req=ext-redis; fi
 
 
 USER www-data
