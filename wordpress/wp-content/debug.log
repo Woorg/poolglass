@@ -1,0 +1,2 @@
+[16-Dec-2024 17:22:19 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 189
+[16-Dec-2024 17:22:20 UTC] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 4295229440 bytes) in /var/www/poolglass/wordpress/wp-includes/theme.php on line 189

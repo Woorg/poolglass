@@ -43,7 +43,7 @@ services:
       DB_NAME: ${DB_NAME}
 
       WORDPRESS_TABLE_PREFIX: ${WP_DB_PREFIX}
-      WORDPRESS_DEBUG: ${WP_DEBUG:-true}
+      WORDPRESS_DEBUG: ${WP_DEBUG}
 
     # privileged: true
     volumes:
