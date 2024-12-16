@@ -1,0 +1,13 @@
+.socials {
+  @apply flex items-center gap-4;
+  &__item {
+  }
+
+  &__link {
+    @apply flex w-8 items-center justify-center text-dirty_gray;
+  }
+
+  &__icon {
+    @apply grow-0;
+  }
+}
