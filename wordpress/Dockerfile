@@ -35,13 +35,13 @@ COPY . /var/www/html
 WORKDIR /var/www/html
 
 # Настраиваем права доступа к wp-content и плагину
-RUN mkdir -p /var/www/html/wp-content/plugins/all-in-one-wp-migration/storage && \
-  chown -R www-data:www-data /var/www/html/wp-content && \
-  chmod -R 755 /var/www/html/wp-content
+# RUN mkdir -p /var/www/html/wp-content/plugins/all-in-one-wp-migration/storage && \
+#   chown -R www-data:www-data /var/www/html/wp-content && \
+#   chmod -R 755 /var/www/html/wp-content
 
 # Повторно проверяем права на папку плагина
-RUN ls -ld /var/www/html/wp-content/plugins/all-in-one-wp-migration/storage && \
-  ls -l /var/www/html/wp-content/plugins/all-in-one-wp-migration
+# RUN ls -ld /var/www/html/wp-content/plugins/all-in-one-wp-migration/storage && \
+#   ls -l /var/www/html/wp-content/plugins/all-in-one-wp-migration
 
 # Устанавливаем права на папку
 
