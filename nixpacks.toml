@@ -1,5 +1,5 @@
 [provider]
-name = "php" # Явно указываем провайдера PHP
+name = "php"
 
 [phases.setup]
 nixPkgs = [
@@ -14,15 +14,15 @@ nixPkgs = [
 
 [phases.build]
 cmds = [
-  "cd wordpress",                                                                                                                                  # Переход в папку с WordPress
+  "cd wordpress",
   "composer install --no-dev --optimize-autoloader",
   "curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp",
 ]
 
 [phases.start]
 cmds = [
-  "cd wordpress",                                    # Переход в папку с WordPress
+  "cd wordpress",
   "chown -R www-data:www-data /workspace/wordpress",
   "chmod -R 755 /workspace/wordpress",
-  "php-fpm",
+  "php-fpm --nodaemonize",
 ]
