@@ -24,17 +24,11 @@ services:
       context: ./wordpress
       dockerfile: Dockerfile
     restart: always
-    # depends_on:
-    #   - redis
 
     expose:
       - '9000'
 
-    # ports:
-    #   - '9000:80'
-
     environment:
-      # - SERVICE_FQDN_WORDPRESS
       ENVIRONMENT: ${ENVIRONMENT}
       DB_HOST: ${DB_HOST}
       DB_USER: ${DB_USER}
@@ -44,23 +38,5 @@ services:
       WORDPRESS_TABLE_PREFIX: ${WP_DB_PREFIX}
       WORDPRESS_DEBUG: ${WP_DEBUG}
 
-    # privileged: true
     volumes:
       - wordpress-files:/var/www/html:rw
-
-  # adminer:
-  #   image: adminer:latest
-  #   container_name: ${APP_NAME}-adminer
-  #   restart: always
-  #   depends_on:
-  #     - mariadb
-  #   expose:
-  #     - '8080'
-
-  #   ports:
-  #     - '8080:8080'
-# volumes:
-#   nginx_logs:
-#   wordpress-files:
-#   # mariadb-data:
-#   redis:

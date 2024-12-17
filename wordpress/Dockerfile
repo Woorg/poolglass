@@ -17,13 +17,13 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 # Копируем php.ini в контейнер
 COPY php.ini /usr/local/etc/php/conf.d/php.ini
 # Копируем файлы WordPress в контейнер
-COPY . /var/www/html
+COPY --chown=www-data:www-data . /var/www/html
+
 WORKDIR /var/www/html
+
 # Устанавливаем права на папку
-RUN chown -R www-data:www-data /var/www/html 
-RUN chmod -R 755 /var/www/html
+RUN chmod -R 755 /var/www/html/wp-content
+
 USER www-data
-# RUN chmod a+rwx -R /var/www/html
-# Устанавливаем рабочую директорию
-# Запускаем PHP-FPM
+
 CMD ["php-fpm"]
