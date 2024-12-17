@@ -21,8 +21,9 @@ COPY --chown=www-data:www-data . /var/www/html
 
 WORKDIR /var/www/html
 
-# Устанавливаем права на папку
-RUN chmod -R 755 /var/www/html/wp-content
+# Correct permissions for wp-content
+RUN chown -R www-data:www-data /var/www/html/wp-content \
+  && chmod -R 775 /var/www/html/wp-content
 
 USER www-data
 
