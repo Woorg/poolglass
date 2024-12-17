@@ -1,15 +1,28 @@
+[provider]
+name = "php" # Явно указываем провайдера PHP
+
 [phases.setup]
-nixPkgs = ["curl", "php", "composer", "unzip", "libpng", "libjpeg", "libfreetype"]
+nixPkgs = [
+  "curl",
+  "php",
+  "composer",
+  "unzip",
+  "libpng",
+  "libjpeg",
+  "libfreetype",
+]
 
 [phases.build]
 cmds = [
+  "cd wordpress",                                                                                                                                  # Переход в папку с WordPress
   "composer install --no-dev --optimize-autoloader",
-  "curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp"
+  "curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp",
 ]
 
 [phases.start]
 cmds = [
-  "chown -R www-data:www-data /workspace",
-  "chmod -R 755 /workspace",
-  "php-fpm"
+  "cd wordpress",                                    # Переход в папку с WordPress
+  "chown -R www-data:www-data /workspace/wordpress",
+  "chmod -R 755 /workspace/wordpress",
+  "php-fpm",
 ]
