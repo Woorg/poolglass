@@ -1,0 +1,15 @@
+[phases.setup]
+nixPkgs = ["curl", "php", "composer", "unzip", "libpng", "libjpeg", "libfreetype"]
+
+[phases.build]
+cmds = [
+  "composer install --no-dev --optimize-autoloader",
+  "curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp"
+]
+
+[phases.start]
+cmds = [
+  "chown -R www-data:www-data /workspace",
+  "chmod -R 755 /workspace",
+  "php-fpm"
+]
