@@ -16,9 +16,8 @@ services:
     #   - '80:80'
 
     volumes:
-      - nginx_logs:/var/log/nginx
-      # - wordpress-files:/var/www/html
-      - ./wordpress:/var/www/html:rw
+      - nginx/logs:/var/log/nginx
+      - wordpress-files:/var/www/html:rw
 
   wordpress:
     user: '${UID}:${GID}'
@@ -48,7 +47,7 @@ services:
 
     # privileged: true
     volumes:
-      - ./wordpress:/var/www/html:rw
+      - wordpress-files:/var/www/html:rw
 
   # adminer:
   #   image: adminer:latest
