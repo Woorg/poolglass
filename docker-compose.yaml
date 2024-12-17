@@ -17,7 +17,7 @@ services:
 
     volumes:
       - nginx/logs:/var/log/nginx
-      - ./wordpress:/var/www/html:rw
+      - wordpress-files:/var/www/html:rw
 
   wordpress:
     build:
@@ -46,7 +46,7 @@ services:
 
     # privileged: true
     volumes:
-      - ./wordpress:/var/www/html:rw
+      - wordpress-files:/var/www/html:rw
 
   # adminer:
   #   image: adminer:latest
