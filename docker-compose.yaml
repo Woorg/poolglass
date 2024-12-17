@@ -20,7 +20,6 @@ services:
       - wordpress-files:/var/www/html:rw
 
   wordpress:
-    user: '${UID}:${GID}'
     build:
       context: ./wordpress
       dockerfile: Dockerfile
