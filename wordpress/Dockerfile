@@ -23,9 +23,17 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 # Копируем php.ini в контейнер
 COPY php.ini /usr/local/etc/php/conf.d/php.ini
 
+ARG UID=33
+ARG GID=33
+
+# Создаем группу и пользователя с заданными UID и GID
+RUN groupmod -g ${GID} www-data && \
+  usermod -u ${UID} -g ${GID} www-data
+
 # Копируем файлы WordPress в контейнер
 COPY . /var/www/html
 WORKDIR /var/www/html
+
 
 # Устанавливаем права на папку
 RUN chown -R www-data:www-data /var/www/html 
