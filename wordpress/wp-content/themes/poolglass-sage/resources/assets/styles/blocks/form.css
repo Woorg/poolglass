@@ -33,6 +33,11 @@
     }
   }
 
+  &__input {
+    &_phone {
+    }
+  }
+
   &__textarea {
     @apply h-[103px] rounded-[20px];
   }
@@ -63,6 +68,6 @@
     }
   }
   form.submitting .wpcf7-spinner {
-    @apply flex justify-center;
+    @apply mx-auto flex justify-center;
   }
 }

@@ -15,8 +15,11 @@
         {{-- @dump($key) --}}
         <article class="about__card about__card_{{ $key + 1 }}">
 
-          <a href="{{ get_permalink($item['post']->ID) }}"
-            class="about__card-link">
+          @php
+            $permalink = get_permalink($item['post']->ID);
+          @endphp
+
+          <a href="{{ $permalink ?? $permalink }}" class="about__card-link">
             <div class="about__card-figure">
               {!! wp_get_attachment_image($item['image']['ID'], 'full', null, [
                   'class' => 'about__card-img',

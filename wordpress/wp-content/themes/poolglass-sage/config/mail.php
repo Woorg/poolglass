@@ -36,13 +36,14 @@ return [
     'smtp' => [
       'transport' => 'smtp',
       'url' => env('MAIL_URL'),
-      'host' => env('MAIL_HOST', 'sandbox.smtp.mailtrap.io'),
+      'host' => env('MAIL_HOST', ''),
       'port' => env('MAIL_PORT', 587),
       'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-      'username' => env('MAIL_USERNAME', '31583310afa989'),
-      'password' => env('MAIL_PASSWORD', 'c7a4337adc2e1d'),
+      'username' => env('MAIL_USERNAME', ''),
+      'password' => env('MAIL_PASSWORD', ''),
+      'SMTPAuth' => true,
       'timeout' => null,
-      'local_domain' => env('MAIL_EHLO_DOMAIN', 'poolglass.loc'),
+      'local_domain' => env('MAIL_EHLO_DOMAIN', 'poolglass.pro'),
     ],
 
     'ses' => [

@@ -7,18 +7,22 @@
       <div class="latest-projects__grid">
 
         @foreach ($list as $item)
+          @php
+            $permalink = isset($item['post']->ID)
+                ? get_permalink($item['post']->ID)
+                : '#';
+          @endphp
           {{-- @dump($item) --}}
           <div class="latest-projects__item">
-            <a href="{{ get_permalink($item['post']->ID) }}"
-              class="latest-projects__item-link">
+            <a href="{{ $permalink }}" class="latest-projects__item-link">
               <h3 class="latest-projects__item-title title title_h2">
                 {{ $item['item_title'] }}
               </h3>
               <div class="latest-projects__item-text">
                 {!! $item['text'] !!}
               </div>
-              <span class="latest-projects__more"
-                href="{{ get_permalink($item['post']->ID) }}">{{ $item['more_text'] }}</span>
+              <span
+                class="latest-projects__more">{{ $item['more_text'] }}</span>
             </a>
           </div>
         @endforeach

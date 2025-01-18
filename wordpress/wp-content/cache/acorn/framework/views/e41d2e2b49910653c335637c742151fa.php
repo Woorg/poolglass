@@ -7,10 +7,14 @@
       <div class="latest-projects__grid">
 
         <?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <?php
+            $permalink = isset($item['post']->ID)
+                ? get_permalink($item['post']->ID)
+                : '#';
+          ?>
           
           <div class="latest-projects__item">
-            <a href="<?php echo e(get_permalink($item['post']->ID)); ?>"
-              class="latest-projects__item-link">
+            <a href="<?php echo e($permalink); ?>" class="latest-projects__item-link">
               <h3 class="latest-projects__item-title title title_h2">
                 <?php echo e($item['item_title']); ?>
 
@@ -19,8 +23,8 @@
                 <?php echo $item['text']; ?>
 
               </div>
-              <span class="latest-projects__more"
-                href="<?php echo e(get_permalink($item['post']->ID)); ?>"><?php echo e($item['more_text']); ?></span>
+              <span
+                class="latest-projects__more"><?php echo e($item['more_text']); ?></span>
             </a>
           </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

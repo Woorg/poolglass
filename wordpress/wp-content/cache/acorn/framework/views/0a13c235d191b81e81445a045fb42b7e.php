@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="base" content="<?php echo e(config('app.url')); ?>">
   <meta name="yandex-verification" content="7819d479609f3135" />
-  <meta name="google-site-verification"
-    content="suiCZvNHw4TdTn3TJNsGYhigK1KBb_RgjO7H3N7nIbM" />
+  <meta name="google-site-verification" content="suiCZvNHw4TdTn3TJNsGYhigK1KBb_RgjO7H3N7nIbM" />
   <?php (do_action('get_header')); ?>
   <?php (wp_head()); ?>
 </head>
 
 <body x-data :class="{ no_scroll: $store.popup.popup_open }"
-  x-on:keydown.escape.prevent.stop="$store.popup.closePopup()"
-  <?php (body_class('font-raleway font-regular page flex flex-col min-h-screen relative')); ?>>
+  x-on:keydown.escape.prevent.stop="$store.popup.closePopup()" <?php (body_class('font-raleway font-regular page flex
+  flex-col min-h-screen relative')); ?>>
   <?php (wp_body_open()); ?>
 
   
@@ -35,10 +34,10 @@
   <?php echo $__env->yieldContent('footer_scripts'); ?>
 
   <?php if($custom_scripts): ?>
-    <?php $__currentLoopData = $custom_scripts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $script): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-      <?php echo $script['script']; ?>
+  <?php $__currentLoopData = $custom_scripts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $script): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+  <?php echo $script['script']; ?>
 
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   <?php endif; ?>
 
 </body>

@@ -4,6 +4,7 @@ import Alpine from 'alpinejs';
 import calculator from './components/calculator';
 import { headerFixed } from './components/header';
 import { initPopupStore } from './components/popup';
+import { inputMasks } from './components/inputMasks';
 import { nav } from './components/nav';
 import { projectFilter } from './components/projectsFilter';
 
@@ -23,6 +24,7 @@ addEventListener('DOMContentLoaded', async () => {
     Alpine.data('calculator', calculator);
     // Alpine.plugin(focus);
     initPopupStore(); // Инициализируем глобальное хранилище
+    inputMasks();
   });
 
   Alpine.start();

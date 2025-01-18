@@ -7,3 +7,32 @@
 [16-Dec-2024 18:01:32 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
 [16-Dec-2024 18:01:32 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
 [16-Dec-2024 18:01:32 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[19-Dec-2024 02:12:13 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[19-Dec-2024 02:13:10 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[19-Dec-2024 02:13:10 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[19-Dec-2024 02:13:10 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[19-Dec-2024 02:13:10 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[19-Dec-2024 02:13:10 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[19-Dec-2024 02:13:10 UTC] WPMDB Error: Data cannot be unserialized. Scope: DeliciousBrains\WPMDB\Common\Replace::recursive_unserialize_replace().
+[19-Dec-2024 02:13:59 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
+[19-Dec-2024 02:13:59 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
+[23-Dec-2024 23:11:30 UTC] PHP Warning:  mysqli_real_connect(): php_network_getaddresses: getaddrinfo for mariadb failed: Temporary failure in name resolution in /var/www/poolglass/wordpress/wp-includes/class-wpdb.php on line 1982
+[23-Dec-2024 23:11:30 UTC] PHP Warning:  mysqli_real_connect(): php_network_getaddresses: getaddrinfo for mariadb failed: Temporary failure in name resolution in /var/www/poolglass/wordpress/wp-includes/class-wpdb.php on line 1982
+[23-Dec-2024 23:11:30 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo for mariadb failed: Temporary failure in name resolution in /var/www/poolglass/wordpress/wp-includes/class-wpdb.php on line 1982
+[23-Dec-2024 23:11:30 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo for mariadb failed: Temporary failure in name resolution in /var/www/poolglass/wordpress/wp-includes/class-wpdb.php on line 1982
+[05-Jan-2025 14:26:00 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/poolglass/wordpress/wp-includes/class-wpdb.php on line 1982
+[05-Jan-2025 14:26:00 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/poolglass/wordpress/wp-includes/class-wpdb.php on line 1982
+[09-Jan-2025 22:51:58 UTC] WPMDB: {"type":"initiate","location":"local","target":true,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[09-Jan-2025 22:58:41 UTC] WPMDB: {"type":"complete","location":"local","target":true,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"},"migration_id":"509b4775-128d-4d89-974d-250e98afff65"}
+[15-Jan-2025 10:36:58 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[15-Jan-2025 10:37:02 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[15-Jan-2025 10:37:09 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[15-Jan-2025 10:39:10 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
+[15-Jan-2025 10:39:10 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
+[15-Jan-2025 10:39:11 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[15-Jan-2025 10:39:18 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[15-Jan-2025 10:39:34 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[15-Jan-2025 10:42:35 UTC] WPMDB: {"type":"initiate","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
+[15-Jan-2025 10:44:28 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 29
+[15-Jan-2025 10:44:28 UTC] PHP Warning:  Trying to access array offset on null in /var/www/poolglass/wordpress/wp-content/plugins/wp-migrate-db-pro/class/Common/Error/HandleRemotePostError.php on line 33
+[15-Jan-2025 10:44:30 UTC] WPMDB: {"type":"cancel","location":"local","target":false,"sites":{"local":"http:\/\/poolglass.loc","remote":"https:\/\/poolglass.pro"}}
