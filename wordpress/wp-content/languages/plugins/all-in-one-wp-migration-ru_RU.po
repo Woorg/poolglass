@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - All-in-One WP Migration and Backup - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-01-16 13:28:02+0000\n"
+"PO-Revision-Date: 2025-01-21 15:48:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,14 @@ msgstr ""
 "X-Generator: GlotPress/4.0.1\n"
 "Language: ru\n"
 "Project-Id-Version: Plugins - All-in-One WP Migration and Backup - Stable (latest release)\n"
+
+#: lib/view/export/find-replace.php:35 lib/view/export/find-replace.php:44
+msgid "Search for"
+msgstr "Поиск"
+
+#: lib/view/export/export-buttons.php:35
+msgid "Export Site To"
+msgstr "Экспортировать сайт в"
 
 #: lib/view/export/advanced-settings.php:115
 msgid "Exclude database (sql)"
@@ -194,6 +202,51 @@ msgstr "Файлы плагинов собраны."
 #: lib/model/export/class-ai1wm-export-enumerate-plugins.php:51
 msgid "Gathering plugin files..."
 msgstr "Сбор файлов плагина..."
+
+#: lib/model/export/class-ai1wm-export-enumerate-media.php:93
+msgid "Media files gathered."
+msgstr "Файлы медиа собраны."
+
+#: lib/model/export/class-ai1wm-export-enumerate-media.php:51
+msgid "Gathering media files..."
+msgstr "Собираем файлы медиа..."
+
+#: lib/model/export/class-ai1wm-export-enumerate-content.php:111
+msgid "Content files gathered."
+msgstr "Файлы содержимого собраны."
+
+#: lib/model/export/class-ai1wm-export-enumerate-content.php:51
+msgid "Gathering content files..."
+msgstr "Собираем файлы содержимого..."
+
+#: lib/model/export/class-ai1wm-export-database.php:159
+msgid "Database exported."
+msgstr "База данных экспортирована."
+
+#: lib/model/export/class-ai1wm-export-database-file.php:78
+msgid "Database archived."
+msgstr "База данных упакована."
+
+#: lib/model/export/class-ai1wm-export-config.php:180
+msgid "Configuration prepared."
+msgstr "Конфигурация подготовлена."
+
+#: lib/model/export/class-ai1wm-export-config-file.php:72
+msgid "Configuration archived."
+msgstr "Конфигурация упакована."
+
+#: lib/model/export/class-ai1wm-export-compatibility.php:35
+#: lib/model/import/class-ai1wm-import-compatibility.php:36
+msgid "Checking for compatibility..."
+msgstr "Проверяем совместимость..."
+
+#: lib/model/export/class-ai1wm-export-archive.php:44
+msgid "Export file created."
+msgstr "Файл экспорта создан."
+
+#: lib/model/export/class-ai1wm-export-archive.php:37
+msgid "Creating export file..."
+msgstr "Создание файла экспорта..."
 
 #: lib/controller/class-ai1wm-export-controller.php:94
 #: lib/controller/class-ai1wm-export-controller.php:95
@@ -467,6 +520,18 @@ msgstr "Связаться с поддержкой"
 msgid "Retrieving WordPress permalinks settings..."
 msgstr "Настройка постоянных ссылок WordPress завершена."
 
+#: lib/view/import/avada.php:40
+msgid "» <a class=\"ai1wm-no-underline\" href=\"https://theme-fusion.com/documentation/avada/installation-maintenance/important-update-information/#clear-caches\" target=\"_blank\">Reset Avada Fusion Builder cache</a>.<br />"
+msgstr "» <a class=\"ai1wm-no-underline\" href=\"https://theme-fusion.com/documentation/avada/installation-maintenance/important-update-information/#clear-caches\" target=\"_blank\">Сбросить кэш Avada Fusion Builder </a>. (откроется новое окно)<br />"
+
+#: lib/view/import/avada.php:37
+msgid "» <a class=\"ai1wm-no-underline\" href=\"https://oxygenbuilder.com/documentation/other/importing-exporting/#resigning\" target=\"_blank\">Re-sign Oxygen Builder shortcodes</a>.<br />"
+msgstr "» <a class=\"ai1wm-no-underline\" href=\"https://oxygenbuilder.com/documentation/other/importing-exporting/#resigning\" target=\"_blank\">Обновить шорткоды Oxygen Builder </a>. (откроется новое окно)<br />"
+
+#: lib/view/import/avada.php:31
+msgid "» Permalinks are set to default. <a class=\"ai1wm-no-underline\" href=\"https://help.servmask.com/knowledgebase/permalinks-are-set-to-default/\" target=\"_blank\">Why?</a><br />"
+msgstr "» Постоянные ссылки установлены в значение по умолчанию. <a class=\"ai1wm-no-underline\" href=\"https://help.servmask.com/knowledgebase/permalinks-are-set-to-default/\" target=\"_blank\">Почему?</a> (откроется новое окно)<br />"
+
 #: lib/view/main/translate.php:31
 msgid "Translate"
 msgstr "Перевести"
@@ -493,6 +558,10 @@ msgstr "Ваша резервная копия сделана с PHP %s, но с
 #: lib/view/backups/backups-list.php:46 lib/view/backups/index.php:49
 msgid "Refreshing backup list..."
 msgstr "Обновляем список резервных копий..."
+
+#: lib/view/import/import-permissions.php:34
+msgid "<h3>Could not import site</h3><p>Please ensure the directory <strong>%s</strong> has read/write permissions.</p><p><a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a></p>"
+msgstr "<h3>Невозможно импортировать сайт</h3><p>Пожалуйста убедитесь, что папка \"storage\" <strong>%s</strong> имеет корректные файловые разрешения.</p><p><a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Технические детали</a></p>"
 
 #: lib/view/import/button-file.php:31
 msgid "To choose a file please go inside the link and click on the browse button."

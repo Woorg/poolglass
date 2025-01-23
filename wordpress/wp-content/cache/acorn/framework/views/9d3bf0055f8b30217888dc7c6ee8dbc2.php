@@ -8,6 +8,19 @@
 
     </a>
 
+    <?php if(has_nav_menu('langs_navigation')): ?>
+      <nav class="header__langs langs"
+        aria-label="<?php echo e(wp_get_nav_menu_name('langs_navigation')); ?>"">
+        <?php echo wp_nav_menu([
+            'theme_location' => 'langs_navigation',
+            'menu_class' => 'langs__list',
+            'container' => null,
+            'active' => '',
+        ]); ?>
+
+      </nav>
+    <?php endif; ?>
+
     <div class="header__nav-w">
 
       <?php if(has_nav_menu('primary_navigation')): ?>

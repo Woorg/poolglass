@@ -4,11 +4,9 @@
   @include('partials.page-header')
 
   @if (!have_posts())
-    <x-alert type="warning">
-      {!! pll__('Sorry, no results were found.', 'sage') !!}
-    </x-alert>
-
-    {!! get_search_form(false) !!}
+    @php
+      wp_redirect(home_url('/404/')); // Replace with your custom 404
+    @endphp
   @endif
 
   @while (have_posts())

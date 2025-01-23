@@ -7,5 +7,8 @@
 
   &_inner {
     @apply ~pb-[112px]/[124px] xl:min-h-[680px];
+    .container {
+      @apply py-10 pb-14;
+    }
   }
 }

@@ -8,8 +8,12 @@
   &__logo {
   }
 
+  &__langs {
+    @apply ml-auto lg:ml-0;
+  }
+
   &__nav-w {
-    @apply relative w-full lg:flex lg:flex-nowrap lg:items-center lg:justify-between lg:gap-4;
+    @apply relative lg:flex lg:w-full lg:max-w-[494px] lg:flex-nowrap lg:items-center lg:justify-between lg:gap-4 xl:max-w-[780px];
 
     @screen lg {
     }
@@ -67,7 +71,7 @@
     }
 
     .header__nav-w {
-      @apply absolute right-0 top-0 z-20 flex h-screen max-w-[604px] flex-col bg-blue ~py-[40px]/[60px];
+      @apply absolute right-0 top-0 z-20 flex h-screen w-full max-w-[604px] flex-col bg-blue ~py-[40px]/[60px];
     }
     .header__nav {
       @apply flex h-full flex-col justify-center;

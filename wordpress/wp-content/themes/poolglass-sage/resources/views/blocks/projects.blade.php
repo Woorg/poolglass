@@ -8,6 +8,7 @@
       <nav class="projects__filter"
         aria-label="{{ pll__('Filter projects', 'sage') }}">
         @if ($terms)
+
           <ul class="projects__filter-list">
             <li class="projects__filter-item">
               <a data-filter="all" class="projects__filter-link" href="#"
@@ -24,23 +25,25 @@
               </li>
             @endforeach
           </ul>
+
         @endif
 
       </nav>
 
       <div class="projects__grid">
+
         @foreach ($projects as $item)
           @php
             $terms = wp_get_post_terms($item->ID, 'pool_kinds');
+            $term_slug = !empty($terms) ? $terms[0]->slug : '';
           @endphp
 
-          {{-- @dump($terms) --}}
-          <article class="projects__item" data-term={{ $terms[0]->slug }}
+          <article class="projects__item" data-term={{ $term_slug }}
             :class="{
                 'hidden': activeFilter !== 'all' &&
-                    activeFilter !== '{{ $terms[0]->slug }}'
+                    activeFilter !== '{{ $term_slug }}'
             }"
-            x-show="activeFilter === 'all' || activeFilter === '{{ $terms[0]->slug }}'"
+            x-show="activeFilter === 'all' || activeFilter === '{{ $term_slug }}'"
             x-transition>
             <a href="{{ get_permalink($item->ID) }}" class="projects__link">
               <figure class="projects__figure">
@@ -56,6 +59,8 @@
           </article>
         @endforeach
       </div>
+    @elseif (empty($projects))
+      <p>{{ pll__('No projects found', 'sage') }}</p>
     @endif
 
     @if ($pagination)

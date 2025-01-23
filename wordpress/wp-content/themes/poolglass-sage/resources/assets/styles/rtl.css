@@ -1,0 +1,38 @@
+[dir='rtl'] {
+  .header {
+  }
+
+  .footer__container {
+    transform: scaleX(-1);
+  }
+
+  .first_front {
+    .first__container-w {
+      &:after {
+        @apply left-0;
+        transform: scaleX(-1);
+      }
+    }
+  }
+  .first__bg {
+    @apply left-0;
+    transform: scaleX(-1);
+  }
+  .first_inner {
+    background-image: linear-gradient(
+      to left,
+      #2b90c8 0%,
+      #1868ad 16%,
+      #0b3370 50%,
+      #142c52 100%
+    );
+    .first__bg {
+      @apply left-0;
+      transform: scaleX(-1);
+    }
+  }
+
+  .footer__copyright {
+    @apply ml-0;
+  }
+}

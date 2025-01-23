@@ -1,0 +1,16 @@
+.langs {
+  &__list {
+    @apply flex items-center justify-center gap-2;
+  }
+  .nav__item {
+    @apply shrink-0;
+    &.current-lang,
+    &.current_page_item {
+      .nav__link {
+        &:after {
+          @apply origin-bottom-left scale-x-100;
+        }
+      }
+    }
+  }
+}

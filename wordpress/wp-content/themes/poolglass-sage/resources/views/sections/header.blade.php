@@ -7,6 +7,18 @@
       {!! $logo !!}
     </a>
 
+    @if (has_nav_menu('langs_navigation'))
+      <nav class="header__langs langs"
+        aria-label="{{ wp_get_nav_menu_name('langs_navigation') }}"">
+        {!! wp_nav_menu([
+            'theme_location' => 'langs_navigation',
+            'menu_class' => 'langs__list',
+            'container' => null,
+            'active' => '',
+        ]) !!}
+      </nav>
+    @endif
+
     <div class="header__nav-w">
 
       @if (has_nav_menu('primary_navigation'))

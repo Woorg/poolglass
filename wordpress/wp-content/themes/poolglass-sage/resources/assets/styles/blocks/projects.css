@@ -15,14 +15,15 @@
   }
 
   &__filter-link {
-    @apply border-filter text-filter flex rounded-[100px] border-[2px] px-5 py-[7px] text-[15px] font-semibold;
+    @apply flex rounded-[100px] border-[2px] border-filter px-5 py-[7px] text-[15px] font-semibold text-filter;
     &.active {
       @apply border-blue text-blue;
     }
   }
 
   &__grid {
-    @apply grid ~gap-[10px]/[20px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+    @apply relative grid ~gap-[10px]/[20px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+    z-index: 1;
   }
   &__item {
     @apply col-span-1 rounded-[10px] bg-box;

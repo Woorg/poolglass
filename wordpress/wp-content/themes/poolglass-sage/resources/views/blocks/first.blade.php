@@ -57,39 +57,38 @@
 
         @if ($tiles_show)
           <div class="first__tiles">
-            @foreach ($tiles as $item)
-              {{-- @dump($item) --}}
+            @if ($tiles)
+              @foreach ($tiles as $item)
+                @php
+                  if (isset($item['tile_link']['url'])) {
+                      $tile_url = $item['tile_link']['url'];
+                  } else {
+                      $tile_url = '#';
+                  }
 
-              @php
-                if (isset($item['tile_link']['url'])) {
-                    $tile_url = $item['tile_link']['url'];
-                } else {
-                    $tile_url = '#';
-                }
+                  if (isset($item['tile_popup_id'])) {
+                      $tile_popup_id = $item['tile_popup_id'];
+                  }
+                @endphp
 
-                if (isset($item['tile_popup_id'])) {
-                    $tile_popup_id = $item['tile_popup_id'];
-                }
-              @endphp
-              {{-- @dump($tile_url) --}}
-              @if ($item['tile_show'])
-                <div class="first__tile tile tile_{{ $item['tile_style'] }}">
-                  <a x-data
-                    x-on:click="$store.popup.openPopup('{{ $tile_popup_id }}')"
-                    href="{{ $tile_url }}" class="tile__link">
-                    {{ get_svg($item['tile_style'] . '-icon', 'tile__icon', []) }}
+                @if ($item['tile_show'])
+                  <div class="first__tile tile tile_{{ $item['tile_style'] }}">
+                    <a x-data
+                      x-on:click="$store.popup.openPopup('{{ $tile_popup_id }}')"
+                      href="{{ $tile_url }}" class="tile__link">
+                      {{ get_svg($item['tile_style'] . '-icon', 'tile__icon', []) }}
 
-                    <div class="tile__link-bottom">
-                      <span class="tile__link-text">
-                        {{ $item['tile_text'] }}
-                      </span>
-                      {{ get_svg('arrow', 'tile__link-icon', []) }}
-                    </div>
-                  </a>
-                </div>
-              @endif
-            @endforeach
-
+                      <div class="tile__link-bottom">
+                        <span class="tile__link-text">
+                          {{ $item['tile_text'] }}
+                        </span>
+                        {{ get_svg('arrow', 'tile__link-icon', []) }}
+                      </div>
+                    </a>
+                  </div>
+                @endif
+              @endforeach
+            @endif
           </div>
         @endif
       </div>
@@ -112,7 +111,6 @@
 
   @if (!is_front_page())
     <div class="first__bg">
-
       {{ get_svg('first-inner-bg', 'first__inner-bg', []) }}
     </div>
   @endif

@@ -57,42 +57,41 @@
 
         <?php if($tiles_show): ?>
           <div class="first__tiles">
-            <?php $__currentLoopData = $tiles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-              
+            <?php if($tiles): ?>
+              <?php $__currentLoopData = $tiles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php
+                  if (isset($item['tile_link']['url'])) {
+                      $tile_url = $item['tile_link']['url'];
+                  } else {
+                      $tile_url = '#';
+                  }
 
-              <?php
-                if (isset($item['tile_link']['url'])) {
-                    $tile_url = $item['tile_link']['url'];
-                } else {
-                    $tile_url = '#';
-                }
+                  if (isset($item['tile_popup_id'])) {
+                      $tile_popup_id = $item['tile_popup_id'];
+                  }
+                ?>
 
-                if (isset($item['tile_popup_id'])) {
-                    $tile_popup_id = $item['tile_popup_id'];
-                }
-              ?>
-              
-              <?php if($item['tile_show']): ?>
-                <div class="first__tile tile tile_<?php echo e($item['tile_style']); ?>">
-                  <a x-data
-                    x-on:click="$store.popup.openPopup('<?php echo e($tile_popup_id); ?>')"
-                    href="<?php echo e($tile_url); ?>" class="tile__link">
-                    <?php echo e(get_svg($item['tile_style'] . '-icon', 'tile__icon', [])); ?>
+                <?php if($item['tile_show']): ?>
+                  <div class="first__tile tile tile_<?php echo e($item['tile_style']); ?>">
+                    <a x-data
+                      x-on:click="$store.popup.openPopup('<?php echo e($tile_popup_id); ?>')"
+                      href="<?php echo e($tile_url); ?>" class="tile__link">
+                      <?php echo e(get_svg($item['tile_style'] . '-icon', 'tile__icon', [])); ?>
 
 
-                    <div class="tile__link-bottom">
-                      <span class="tile__link-text">
-                        <?php echo e($item['tile_text']); ?>
+                      <div class="tile__link-bottom">
+                        <span class="tile__link-text">
+                          <?php echo e($item['tile_text']); ?>
 
-                      </span>
-                      <?php echo e(get_svg('arrow', 'tile__link-icon', [])); ?>
+                        </span>
+                        <?php echo e(get_svg('arrow', 'tile__link-icon', [])); ?>
 
-                    </div>
-                  </a>
-                </div>
-              <?php endif; ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
+                      </div>
+                    </a>
+                  </div>
+                <?php endif; ?>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php endif; ?>
           </div>
         <?php endif; ?>
       </div>
@@ -117,7 +116,6 @@
 
   <?php if(!is_front_page()): ?>
     <div class="first__bg">
-
       <?php echo e(get_svg('first-inner-bg', 'first__inner-bg', [])); ?>
 
     </div>

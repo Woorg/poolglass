@@ -10,6 +10,7 @@
 @import 'global/utils.css';
 
 @import 'typography.css';
+@import 'rtl.css';
 
 @import 'blocks/header.css';
 @import 'blocks/logo.css';
@@ -34,3 +35,4 @@
 @import 'blocks/form.css';
 @import 'blocks/tile.css';
 @import 'blocks/calculator.css';
+@import 'blocks/langs.css';

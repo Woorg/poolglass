@@ -8,6 +8,7 @@
       <nav class="projects__filter"
         aria-label="<?php echo e(pll__('Filter projects', 'sage')); ?>">
         <?php if($terms): ?>
+
           <ul class="projects__filter-list">
             <li class="projects__filter-item">
               <a data-filter="all" class="projects__filter-link" href="#"
@@ -24,24 +25,26 @@
               </li>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </ul>
+
         <?php endif; ?>
 
       </nav>
 
       <div class="projects__grid">
+
         <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <?php
             $terms = wp_get_post_terms($item->ID, 'pool_kinds');
+            $term_slug = !empty($terms) ? $terms[0]->slug : '';
           ?>
 
-          
-          <article class="projects__item" data-term=<?php echo e($terms[0]->slug); ?>
+          <article class="projects__item" data-term=<?php echo e($term_slug); ?>
 
             :class="{
                 'hidden': activeFilter !== 'all' &&
-                    activeFilter !== '<?php echo e($terms[0]->slug); ?>'
+                    activeFilter !== '<?php echo e($term_slug); ?>'
             }"
-            x-show="activeFilter === 'all' || activeFilter === '<?php echo e($terms[0]->slug); ?>'"
+            x-show="activeFilter === 'all' || activeFilter === '<?php echo e($term_slug); ?>'"
             x-transition>
             <a href="<?php echo e(get_permalink($item->ID)); ?>" class="projects__link">
               <figure class="projects__figure">
@@ -58,6 +61,8 @@
           </article>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </div>
+    <?php elseif(empty($projects)): ?>
+      <p><?php echo e(pll__('No projects found', 'sage')); ?></p>
     <?php endif; ?>
 
     <?php if($pagination): ?>
